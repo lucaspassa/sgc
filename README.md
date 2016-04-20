@@ -1,31 +1,25 @@
+## Laboratorio de Lenguajes II 
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+Sistema de Gestion Contable Abierto Escalable. 
+----------------------------------------------
 
+El desarrollo de un sistema contable nos abre una ventana de oportunidades para poder implementarlo en cualquier sitio, local o comercio, realizándolo de manera gratuita para adquirir experiencia en el tema, o también para generar dinero por ello.
 
-Hi there! Welcome to Cloud9 IDE!
+El objetivo de crear este sistema es facilitar la labor diaria de cualquier comercio, emprendimiento y/o profesional donde tengan que gestionar las tareas que transcurren en el día, como administrar las ventas, los pagos a proveedores, reportes, stock de mercaderías etc.
 
-To get you started, we have created a small hello world application.
+Si bien la idea es general, se crearía este proyecto a fines de implementarlo en cualquier ámbito de negocios, o para uso personal, donde se requiera llevar auto control sobre uno mismo.
 
-1) Open the hello-world.php file
+# Requerimientos para instalarlo
 
-2) Follow the run instructions in the file's comments
+Servidor Web Apache 
+PHP
+MySql
 
-3) If you want to look at the Apache logs, check out ~/lib/apache2/log
+## Estructura de carpetas
 
-And that's all there is to it! Just have fun. Go ahead and edit the code, 
-or add new files. It's all up to you! 
+-css/ Todos los archivos de estilos (.css)
 
-Happy coding!
-The Cloud9 IDE team
+-js/ Todos los archivos javascripto (.js)
 
 
-## Support & Documentation
 
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
-# sgc
