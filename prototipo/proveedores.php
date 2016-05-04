@@ -97,6 +97,7 @@
                             <td> <?php echo $proveedore['direccion']; ?> </td>
                             <td> <?php echo $proveedore['telefono']; ?> </td>
                             <td> <?php echo $proveedore['correo']; ?> </td>
+                            <td>  <a href="eliminar.php" role="button"  class="btn btn-danger btn-primary btn-block"> Eliminar </a></td>
                         </tr>
                         <?php } ?>
                     </tbody>
