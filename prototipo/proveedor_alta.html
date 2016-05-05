@@ -44,7 +44,7 @@
 
 
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav">
+    <ul class="nav nav-pills">
 
     <li><a href="index.html">Panel Central</a></li>
         <li class="dropdown">
@@ -60,7 +60,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ventas<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="vender_producto.html">Vender Producto</a></li>
-            <li><a href="generar_reporte.html">Generar Reporte</a></li>
+            <li><a href="#">Another action</a></li>
 
             </ul>
         </li>
@@ -68,8 +68,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Proveedores<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="alta_proveedor.html">Alta Proveedor</a></li>
-            <li><a href="#">Consultar Proveedor</a></li>
+            <li><a href="proveedor_alta.html">Alta Proveedor</a></li>
+            <li><a href="proveedor_consulta.html">Consultar Proveedor</a></li>
             </ul>
         </li>
 
@@ -81,6 +81,17 @@
             </ul>
         </li>
 
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> admin</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-"></span> Login</a></li>
+
+
+
+
+
+
+
+   		</ul>
 
 
     </ul>
@@ -97,28 +108,44 @@
 
     <!-- Page Content -->
     <div class="container">
-      <div class="jumbotron">
-    <div class="row">
-              <table class="table table-hover">
-                  <thead>
-                      <th> Nombre </th>
-                        <th> Direccion </th>
-                        <th> Telefono </th>
-                        <th> Correo </th>
-                    </thead>
-                    <tbody>
-                        <tr class="success">
-                            <td> Matias </td>
-                            <td> En mi casa </td>
-                            <td> 2944655052 </td>
-                            <td> matute@micorreo.com.ar </td>
-                            <td>  <a href="eliminar.php" role="button"  class="btn btn-danger btn-primary btn-block"> Eliminar </a></td>
-                        </tr>
-                    </tbody>
-        </table>
 
-    </div>
-      </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Cargar proveeedor</h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Razon Social</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="MegaInfoMaxPowerQuadCore">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Nombre Contacto</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Zambatruli Gimenez">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Cuit</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="30-9990876123-1">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Direccion</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Av. San Martin 567">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Telefono</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="5676543320">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Email</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="campus@capacitas.com">
+        </div>
+        <button type="submit" class="btn btn-primary">Registrar</button>
+  </form>
+
+
 
     </div>
     <!-- /.container -->
