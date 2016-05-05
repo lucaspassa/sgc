@@ -64,10 +64,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Registrar</button>
   </form>
-
-
-
-    </div>
+</div>
 
     <!-- JavaScript Custom -->
     <script src="js/currency.js"></script>

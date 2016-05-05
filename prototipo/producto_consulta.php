@@ -34,18 +34,22 @@
     <div class="row">
               <table class="table table-hover">
                   <thead>
-                      <th> Nombre </th>
-                        <th> Direccion </th>
-                        <th> Telefono </th>
-                        <th> Correo </th>
+                        <th> ID </th>
+                        <th> Codigo </th>
+                        <th> Nombre </th>
+                        <th> Precio Minorista </th>
+                        <th> Precio Mayorista </th>
+                        <th> Descripcion </th>
                     </thead>
                     <tbody>
                         <tr class="success">
-                            <td> Matias </td>
-                            <td> En mi casa </td>
-                            <td> 2944655052 </td>
-                            <td> matute@micorreo.com.ar </td>
-                            <td>  <a href="eliminar.php" role="button"  class="btn btn-danger btn-primary btn-block"> Eliminar </a></td>
+                            <td> 21354 </td>
+                            <td> MDV566</td>
+                            <td> Hitachi </td>
+                            <td> 4521,55</td>
+                            <td> 7999 </td>
+                            <td> LCD 42' Full HD SmartTV 3D </td>
+                            <td> <a href="eliminar.php" role="button"  class="btn btn-danger btn-primary btn-block"> Eliminar </a></td>
                         </tr>
                     </tbody>
         </table>

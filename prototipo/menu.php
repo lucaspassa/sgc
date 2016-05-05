@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" id="menu" role="navigation">
     <div class="container">
 
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -47,6 +47,16 @@
         <li><a href="producto_alta.php">Alta</a></li>
         <li><a href="producto_consulta.php">Consultar</a></li>
         </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Caja<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+            <li><a href="caja_ingreso.php">Ingreso</a></li>
+            <li><a href="caja_egreso.php">Egreso</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="caja_consulta.php">Consultar Movimientos</a></li>
+      </ul>
     </li>
 
     </ul>
