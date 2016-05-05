@@ -17,12 +17,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-    </style>
+    <link href="css/custom.style.css" rel="stylesheet">
 
 </head>
 
@@ -40,6 +35,7 @@
                         <th> Precio Minorista </th>
                         <th> Precio Mayorista </th>
                         <th> Descripcion </th>
+                        <th> Acciones </  th>
                     </thead>
                     <tbody>
                         <tr class="success">
@@ -49,7 +45,11 @@
                             <td> 4521,55</td>
                             <td> 7999 </td>
                             <td> LCD 42' Full HD SmartTV 3D </td>
-                            <td> <a href="eliminar.php" role="button"  class="btn btn-danger btn-primary btn-block"> Eliminar </a></td>
+                            <td>
+                              <a href="editar_producto.php" role="button"><span class="glyphicon glyphicon-pencil" id="colorGlypiconEdit" aria-hidden="true"></span></a>
+                              <a href="eliminar_producto.php" role="button"><span class="glyphicon glyphicon-trash" id="colorGlypiconDelete" aria-hidden="true"></span></a>
+                              <a href="imprimir_producto.php" role="button"><span class="glyphicon glyphicon-print" id="colorGlypiconPrint" aria-hidden="true"></span></a>
+                            </td>
                         </tr>
                     </tbody>
         </table>
