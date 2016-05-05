@@ -6,6 +6,10 @@ body {
   position: fixed;
 }
 
+#logInBtn {
+  margin: 15px 0 0 0;
+}
+
 #colorGlypiconEdit {
   border-radius: 5px;
   color: white;

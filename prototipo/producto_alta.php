@@ -60,7 +60,7 @@
         </div>
         <div class="form-group">
             <label for="descripcionProd">Descripcion</label>
-            <input type="textfield" class="form-control" id="descripcionProd" placeholder="Descripcion del producto a cargar.">
+            <textarea type="text" class="form-control" id="descripcionProd" placeholder="Descripcion del producto a cargar."></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Registrar</button>
   </form>
