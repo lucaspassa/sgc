@@ -29,18 +29,57 @@
 <body>
 
     <!-- Page Content -->
-    <div class="container">
+     <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <table class="table table-hover">
+                    <thead>
+                        <th> Nombre </th>
+                        <th> Apellido </th>
+                        <th> Razon Social </th>
+                        <th> Dni </th>
+                        <th> Cuit </th>
+                        <th> Dirección </th>
+                        <th> Telefono </th>
+                        <th> Email </th>
+                        <th> Acciones </th>
+                    </thead>
+                    <tbody>
+                        <tr class="success">
+                            <td> Roberto </td>
+                            <td> Gonzalez</td>
+                            <td> Roberto Gonzalez</td>
+                            <td> 4587982</td>
+                            <td> 2045879829 </td>
+                            <td> Mitre 230</td>
+                            <td> 2944768745 </td>
+                            <td> gonzalezroberto@gmail.com </td>
+                            <td>
+                              <a href="editar_producto.php" role="button"><span class="glyphicon glyphicon-pencil" id="colorGlypiconEdit" aria-hidden="true"></span></a>
+                              <a href="imprimir_producto.php" role="button"><span class="glyphicon glyphicon-print" id="colorGlypiconPrint" aria-hidden="true"></span></a>
+                              <a href="eliminar_producto.php" role="button"><span class="glyphicon glyphicon-trash" id="colorGlypiconDelete" aria-hidden="true"></span></a>
+                            </td>
+                        </tr>
+                        <tr class="success">
+                            <td> Fernando </td>
+                            <td> Torres </td>
+                            <td> Fernando Torres</td>
+                            <td> 56987345</td>
+                            <td> 20569873459 </td>
+                            <td> Gallardo 700</td>
+                            <td> 2944875634 </td>
+                            <td> fernandotorres@gmail.com </td>
 
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1>Consultar Clientes</h1>
-                <ul class="list-unstyled">
-                    <li>Sistema de Gestión</li>
-                    <li>Version 1.0</li>
-                </ul>
+                            <td>
+                              <a href="editar_producto.php" role="button"><span class="glyphicon glyphicon-pencil" id="colorGlypiconEdit" aria-hidden="true"></span></a>
+                              <a href="imprimir_producto.php" role="button"><span class="glyphicon glyphicon-print" id="colorGlypiconPrint" aria-hidden="true"></span></a>
+                              <a href="eliminar_producto.php" role="button"><span class="glyphicon glyphicon-trash" id="colorGlypiconDelete" aria-hidden="true"></span></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-        <!-- /.row -->
     </div>
     <!-- /.container -->
 
