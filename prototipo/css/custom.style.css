@@ -1,0 +1,39 @@
+body {
+    padding-top: 70px;
+}
+
+#menu {
+  position: fixed;
+}
+
+#logInBtn {
+  margin: 15px 0 0 0;
+}
+
+#colorGlypiconEdit {
+  border-radius: 5px;
+  color: white;
+  margin: 0 5px 0 5px;
+  padding: 5px;
+  background-color: #474747;
+}
+
+#colorGlypiconDelete {
+  border-radius: 5px;
+  color: red;
+  margin: 0 5px 0 5px;
+  padding: 5px;
+  background-color: #474747;
+}
+
+#colorGlypiconPrint {
+  border-radius: 5px;
+  color: white;
+  margin: 0 5px 0 5px;
+  padding: 5px;
+  background-color: #474747;
+}
+
+table tbody >tr >td {
+  vertical-align: middle;
+}
