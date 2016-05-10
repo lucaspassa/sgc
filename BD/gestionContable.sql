@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 07-05-2016 a las 00:43:04
+-- Tiempo de generación: 10-05-2016 a las 21:37:50
 -- Versión del servidor: 5.6.24
 -- Versión de PHP: 5.6.8
 
@@ -31,6 +31,13 @@ CREATE TABLE IF NOT EXISTS `permisos` (
   `descripcion` varchar(30) COLLATE utf8_spanish2_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
+--
+-- Volcado de datos para la tabla `permisos`
+--
+
+INSERT INTO `permisos` (`codigoPermiso`, `descripcion`) VALUES
+('TODO', 'Todos los permisos');
+
 -- --------------------------------------------------------
 
 --
@@ -41,7 +48,14 @@ CREATE TABLE IF NOT EXISTS `roles` (
   `idRol` int(11) NOT NULL,
   `nombreRol` varchar(15) COLLATE utf8_spanish2_ci NOT NULL,
   `descripcion` varchar(50) COLLATE utf8_spanish2_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `roles`
+--
+
+INSERT INTO `roles` (`idRol`, `nombreRol`, `descripcion`) VALUES
+(1, 'administrador', 'administrador');
 
 -- --------------------------------------------------------
 
@@ -53,6 +67,13 @@ CREATE TABLE IF NOT EXISTS `rol_permiso` (
   `codigoPermiso` varchar(10) COLLATE utf8_spanish2_ci NOT NULL,
   `idRol` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `rol_permiso`
+--
+
+INSERT INTO `rol_permiso` (`codigoPermiso`, `idRol`) VALUES
+('TODO', 1);
 
 -- --------------------------------------------------------
 
@@ -66,7 +87,19 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `clave` varchar(15) COLLATE utf8_spanish2_ci NOT NULL,
   `fechaAlta` date NOT NULL,
   `idRol` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`idUsuario`, `nombreUsuario`, `clave`, `fechaAlta`, `idRol`) VALUES
+(1, 'matias', 'matias', '2016-05-06', 1),
+(2, 'diego', 'diego', '2016-05-06', 1),
+(3, 'lucas', 'lucas', '2016-05-06', 1),
+(4, 'bruno', 'bruno', '2016-05-06', 1),
+(5, 'bauty', 'bauty', '2016-05-06', 1),
+(6, 'daniel', 'daniel', '2016-05-06', 1);
 
 --
 -- Índices para tablas volcadas
@@ -105,12 +138,12 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `idRol` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idRol` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- Restricciones para tablas volcadas
 --
