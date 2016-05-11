@@ -52,11 +52,25 @@
             <label for="exampleInputPassword1">Clave</label>
             <input type="text" class="form-control" id="exampleInputPassword1" placeholder="xxxxx">
         </div>
+
+        
+        <fieldset class="form-group">
+            <label for="exampleSelect1">Seleccionar Rol</label>
+            <select class="form-control" id="exampleSelect1">
+            <option>Administrador</option>
+            <option>Supervisor</option>
+            <option>Ventas</option>
+            <option>Deposito</option>
+            </select>
+        </fieldset>
+
         <div class="form-group">
             <label for="exampleInputPassword1">Email</label>
             <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Ej: juanperez@gmail.com">
         </div>
         <button type="submit" class="btn btn-primary">Registrar</button>
+
+       
   </form>
 
 

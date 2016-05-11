@@ -37,6 +37,7 @@
                         <th> Nombre y Apellido </th>
                         <th> Nombre de usuario </th>
                         <th> Clave </th>
+                        <th> Rol </th>
                         <th> Email </th>
                         
                     </thead>
@@ -44,8 +45,22 @@
                         <tr class="success">
                             <td> Roberto Gonzalez </td>
                             <td> groberto </td>
-                            <td> abcde1234</td>
+                            <td> abcde1234 </td>
+                            <td> Administrador </td>
                             <td> groberto@gmail.com</td>
+                            <td>
+                              <a href="editar_producto.php" role="button"><span class="glyphicon glyphicon-pencil" id="colorGlypiconEdit" aria-hidden="true"></span></a>
+                              <a href="imprimir_producto.php" role="button"><span class="glyphicon glyphicon-print" id="colorGlypiconPrint" aria-hidden="true"></span></a>
+                              <a href="eliminar_producto.php" role="button"><span class="glyphicon glyphicon-trash" id="colorGlypiconDelete" aria-hidden="true"></span></a>
+                            </td>
+                        </tr>
+
+                        <tr class="success">
+                            <td> Gaston Gutierrez </td>
+                            <td> ggutierrez </td>
+                            <td> abcde98 </td>
+                            <td> Supervisor </td>
+                            <td> ggutierrez@gmail.com</td>
                             <td>
                               <a href="editar_producto.php" role="button"><span class="glyphicon glyphicon-pencil" id="colorGlypiconEdit" aria-hidden="true"></span></a>
                               <a href="imprimir_producto.php" role="button"><span class="glyphicon glyphicon-print" id="colorGlypiconPrint" aria-hidden="true"></span></a>
