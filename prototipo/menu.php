@@ -20,8 +20,8 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clientes<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="cliente_alta.php">Crear Cliente</a></li>
-                <li><a href="cliente_consulta.php">Consultar Clientes</a></li>
+                <li><a href="cliente_alta.php">Alta Cliente</a></li>
+                <li><a href="cliente_consulta.php">Consultar Cliente</a></li>
               </ul>
             </li>
 
@@ -48,14 +48,22 @@
         <li><a href="producto_consulta.php">Consultar</a></li>
         </ul>
     </li>
-
-    <li class="dropdown">
+	
+	  <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Caja<span class="caret"></span></a>
       <ul class="dropdown-menu">
             <li><a href="caja_ingreso.php">Ingreso</a></li>
             <li><a href="caja_egreso.php">Egreso</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="caja_consulta.php">Consultar Movimientos</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuarios<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+            <li><a href="usuario_alta.php">Alta usuario</a></li>
+            <li><a href="usuario_consulta.php">Consultar usuario</a></li>
       </ul>
     </li>
 

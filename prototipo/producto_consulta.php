@@ -35,7 +35,7 @@
                         <th> Precio Minorista </th>
                         <th> Precio Mayorista </th>
                         <th> Descripcion </th>
-                        <th> Acciones </  th>
+                        <th> Acciones </th>
                     </thead>
                     <tbody>
                         <tr class="success">
