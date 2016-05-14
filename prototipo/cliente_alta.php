@@ -39,7 +39,7 @@
         <!-- /.row -->
 
 
-    <form>
+    <form action="cliente_consulta.php">
         <div class="form-group">
             <label for="exampleInputEmail1">Nombre</label>
             <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ej: Juan">
