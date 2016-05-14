@@ -58,7 +58,7 @@
             <li><a href="caja_consulta.php">Consultar Movimientos</a></li>
       </ul>
     </li>
-<<<<<<< HEAD
+
 
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuarios<span class="caret"></span></a>
@@ -68,14 +68,13 @@
       </ul>
     </li>
 
-=======
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Permisos<span class="caret"></span></a>
       <ul class="dropdown-menu">
         <li><a href="permisos.php">Consultar</a></li>
         </ul>
     </li>
->>>>>>> 8d7065c1420caa422b9b733cfe9cf083cba66706
+
     </ul>
   </div>
   <!-- /.navbar-collapse -->
