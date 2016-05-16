@@ -123,7 +123,7 @@ ALTER TABLE `roles`
 ALTER TABLE `rol_permiso`
   ADD PRIMARY KEY (`codigoPermiso`,`idRol`),
   ADD KEY `idRolRestric` (`idRol`);
-
+  ADD KEY `codigoPermisoRestric` (`codigoPermiso`);
 --
 -- Indices de la tabla `usuarios`
 --
