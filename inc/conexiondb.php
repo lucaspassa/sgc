@@ -1,7 +1,7 @@
 <?php
 
 $conexion = mysql_connect("localhost", "root"); 
-mysql_select_db("sgcdb", $link); 
+mysql_select_db("sgcdb", $conexion); 
 
 if($conexion=== false) { 
  echo 'Ha habido un error <br>'; 
