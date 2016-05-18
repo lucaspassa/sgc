@@ -5,10 +5,10 @@
  */
 
 // Se inician las variables con los datos para conexión con el motor de base de datos  
-$servername = getenv('IP');
-$username = getenv('C9_USER');
+$servername = localhost;
+$username = root;
 $password = "";
-$database = "c9";
+$database = sgcdb;
  
 define("SERVER",$servername);
 define("USER",$username);
