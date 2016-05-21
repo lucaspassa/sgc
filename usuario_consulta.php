@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Consulta de usuarios</title>
+    <title>Consulta de clientes</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -25,6 +25,7 @@
     </style>
 
 </head>
+
 <body>
 
     <!-- Page Content -->
@@ -55,7 +56,7 @@
                         </tr>
 
                         <tr class="success">
-                            <td> </td>
+                            <td> Gaston Gutierrez </td>
                             <td> ggutierrez </td>
                             <td> abcde98 </td>
                             <td> Supervisor </td>
@@ -65,7 +66,8 @@
                               <a href="imprimir_producto.php" role="button"><span class="glyphicon glyphicon-print" id="colorGlypiconPrint" aria-hidden="true"></span></a>
                               <a href="eliminar_producto.php" role="button"><span class="glyphicon glyphicon-trash" id="colorGlypiconDelete" aria-hidden="true"></span></a>
                             </td>
-                        </tr>  
+                        </tr>
+                        
                     </tbody>
                 </table>
             </div>

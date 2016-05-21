@@ -1,4 +1,6 @@
-<?php include "menu.php" ?>
+<?php
+require_once("validar.php");
+include "menu.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Alta de proveedores</title>
+    <title>Sistema de Gestión</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -22,40 +24,24 @@
         padding-top: 70px;
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
-    .btn {
-        margin-top: 10px;
-    }
     </style>
 
 </head>
 
 <body>
-
     <!-- Page Content -->
     <div class="container">
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1> Permisos </h1>
+                <h1>Panel Central</h1>
+                <ul class="list-unstyled">
+                    <li>Sistema de Gestión</li>
+                    <li>Version 1.0</li>
+                </ul>
             </div>
         </div>
         <!-- /.row -->
-
-
-    <form name="form1" method="post" action="ver_permisos.php">
-      <select class="form-control" name="rol">
-        <option value=""></option>
-          <option>Supervisor</option>
-          <option>Administrador</option>
-          <option>Cajero</option>
-          <option>Ventas</option>
-          <option>Deposito</option>
-      </select>
-        <button type="submit" class="btn btn-primary">Ver permisos</button>
-  </form>
-
-
-
     </div>
     <!-- /.container -->
 
