@@ -1,7 +1,9 @@
+# CREACION DE BASE DE DATOS
+CREATE SCHEMA `sgc` ;
+use sgc;
+
 # CREACION DE TABLAS GENERALES
-
 -- --------------------------------------------------------
-
 --
 -- Estructura de tabla para la tabla `permisos`
 --
@@ -12,15 +14,6 @@ CREATE TABLE IF NOT EXISTS `permisos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
--- Volcado de datos para la tabla `permisos`
---
-
-INSERT INTO `permisos` (`codigoPermiso`, `descripcion`) VALUES
-('TODO', 'Todos los permisos');
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `roles`
 --
 
@@ -29,34 +22,13 @@ CREATE TABLE IF NOT EXISTS `roles` (
   `nombreRol` varchar(15) COLLATE utf8_spanish2_ci NOT NULL,
   `descripcion` varchar(50) COLLATE utf8_spanish2_ci NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
-
---
--- Volcado de datos para la tabla `roles`
---
-
-INSERT INTO `roles` (`idRol`, `nombreRol`, `descripcion`) VALUES
-(1, 'administrador', 'administrador');
-
--- --------------------------------------------------------
-
 --
 -- Estructura de tabla para la tabla `rol_permiso`
 --
-
 CREATE TABLE IF NOT EXISTS `rol_permiso` (
   `codigoPermiso` varchar(10) COLLATE utf8_spanish2_ci NOT NULL,
   `idRol` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
-
---
--- Volcado de datos para la tabla `rol_permiso`
---
-
-INSERT INTO `rol_permiso` (`codigoPermiso`, `idRol`) VALUES
-('TODO', 1);
-
--- --------------------------------------------------------
-
 --
 -- Estructura de tabla para la tabla `usuarios`
 --
@@ -68,19 +40,6 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `fechaAlta` date NOT NULL,
   `idRol` int(11) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
-
---
--- Volcado de datos para la tabla `usuarios`
---
-
-INSERT INTO `usuarios` (`idUsuario`, `nombreUsuario`, `clave`, `fechaAlta`, `idRol`) VALUES
-(1, 'matias', 'matias', '2016-05-06', 1),
-(2, 'diego', 'diego', '2016-05-06', 1),
-(3, 'lucas', 'lucas', '2016-05-06', 1),
-(4, 'bruno', 'bruno', '2016-05-06', 1),
-(5, 'bauty', 'bauty', '2016-05-06', 1),
-(6, 'daniel', 'daniel', '2016-05-06', 1);
-
 --
 -- Índices para tablas volcadas
 --
@@ -103,7 +62,7 @@ ALTER TABLE `roles`
 ALTER TABLE `rol_permiso`
   ADD PRIMARY KEY (`codigoPermiso`,`idRol`),
   ADD KEY `idRolRestric` (`idRol`);
-  ADD KEY `codigoPermisoRestric` (`codigoPermiso`);
+--  ADD KEY `codigoPermisoRestric` (`codigoPermiso`);
 --
 -- Indices de la tabla `usuarios`
 --
@@ -135,12 +94,8 @@ ALTER TABLE `rol_permiso`
   ADD CONSTRAINT `codigoPermisoRestric` FOREIGN KEY (`codigoPermiso`) REFERENCES `permisos` (`codigoPermiso`) ON UPDATE CASCADE,
   ADD CONSTRAINT `idRolRestric` FOREIGN KEY (`idRol`) REFERENCES `roles` (`idRol`) ON UPDATE CASCADE;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
-
-
+-- Tablas de productos
 CREATE TABLE
 IF NOT EXISTS productos(
 	idProducto INT(10) NOT NULL AUTO_INCREMENT,
