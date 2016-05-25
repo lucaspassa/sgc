@@ -5,10 +5,10 @@
  */
 
 // Se inician las variables con los datos para conexión con el motor de base de datos  
-$servername = localhost;
-$username = root;
-$password = "";
-$database = sgcdb;
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$database = "sgc";
  
 define("SERVER",$servername);
 define("USER",$username);
