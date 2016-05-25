@@ -1,4 +1,5 @@
 <?php
+
 require_once("config.php");
 //Inicio de la sesion
 session_start();
@@ -16,6 +17,7 @@ if(($nombre == 'admin')&&($clave == 12345)){
   	header('Location: ../principal.php');
 }else{
   $_SESSION['ingreso'] = false;
-  echo 'Error al conectar, verifique usuario y contrasenia';
+  echo 'Error al conectar, verifique usuario y contraseña';
 }
+
 ?>
