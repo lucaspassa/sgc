@@ -139,7 +139,7 @@ IF NOT EXISTS proveedores(
 
 
 CREATE TABLE
-IF NOT EXISTS venta(
+IF NOT EXISTS ingreso(
 	idProducto INT(10) NOT NULL  ,
 	idCliente INT(10) NOT NULL  ,
 	cantidad INT(10) NOT NULL  ,
@@ -149,7 +149,7 @@ IF NOT EXISTS venta(
 );
 
 CREATE TABLE
-IF NOT EXISTS compra(
+IF NOT EXISTS egreso(
 	idProveedor INT(10) NOT NULL  ,
 	idProducto INT(10) NOT NULL  ,
 	nroCompra INT(10) NOT NULL  ,
@@ -171,22 +171,22 @@ IF NOT EXISTS tipoComprobante(
 # CREACION DE LLAVES COMPUESTAS
 
 
-ALTER TABLE venta
+ALTER TABLE ingreso
  ADD PRIMARY KEY(idProducto , idCliente) ,
  ADD KEY idProdRestriccion (idProducto) ,
  ADD KEY idClienteRestriccion (idCliente);
 
-ALTER TABLE compra 
+ALTER TABLE egreso
  ADD PRIMARY KEY(idProveedor , idProducto) ,
  ADD KEY idProveedorRestriccion (idProveedor) ,
  ADD KEY idProdCompraRestriccion (idProducto);
 
 # RESTRICCION PARA ACTUALIZACION EN CASCADA Y EVITAR BORRADO DE LLAVES RELACIONADAS
 
-ALTER TABLE compra
+ALTER TABLE egreso
  ADD CONSTRAINT idProveedorRestriccion FOREIGN KEY (idProveedor) REFERENCES proveedores (idProveedor) ON UPDATE CASCADE,
  ADD CONSTRAINT idProdCompraRestriccion FOREIGN KEY (idProducto) REFERENCES productos (idProducto) ON UPDATE CASCADE;
 
-ALTER TABLE venta
+ALTER TABLE ingreso
  ADD CONSTRAINT idProdRestriccion FOREIGN KEY (idProducto) REFERENCES productos (idProducto) ON UPDATE CASCADE,
  ADD CONSTRAINT idClienteRestriccion FOREIGN KEY (idCliente) REFERENCES clientes(idCliente) ON UPDATE CASCADE;
