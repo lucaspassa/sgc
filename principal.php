@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 <?php
 require_once("inc/validar.php");
 include "menu.php"; ?>
+=======
 
+<?php 
+>>>>>>> 87b1c987325391cc3f4e9cfcf9bfc72ded25cd14
+
+include ('inc/menu.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,10 +43,7 @@ include "menu.php"; ?>
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1>Panel Central</h1>
-                <ul class="list-unstyled">
-                    <li>Sistema de Gestión</li>
-                    <li>Version 1.0</li>
-                </ul>
+                
             </div>
         </div>
         <!-- /.row -->
