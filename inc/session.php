@@ -1,6 +1,5 @@
 <?php
-
-require_once("config.php");
+require_once("conexiondb.php");
 //Inicio de la sesion
 session_start();
 
@@ -8,10 +7,15 @@ session_start();
 $nombreU = $_POST['user'];
 $clave = $_POST['password'];
 
+// Buscar usuarios en la base de datos
+$usuario = mysqli_query($conexion,"SELECT * FROM usuarios WHERE nombreUsuario = '$nombreU' AND clave = '$clave'");
+$usuario = mysqli_fetch_array($usuario);
+
+
 //Hago la validacion para ver si el usuario existe
-if(($nombreU == 'admin')&&($clave == '12345')){
+if(($nombreU == $usuario['nombreUsuario'])&&($clave == $usuario['clave'])){
     $_SESSION['nombre'] = $nombreU;
-    $_SESSION['permiso'] = 1;//Aca deberia tomar los permisos de la base de datos
+    $_SESSION['permiso'] = $usuario['idRol'];//Aca deberia tomar los permisos de la base de datos
     $_SESSION['entrar'] = true;
     echo 'Bievenido';
   	header('Location: ../principal.php');

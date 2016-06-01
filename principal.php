@@ -1,11 +1,11 @@
-<<<<<<< HEAD
+
 <?php
 require_once("inc/validar.php");
 include "menu.php"; ?>
-=======
 
-<?php 
->>>>>>> 87b1c987325391cc3f4e9cfcf9bfc72ded25cd14
+
+<?php
+
 
 include ('inc/menu.php');
 
@@ -43,7 +43,7 @@ include ('inc/menu.php');
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1>Panel Central</h1>
-                
+
             </div>
         </div>
         <!-- /.row -->
