@@ -48,7 +48,7 @@
         <li><a href="producto_consulta.php">Consultar</a></li>
         </ul>
     </li>
-	
+
 	  <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Caja<span class="caret"></span></a>
       <ul class="dropdown-menu">
@@ -71,7 +71,8 @@
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Permisos<span class="caret"></span></a>
       <ul class="dropdown-menu">
-        <li><a href="permisos.php">Consultar</a></li>
+        <li><a href="permiso_alta.php">Nuevo</a></li>
+        <li><a href="permiso_consulta.php">Consultar</a></li>
         </ul>
     </li>
 

@@ -1,15 +1,11 @@
-
 <?php
-require_once("inc/validar.php");
-include "inc/menu.php"; ?>
+include "inc/menu.php";
+include "inc/conexiondb.php";
 
+$permisos = mysqli_query($conexion,"SELECT * FROM permisos");
 
-<?php
+ ?>
 
-
-include ('inc/menu.php');
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +17,7 @@ include ('inc/menu.php');
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Sistema de Gestión</title>
+    <title> Permisos </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -32,21 +28,38 @@ include ('inc/menu.php');
         padding-top: 70px;
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
+    .btn {
+        margin-top: 10px;
+    }
     </style>
 
 </head>
 
 <body>
+
     <!-- Page Content -->
     <div class="container">
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>Panel Central</h1>
-
+                <h1> Permisos </h1>
             </div>
         </div>
         <!-- /.row -->
+
+
+    <form name="form1" method="post" action="ver_permisos.php">
+      <select class="form-control" name="rol">
+        <option value=""></option>
+        <?php while($permisosArr = mysqli_fetch_array($permisos)){ ?>
+          <option><?php echo $permisosArr['codigoPermiso']; ?></option>
+        <?php } ?>
+      </select>
+        <button type="submit" class="btn btn-primary">Ver permisos</button>
+  </form>
+
+
+
     </div>
     <!-- /.container -->
 
