@@ -1,5 +1,9 @@
 
+<?php 
 
+include ('inc/menu.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,10 +40,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1>Panel Central</h1>
-                <ul class="list-unstyled">
-                    <li>Sistema de Gestión</li>
-                    <li>Version 1.0</li>
-                </ul>
+                
             </div>
         </div>
         <!-- /.row -->
