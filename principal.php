@@ -1,6 +1,4 @@
-<?php
-require_once("validar.php");
-include "menu.php"; ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +27,9 @@ include "menu.php"; ?>
 </head>
 
 <body>
+  <?php
+  //require_once("validar.php");
+  include "menu.php"; ?>
     <!-- Page Content -->
     <div class="container">
 
