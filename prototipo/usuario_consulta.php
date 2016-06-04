@@ -29,10 +29,38 @@
 
     <!-- Page Content -->
      <div class="container">
+        <div class="col-lg-6">
+            <div class="input-group">
+            <input type="text" class="form-control">
+                <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Buscar</button>
+                </span>
+            </div>
+        </div>
+            
+        <a data-toggle="modal" href="#myModal" class="btn btn-danger btn-primary">Eliminar</a>
+        <a role="button" href="proveedor_modificar.php" class="btn btn-warning btn-primary">Modificar</a>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    
+                    <h3>&#191;Realmente desea eliminar los clientes seleccionados?</h3>
+                </div>
+        
+                <div class="modal-footer">
+                    <button id="edit-form"  data-id-mutual="" class="btn btn-primary">Eliminar</button>
+                    <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+                </div>
+                </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+        </div><!-- /.modal --> 
+        
         <div class="jumbotron">
-            <div class="row">
+            <div class="table-responsive">
                 <table class="table table-hover">
                     <thead>
+                        <th> <input type="checkbox" value=""></th>
                         <th> Nombre y Apellido </th>
                         <th> Nombre de usuario </th>
                         <th> Clave </th>
@@ -47,11 +75,6 @@
                             <td> abcde1234 </td>
                             <td> Administrador </td>
                             <td> groberto@gmail.com</td>
-                            <td>
-                              <a href="editar_producto.php" role="button"><span class="glyphicon glyphicon-pencil" id="colorGlypiconEdit" aria-hidden="true"></span></a>
-                              <a href="imprimir_producto.php" role="button"><span class="glyphicon glyphicon-print" id="colorGlypiconPrint" aria-hidden="true"></span></a>
-                              <a href="eliminar_producto.php" role="button"><span class="glyphicon glyphicon-trash" id="colorGlypiconDelete" aria-hidden="true"></span></a>
-                            </td>
                         </tr>
 
                         <tr class="success">
@@ -60,11 +83,6 @@
                             <td> abcde98 </td>
                             <td> Supervisor </td>
                             <td> ggutierrez@gmail.com</td>
-                            <td>
-                              <a href="editar_producto.php" role="button"><span class="glyphicon glyphicon-pencil" id="colorGlypiconEdit" aria-hidden="true"></span></a>
-                              <a href="imprimir_producto.php" role="button"><span class="glyphicon glyphicon-print" id="colorGlypiconPrint" aria-hidden="true"></span></a>
-                              <a href="eliminar_producto.php" role="button"><span class="glyphicon glyphicon-trash" id="colorGlypiconDelete" aria-hidden="true"></span></a>
-                            </td>
                         </tr>  
                     </tbody>
                 </table>
