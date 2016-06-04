@@ -1,4 +1,4 @@
-<?php include "menu.php" ?>
+<?php include "inc/menu.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,18 +39,18 @@
         <!-- /.row -->
 
 
-    <form action="usuario_consulta.php">
+    <form action="usuario_guardar.php" method="POST" >
         <div class="form-group">
             <label for="exampleInputPassword1">Nombre de usuario</label>
-            <input type="text" class="form-control" id="exampleInputPassword1">
+            <input type="text" class="form-control" id="exampleInputPassword1" name="nombre_usuario">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Clave</label>
-            <input type="text" class="form-control" id="exampleInputPassword1">
+            <input type="text" class="form-control" id="exampleInputPassword1" name="clave">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Fecha Alta</label>
-            <input type="email" class="form-control" id="exampleInputPassword1">
+            <input type="text" class="form-control" id="exampleInputPassword1" name="fecha_alta">
         </div>
         
         <fieldset class="form-group">
@@ -63,7 +63,6 @@
             </select>
         </fieldset>
 
-        
         <button type="submit" class="btn btn-primary">Registrar</button>
 
        
