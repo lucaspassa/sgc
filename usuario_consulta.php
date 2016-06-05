@@ -64,7 +64,7 @@
                                 <?php echo $row['fechaAlta'];?>
                             </td>
                             <td>
-                                <a href="modificar.php?id=<?php echo $row['idUsuario'];?>">Modificar</a>
+                                <a href="usuario_mod.php?id=<?php echo $row['idUsuario'];?>">Modificar</a>
                             </td>
                             <td>
                                 <a href="eliminar.php?id=<?php echo $row['idUsuario'];?>">Eliminar</a>
