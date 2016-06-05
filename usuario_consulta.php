@@ -1,4 +1,11 @@
-<?php include "inc/menu.php" ?>
+<?php 
+    include "inc/menu.php" ;
+    require('inc/conexiondb.php');
+
+    $query="SELECT idUsuario,nombreUsuario,clave,fechaAlta from usuarios ";
+    $resultado = mysqli_query($conexion,$query);
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,39 +41,39 @@
             <div class="row">
                 <table class="table table-hover">
                     <thead>
-                        <th> Nombre y Apellido </th>
-                        <th> Nombre de usuario </th>
-                        <th> Clave </th>
-                        <th> Rol </th>
-                        <th> Email </th>
+                        
+                        <tr>
+                            <td><b>Nombre de Usuario</b></td>
+                            <td><b>Clave</b></td>
+                            <td><b>Fecha de Alta</b></td>
+                            <td></td>
+                        </tr>
+                       
                         
                     </thead>
                     <tbody>
-                        <tr class="success">
-                            <td> Roberto Gonzalez </td>
-                            <td> groberto </td>
-                            <td> abcde1234 </td>
-                            <td> Administrador </td>
-                            <td> groberto@gmail.com</td>
+                        <?php while($row=$resultado->fetch_assoc()){ ?>
+                        <tr>
                             <td>
-                              <a href="editar_producto.php" role="button"><span class="glyphicon glyphicon-pencil" id="colorGlypiconEdit" aria-hidden="true"></span></a>
-                              <a href="imprimir_producto.php" role="button"><span class="glyphicon glyphicon-print" id="colorGlypiconPrint" aria-hidden="true"></span></a>
-                              <a href="eliminar_producto.php" role="button"><span class="glyphicon glyphicon-trash" id="colorGlypiconDelete" aria-hidden="true"></span></a>
+                                <?php echo $row['nombreUsuario'];?>
                             </td>
-                        </tr>
+                            <td>
+                                <?php echo $row['clave'];?>
+                            </td>
+                            <td>
+                                <?php echo $row['fechaAlta'];?>
+                            </td>
+                            <td>
+                                <a href="modificar.php?id=<?php echo $row['idUsuario'];?>">Modificar</a>
+                            </td>
+                            <td>
+                                <a href="eliminar.php?id=<?php echo $row['idUsuario'];?>">Eliminar</a>
+                            </td>
 
-                        <tr class="success">
-                            <td> Gaston Gutierrez </td>
-                            <td> ggutierrez </td>
-                            <td> abcde98 </td>
-                            <td> Supervisor </td>
-                            <td> ggutierrez@gmail.com</td>
-                            <td>
-                              <a href="editar_producto.php" role="button"><span class="glyphicon glyphicon-pencil" id="colorGlypiconEdit" aria-hidden="true"></span></a>
-                              <a href="imprimir_producto.php" role="button"><span class="glyphicon glyphicon-print" id="colorGlypiconPrint" aria-hidden="true"></span></a>
-                              <a href="eliminar_producto.php" role="button"><span class="glyphicon glyphicon-trash" id="colorGlypiconDelete" aria-hidden="true"></span></a>
-                            </td>
                         </tr>
+                    <?php } ?>
+
+                        
                         
                     </tbody>
                 </table>
@@ -85,3 +92,5 @@
 </body>
 
 </html>
+
+
