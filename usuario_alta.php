@@ -50,16 +50,16 @@
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Fecha Alta</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="fecha_alta">
+            <input type="date" class="form-control" id="exampleInputPassword1" name="fecha_alta">
         </div>
         
         <fieldset class="form-group">
             <label for="exampleSelect1">Seleccionar Rol</label>
-            <select class="form-control" id="exampleSelect1">
-            <option>Administrador</option>
-            <option>Supervisor</option>
-            <option>Ventas</option>
-            <option>Deposito</option>
+            <select class="form-control" name="tipo_rol">
+            <option value="1">Administrador</option>
+            <option value="2">Supervisor</option>
+            <option value="3">Ventas</option>
+            <option value="4">Deposito</option>
             </select>
         </fieldset>
 

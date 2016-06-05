@@ -6,8 +6,9 @@
 	$nombre_usuario=$_POST['nombre_usuario'];
 	$clave_usuario=$_POST['clave'];
 	$fecha_alta=$_POST['fecha_alta'];
+	$tipo_rol=$_POST['tipo_rol'];
 
-	$query="INSERT INTO usuarios (nombreUsuario, clave, fechaAlta) VALUES ('$nombre_usuario','$clave_usuario','$fecha_alta')";
+	$query="INSERT INTO usuarios (nombreUsuario, clave, fechaAlta, idRol) VALUES ('$nombre_usuario','$clave_usuario','$fecha_alta','$tipo_rol')";
 	
 	$resultado = mysqli_query($conexion,$query);
 	
