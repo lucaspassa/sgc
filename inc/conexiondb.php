@@ -6,7 +6,7 @@ $conexion = mysqli_connect($servername, $username,$password,$database);
 if($conexion == false) {
  echo 'Ha habido un error <br>';
 } else {
- echo 'Conectado a la base de datos';
+ //echo 'Conectado a la base de datos';
 }
 
 ?>
