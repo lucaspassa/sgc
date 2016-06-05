@@ -6,9 +6,9 @@
 	$usuario=$_POST['nombre_usuario'];
 	$clave=$_POST['clave'];
 	$fecha=$_POST['fecha_alta'];
-	
-	$query="UPDATE usuarios SET nombreUsuario='$usuario', clave='$clave', fechaAlta='$fecha' WHERE idUsuario='$id'";
-	
+	$tipo_rol=$_POST['tipo_rol'];
+
+	$query="UPDATE usuarios SET nombreUsuario='$usuario', clave='$clave', fechaAlta='$fecha',idRol='$tipo_rol' WHERE idUsuario='$id'";
 	$resultado = mysqli_query($conexion,$query);
 	
 ?>
