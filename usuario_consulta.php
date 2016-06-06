@@ -67,7 +67,7 @@
                                 <a href="usuario_mod.php?id=<?php echo $row['idUsuario'];?>">Modificar</a>
                             </td>
                             <td>
-                                <a href="eliminar.php?id=<?php echo $row['idUsuario'];?>">Eliminar</a>
+                                <a href="usuario_eliminar.php?id=<?php echo $row['idUsuario'];?>">Eliminar</a>
                             </td>
 
                         </tr>
