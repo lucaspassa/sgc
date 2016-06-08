@@ -1,4 +1,14 @@
-<?php include "menu.php" ?>
+<?php 
+    include "inc/menu.php" ;
+    require('inc/conexiondb.php');
+
+    $query="SELECT idCliente,nombre,apellido,razonSocial,categoria,dni,cuit,direccion,telefono,correo from clientes ";
+    $resultado = mysqli_query($conexion,$query);
+
+?>
+
+
+<?php include "inc/menu.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,6 +75,7 @@
                             <th> Nombre </th>
                             <th> Apellido </th>
                             <th> Razon Social </th>
+                            <th>Categoria</th>
                             <th> Dni </th>
                             <th> Cuit </th>
                             <th> Dirección </th>
@@ -72,26 +83,45 @@
                             <th> Email </th>
                         </thead>
                         <tbody>
-                            <tr class="success">
-                                <td> Roberto </td>
-                                <td> Gonzalez</td>
-                                <td> Roberto Gonzalez</td>
-                                <td> 4587982</td>
-                                <td> 2045879829 </td>
-                                <td> Mitre 230</td>
-                                <td> 2944768745 </td>
-                                <td> gonzalezroberto@gmail.com </td>
-                            </tr>
-                            <tr class="success">
-                                <td> Fernando </td>
-                                <td> Torres </td>
-                                <td> Fernando Torres</td>
-                                <td> 56987345</td>
-                                <td> 20569873459 </td>
-                                <td> Gallardo 700</td>
-                                <td> 2944875634 </td>
-                                <td> fernandotorres@gmail.com </td>
-                            </tr>
+                            <?php while($row=$resultado->fetch_assoc()){ ?>
+                            <tr>
+                            <td>
+                                <?php echo $row['nombre'];?>
+                            </td>
+                            <td>
+                                <?php echo $row['apellido'];?>
+                            </td>
+                            <td>
+                                <?php echo $row['razonSocial'];?>
+                            </td>
+                            <td>
+                                <?php echo $row['categoria'];?>
+                            </td>
+                            <td>
+                                <?php echo $row['dni'];?>
+                            </td>
+                            <td>
+                                <?php echo $row['cuit'];?>
+                            </td>
+                            <td>
+                                <?php echo $row['direccion'];?>
+                            </td>
+                            <td>
+                                <?php echo $row['telefono'];?>
+                            </td>
+                            <td>
+                                <?php echo $row['correo'];?>
+                            </td>
+                            <td>
+                                <a href="cliente_mod.php?id=<?php echo $row['idCliente'];?>">Modificar</a>
+                            </td>
+                            <td>
+                                <a href="cliente_eliminar.php?id=<?php echo $row['idCliente'];?>">Eliminar</a>
+                            </td>
+
+                        </tr>
+                    <?php } ?>
+                            
                         </tbody>
                     </table>
                 </div>
