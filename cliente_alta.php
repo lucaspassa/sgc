@@ -1,4 +1,4 @@
-<?php include "menu.php" ?>
+<?php include "inc/menu.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,38 +39,42 @@
         <!-- /.row -->
 
 
-    <form action="cliente_consulta.php">
+    <form action="cliente_guardar.php" method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">Nombre</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ej: Juan">
+            <input type="text" class="form-control" id="exampleInputEmail1" name="nombre">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Apellido</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ej: Perez">
+            <input type="text" class="form-control" id="exampleInputPassword1" name="apellido">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Razon Social</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ej: JuanPerez">
+            <input type="text" class="form-control" id="exampleInputPassword1" name="razon_social" >
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Categoria</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" name="categoria">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Dni</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ej: 34768958">
+            <input type="text" class="form-control" id="exampleInputPassword1" name="dni">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Cuit</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ej: 20347689589">
+            <input type="text" class="form-control" id="exampleInputPassword1" name="cuit">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Dirección</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ej: Av Bustillo km 10">
+            <input type="text" class="form-control" id="exampleInputPassword1" name="direccion" >
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Telefono</label>
-            <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Ej: 2944768798">
+            <input type="tel" class="form-control" id="exampleInputPassword1" name="telefono" >
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Email</label>
-            <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Ej: juanperez@gmail.com">
+            <label for="exampleInputPassword1">Correo Electronico</label>
+            <input type="email" class="form-control" id="exampleInputPassword1" name="correo">
         </div>
         <button type="submit" class="btn btn-primary">Registrar</button>
   </form>
