@@ -1,4 +1,10 @@
-<?php include "menu.php" ?>
+<?php
+include "inc/menu.php";
+include "inc/conexiondb.php";
+
+$permisos = mysqli_query($conexion,"SELECT * FROM permisos");
+
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,24 +52,22 @@
         <!-- /.row -->
 
 
-    <form action="roles_consulta.php">
+    <form method="post" action="insert_rol.php">
         <div class="form-group">
             <label for="exampleInputEmail1">Tipo de rol</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ej: Administrador">
+            <input name="rol" type="text" class="form-control" id="rol" placeholder="Ej: Administrador">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Descripcion</label>
-            <textarea type="text-area" class="form-control" id="exampleInputPassword1" placeholder=""></textarea> 
+            <textarea name="descripcion" type="text-area" class="form-control" id="descripcion" placeholder="Ej: Que tipos de permisos tiene el csm"></textarea>
         </div>
         <fieldset>
                 <label for="exampleInputEmail1">Permisos</label><br/>
-                        <input type="checkbox" name="rol" value="" />Permiso1<br />
-                        <input type="checkbox" name="rol" value="" />Permiso2<br />
-                        <input type="checkbox" name="rol" value="" />Permiso3<br />
-                        <input type="checkbox" name="rol" value="" />Permiso4<br />
-                        
+                  <?php while($permisosArr = mysqli_fetch_array($permisos)){?>
+                        <input type="checkbox" name="rol" value="<?php echo $permisosArr['codigoPermisos'];?>"/> <?php echo $permisosArr['descripcion']; ?><br />
+                  <?php } ?>
         </fieldset>
-        
+
         <button type="submit" class="btn btn-primary">Agregar rol</button>
   </form>
 
