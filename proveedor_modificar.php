@@ -1,4 +1,18 @@
-<?php include "menu.php" ?>
+<?php
+    include "inc/menu.php";
+    require('inc/conexiondb.php');
+    
+    $id=$_GET['id'];
+    
+    $query="SELECT idProveedor,nombreContacto,razonSocial,cuit,direccion,telefono,correo,categoria from proveedores WHERE idProveedor='$id'";
+    
+    
+    
+    $resultado = mysqli_query($conexion,$query);
+    
+    $row=$resultado->fetch_assoc();
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +25,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Modificar proveedores</title>
+    <title>Alta de Cliente</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -33,42 +47,45 @@
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>Modificar proveeedor</h1>
+                <h1>Modificar proveedor</h1>
             </div>
         </div>
         <!-- /.row -->
 
 
-    <form>
+    <form action="proveedor_modificar.php" method="POST">
+
+        <tr>
+            <input type="hidden" name="idCliente" value="<?php echo $id; ?>">
+        </tr>
+
         <div class="form-group">
-            <label for="exampleInputEmail1">Razon Social</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="MegaInfoMaxPowerQuadCore">
+            <label for="exampleInputPassword1">Razon Social</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" value="<?php echo $row['razonSocial']; ?>" name="razon_social" >
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Nombre Contacto</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Zambatruli Gimenez">
+            <label for="exampleInputPassword1">Nombre de Contacto</label>
+            <input type="text" class="form-control" id="exampleInputPassword1"  value="<?php echo $row['nombreContacto']; ?>" name="categoria">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Cuit</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="30-9990876123-1">
+            <input type="text" class="form-control" id="exampleInputPassword1" value="<?php echo $row['cuit']; ?>" name="cuit">
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Direccion</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Av. San Martin 567">
+            <label for="exampleInputPassword1">Dirección</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" value="<?php echo $row['direccion']; ?>" name="direccion" >
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Telefono</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="5676543320">
+            <input type="tel" class="form-control" id="exampleInputPassword1" value="<?php echo $row['telefono']; ?>" name="telefono" >
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Email</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="campus@capacitas.com">
+            <label for="exampleInputPassword1">Correo Electronico</label>
+            <input type="email" class="form-control" id="exampleInputPassword1" value="<?php echo $row['correo']; ?>" name="correo">
         </div>
-        <button type="submit" class="btn btn-primary">Guardar</button>
-        <button type="reset" class="btn btn-primary">Borrar</button>
-        <button> <a href="proveedor_consulta.php" role="button"  class="btn btn-primary"> Cancelar </a> </button>
-        
+        <button type="submit" class="btn btn-primary">Modificar</button>
   </form>
+
 
 
 

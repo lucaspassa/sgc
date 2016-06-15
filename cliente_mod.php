@@ -4,7 +4,7 @@
 	
 	$id=$_GET['id'];
 	
-	$query="SELECT nombre, apellido, razonSocial, categoria, dni, cuit, direccion, telefono, correo FROM clientes WHERE idCliente='$id'";
+	$query="SELECT idProveedor,nombreContacto,razonSocial,cuit,direccion,telefono,correo,categoria FROM proveedores WHERE idProveedor='$id'";
 	
 	
 	
@@ -25,7 +25,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Alta de Cliente</title>
+    <title>Alta de Proveedor</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">

@@ -1,4 +1,4 @@
-<?php include "menu.php" ?>
+<?php include "inc/menu.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,31 +39,32 @@
         <!-- /.row -->
 
 
-    <form>
+    <form action="proveedor_guardar.php" method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">Razon Social</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="MegaInfoMaxPowerQuadCore">
+            <input type="text" class="form-control" id="exampleInputEmail1" name="razon_social">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Nombre Contacto</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Zambatruli Gimenez">
+            <input type="text" class="form-control" id="exampleInputPassword1" name="nombre_contacto">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Cuit</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="30-9990876123-1">
+            <input type="text" class="form-control" id="exampleInputPassword1" name="cuit">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Direccion</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Av. San Martin 567">
+            <input type="text" class="form-control" id="exampleInputPassword1" name="direccion">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Telefono</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="5676543320">
+            <input type="text" class="form-control" id="exampleInputPassword1" name="telefono">
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Email</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="campus@capacitas.com">
+            <label for="exampleInputPassword1">Correo</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" name="correo">
         </div>
+
         <button type="submit" class="btn btn-primary">Registrar</button>
   </form>
 

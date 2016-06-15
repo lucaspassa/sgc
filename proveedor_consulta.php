@@ -1,4 +1,14 @@
-<?php include "menu.php" ?>
+<?php 
+    include "inc/menu.php" ;
+    require('inc/conexiondb.php');
+
+    $query="SELECT idProveedor,nombreContacto,razonSocial,cuit,direccion,telefono,correo,categoria from proveedores";
+    $resultado = mysqli_query($conexion,$query);
+
+?>
+
+
+<?php include "inc/menu.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,16 +60,10 @@
             </div>
         </div>-->
         <div class="col-lg-6">
-            <div class="input-group">
-            <input type="text" class="form-control">
-                <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Buscar</button>
-                </span>
-            </div>
+            
         </div>
             
-        <a data-toggle="modal" href="#myModal" class="btn btn-danger btn-primary">Eliminar</a>
-        <a role="button" href="proveedor_modificar.php" class="btn btn-warning btn-primary">Modificar</a>
+        
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -82,20 +86,49 @@
             <div class="row">
               <table class="table table-hover">
                   <thead>
-                        <th> <input type="checkbox" value=""></th>
-                        <th> Nombre </th>
-                        <th> Direccion </th>
-                        <th> Telefono </th>
-                        <th> Correo </th>
+                       
+                        <tr>
+                            <td><b>Razon social</b></td>
+                            <td><b>Contacto</b></td>
+                            <td><b>Cuit</b></td>
+                            <td><b>Direccion</b></td>
+                            <td><b>Telefono</b></td>
+                            <td><b>Email</b></td>    
+                            <td></td>
+                        </tr>
                     </thead>
                     <tbody>
-                        <tr class="success">
-                            <td><input type="checkbox" value=""></td>
-                            <td> Matias </td>
-                            <td> En mi casa </td>
-                            <td> 2944655052 </td>
-                            <td> matute@micorreo.com.ar </td>
+                        <?php while($row=$resultado->fetch_assoc()){ ?>
+                        <tr>
+                            <td>
+                                <?php echo $row['razonSocial'];?>
+                            </td>
+                            <td>
+                                <?php echo $row['nombreContacto'];?>
+                            </td>
+                            <td>
+                                <?php echo $row['cuit'];?>
+                            </td>
+                            <td>
+                                <?php echo $row['direccion'];?>
+                            </td>
+                            <td>
+                                <?php echo $row['telefono'];?>
+                            </td>
+                            <td>
+                                <?php echo $row['correo'];?>
+                            </td>
+                            <td>
+                                <a href="proveedor_modificar.php?id=<?php echo $row['idProveedor'];?>">Modificar</a>
+                            </td>
+                            <td>
+                                <a href="proveedor_eliminar.php?id=<?php echo $row['idProveedor'];?>">Eliminar</a>
+                            </td>
+
                         </tr>
+                    <?php } ?>
+
+
                     </tbody>    
         </table>
 

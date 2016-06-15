@@ -40,32 +40,7 @@
 
     <!-- Page Content -->
      <div class="container">
-        <div class="col-lg-6">
-            <div class="input-group">
-            <input type="text" class="form-control">
-                <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Buscar</button>
-                </span>
-            </div>
-        </div>
-            
-        <a data-toggle="modal" href="#myModal" class="btn btn-danger btn-primary">Eliminar</a>
-        <a role="button" href="proveedor_modificar.php" class="btn btn-warning btn-primary">Modificar</a>
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                    
-                    <h3>&#191;Realmente desea eliminar los clientes seleccionados?</h3>
-                </div>
         
-                <div class="modal-footer">
-                    <button id="edit-form"  data-id-mutual="" class="btn btn-primary">Eliminar</button>
-                    <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Cancelar</button>
-                </div>
-                </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->    
 
             <div class="jumbotron">
             
@@ -116,8 +91,24 @@
                                 <a href="cliente_mod.php?id=<?php echo $row['idCliente'];?>">Modificar</a>
                             </td>
                             <td>
-                                <a href="cliente_eliminar.php?id=<?php echo $row['idCliente'];?>">Eliminar</a>
-                            </td>
+                                
+                                <a data-toggle="modal" href="#myModal1" >Eliminar</a>      
+                                </td>
+                                <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    
+                    <h3>&#191;Realmente desea eliminar los clientes seleccionados?</h3>
+                </div>
+                <div class="modal-footer">  
+                    <a data-toggle="modal" href="cliente_eliminar.php?id=<?php echo $row['idCliente'];?>">Eliminar</button>
+                    <a data-toggle="modal" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+                </div>
+                </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+        </div>
+                            
 
                         </tr>
                     <?php } ?>

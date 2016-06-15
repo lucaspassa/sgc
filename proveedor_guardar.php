@@ -1,13 +1,25 @@
 <?php 
-	include "inc/menu.php";
+	
 	require('inc/conexiondb.php');
 	
-	$id=$_GET['id'];
-	
-	$query="DELETE FROM proveedores WHERE idProveedor='$id'";
+	$razon_social=$_POST['razon_social'];
+	$nombre_contacto=$_POST['nombre_contacto'];
+	$cuit=$_POST['cuit'];
+	$direccion=$_POST['direccion'];
+	$telefono=$_POST['telefono'];
+	$correo=$_POST['correo'];
+
+	$query="INSERT INTO proveedores (razonSocial, cuit, nombreContacto, direccion, telefono, correo) VALUES ('$razon_social','$cuit','$nombre_contacto','$direccion','$telefono','$correo')";
 	
 	$resultado = mysqli_query($conexion,$query);
 	
+?>
+
+<?php
+
+
+include ('inc/menu.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +32,7 @@
 	    <meta name="description" content="">
 	    <meta name="author" content="">
 
-	    <title>Eliminar Proveedores</title>
+	    <title>Guardar Proveedores</title>
 
 	    <!-- Bootstrap Core CSS -->
 	    <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -39,21 +51,16 @@
 			<center>	
 				
 				<?php if($resultado>0){ ?>
-					<h1>Cliente eliminado</h1>
-					<?php
-					header ("Location: proveedor_consulta.php");
-
-					 }else{ ?>
-					<h1>Error al eliminar el proveedor/h1>		
+					<h1>Proveedor Guardado</h1>
+					<?php }else{ ?>
+					<h1>Error al Guardar Proveedor</h1>		
 				<?php	} ?>		
 			
-			</center>	
+			</center>
 	</body>
 	<script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"><
+    <script src="js/bootstrap.min.js"></script>
 
-</script>
-
-</html>	
+</html>
