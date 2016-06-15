@@ -54,7 +54,7 @@ $permisos = mysqli_query($conexion,"SELECT * FROM permisos");
 
     <form method="post" action="insert_rol.php">
         <div class="form-group">
-            <label for="exampleInputEmail1">Tipo de rol</label>
+            <label >Tipo de rol</label>
             <input name="rol" type="text" class="form-control" id="rol" placeholder="Ej: Administrador">
         </div>
         <div class="form-group">
@@ -64,7 +64,7 @@ $permisos = mysqli_query($conexion,"SELECT * FROM permisos");
         <fieldset>
                 <label for="exampleInputEmail1">Permisos</label><br/>
                   <?php while($permisosArr = mysqli_fetch_array($permisos)){?>
-                        <input type="checkbox" name="rol" value="<?php echo $permisosArr['codigoPermisos'];?>"/> <?php echo $permisosArr['descripcion']; ?><br />
+                        <input type="checkbox" name="permisos" value="<?php echo $permisosArr['codigoPermiso'];?>"/> <?php echo $permisosArr['descripcion']; ?><br />
                   <?php } ?>
         </fieldset>
 

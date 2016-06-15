@@ -1,4 +1,11 @@
-<?php include "inc/menu.php" ?>
+<?php
+include "inc/menu.php";
+include "inc/conexiondb.php";
+
+$roles = mysqli_query($conexion,"SELECT * FROM roles");
+
+
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,15 +46,17 @@
                         <th> Acciones </th>
                     </thead>
                     <tbody>
+                      <?php while($rolesArr = mysqli_fetch_array($roles)){ ?>
                         <tr class="success">
-                            <td> Administrador </td>
-                            <td> Control total sobre el sistema</td>
+                            <td><?php echo $rolesArr['nombreRol']; ?></td>
+                            <td> <?php echo $rolesArr['descripcion']; ?></td>
                             <td>
                               <a href="editar_producto.php" role="button"><span class="glyphicon glyphicon-pencil" id="colorGlypiconEdit" aria-hidden="true"></span></a>
                               <a href="imprimir_producto.php" role="button"><span class="glyphicon glyphicon-print" id="colorGlypiconPrint" aria-hidden="true"></span></a>
                               <a href="eliminar_producto.php" role="button"><span class="glyphicon glyphicon-trash" id="colorGlypiconDelete" aria-hidden="true"></span></a>
                             </td>
                         </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>
