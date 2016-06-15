@@ -119,7 +119,7 @@
                                 <?php echo $row['correo'];?>
                             </td>
                             <td>
-                                <a href="proveedor_modificar.php?id=<?php echo $row['idProveedor'];?>">Modificar</a>
+                                <a href="proveedor_mod.php?id=<?php echo $row['idProveedor'];?>">Modificar</a>
                             </td>
                             <td>
                                 <a href="proveedor_eliminar.php?id=<?php echo $row['idProveedor'];?>">Eliminar</a>

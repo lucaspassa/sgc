@@ -9,7 +9,7 @@
 	$telefono=$_POST['telefono'];
 	$correo=$_POST['correo'];
 
-	$query="INSERT INTO proveedores (razonSocial, cuit, nombreContacto, direccion, telefono, correo) VALUES ('$razon_social','$cuit','$nombre_contacto','$direccion','$telefono','$correo')";
+	$query="INSERT INTO proveedores (razonSocial, nombreContacto, cuit, direccion, telefono, correo) VALUES ('$razon_social','$nombre_contacto','$cuit','$direccion','$telefono','$correo')";
 	
 	$resultado = mysqli_query($conexion,$query);
 	
