@@ -40,11 +40,13 @@
 
     <!-- Page Content -->
      <div class="container">
-        
-
-            <div class="jumbotron">
-            
-                <div class="row">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Lista de Clientes</h1>
+            </div>
+        </div>
+        <div class="jumbotron">
+            <div class="row">
                     <table class="table table-hover">
                         <thead>
                             <th> Nombre </th>
@@ -91,28 +93,26 @@
                                 <a href="cliente_mod.php?id=<?php echo $row['idCliente'];?>">Modificar</a>
                             </td>
                             <td>
-                                
-                                <a data-toggle="modal" href="#myModal1" >Eliminar</a>      
-                                </td>
+                                <a data-toggle="modal" href="#myModal1">Eliminar</a>      
+                            </td>
                                 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
                     
-                    <h3>&#191;Realmente desea eliminar los clientes seleccionados?</h3>
-                </div>
-                <div class="modal-footer">  
-                    <a data-toggle="modal" href="cliente_eliminar.php?id=<?php echo $row['idCliente'];?>">Eliminar</button>
-                    <a data-toggle="modal" data-dismiss="modal" aria-hidden="true">Cancelar</button>
-                </div>
-                </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-        </div>
+                                                <h3>&#191;Realmente desea eliminar los clientes seleccionados?</h3>
+                                            </div>
+                                                <div class="modal-footer">  
+                                                    <a data-toggle="modal" href="cliente_eliminar.php?id=<?php echo $row['idCliente'];?>">Eliminar</button>
+                                                        <a data-toggle="modal" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+                                                </div>
+                                            </div><!-- /.modal-content -->
+                                        </div><!-- /.modal-dialog -->
+                                    </div>
                             
 
-                        </tr>
-                    <?php } ?>
-                            
+                            </tr>
+                                 <?php } ?>
                         </tbody>
                     </table>
                 </div>

@@ -37,6 +37,11 @@
 
     <!-- Page Content -->
      <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1>Lista de Usuarios</h1>
+                </div>
+            </div>
         <div class="jumbotron">
             <div class="row">
                 <table class="table table-hover">

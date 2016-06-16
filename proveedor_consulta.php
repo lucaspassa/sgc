@@ -42,6 +42,11 @@
     <!-- Page Content -->
 
     <div class="container">
+    <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Lista de Productos</h1>
+            </div>
+        </div>
         <!-- <a data-toggle="modal" href="#example" class="btn btn-danger btn-primary">Eliminar</a>
          <a role="button" href="proveedor_modificar.php" class="btn btn-warning btn-primary">Modificar</a>
          
