@@ -7,9 +7,10 @@ if((!empty($_POST['rol'])) && (!empty($_POST['descripcion']))&& (!empty($_POST['
   $permisos = $_POST['permisos'];
 
   mysqli_query($conexion,"INSERT INTO roles (nombreRol,descripcion) VALUES ('$rol','$descripcion')");
-  $idRol = mysql_insert_id();
-  echo $idRol;
-  exit();
+  $idRol = mysqli_query($conexion,"SELECT idRol FROM roles WHERE nombreRol = '$rol'");
+  $idRol = mysqli_fetch_array($idRol);
+  $idRol = $idRol['idRol'];
+
   mysqli_query($conexion,"INSERT INTO rol_permiso (codigoPermiso,idRol) VALUES ('$permisos','$idRol')");
   header("Location: roles_consulta.php");
 
