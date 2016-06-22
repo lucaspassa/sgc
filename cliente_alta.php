@@ -77,6 +77,7 @@
             <input type="email" class="form-control" id="exampleInputPassword1" name="correo">
         </div>
         <button type="submit" class="btn btn-primary">Registrar</button>
+        
   </form>
 
 
