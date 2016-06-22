@@ -7,5 +7,4 @@ if(DEBUG == "true"){
 }else{
     ini_set('display_errors', 0);
 }
-require_once("DbManager.php");
 ?>
