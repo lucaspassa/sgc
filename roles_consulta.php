@@ -51,9 +51,9 @@ $roles = mysqli_query($conexion,"SELECT * FROM roles");
                             <td><?php echo $rolesArr['nombreRol']; ?></td>
                             <td> <?php echo $rolesArr['descripcion']; ?></td>
                             <td>
-                              <a href="editar_producto.php" role="button"><span class="glyphicon glyphicon-pencil" id="colorGlypiconEdit" aria-hidden="true"></span></a>
-                              <a href="imprimir_producto.php" role="button"><span class="glyphicon glyphicon-print" id="colorGlypiconPrint" aria-hidden="true"></span></a>
-                              <a href="eliminar_producto.php" role="button"><span class="glyphicon glyphicon-trash" id="colorGlypiconDelete" aria-hidden="true"></span></a>
+                              <a href="inc/editar_producto.php" role="button"><span class="glyphicon glyphicon-pencil" id="colorGlypiconEdit" aria-hidden="true"></span></a>
+                              <a href="inc/imprimir_producto.php" role="button"><span class="glyphicon glyphicon-print" id="colorGlypiconPrint" aria-hidden="true"></span></a>
+                              <a href="inc/eliminar_producto.php" role="button"><span class="glyphicon glyphicon-trash" id="colorGlypiconDelete" aria-hidden="true"></span></a>
                             </td>
                         </tr>
                         <?php } ?>

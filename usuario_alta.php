@@ -48,7 +48,7 @@ $roles = mysqli_query($conexion,"SELECT * FROM roles");
         <!-- /.row -->
 
 
-    <form action="usuario_guardar.php" method="POST" >
+    <form action="inc/usuario_guardar.php" method="POST" >
         <div class="form-group">
             <label for="exampleInputPassword1">Nombre de usuario</label>
             <input type="text" class="form-control" id="exampleInputPassword1" name="nombre_usuario">

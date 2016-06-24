@@ -1,4 +1,4 @@
-<?php 
+<?php
     include "inc/menu.php" ;
     require('inc/conexiondb.php');
 
@@ -46,15 +46,15 @@
             <div class="row">
                 <table class="table table-hover">
                     <thead>
-                        
+
                         <tr>
                             <td><b>Nombre de Usuario</b></td>
                             <td><b>Clave</b></td>
                             <td><b>Fecha de Alta</b></td>
                             <td></td>
                         </tr>
-                       
-                        
+
+
                     </thead>
                     <tbody>
                         <?php while($row=$resultado->fetch_assoc()){ ?>
@@ -69,17 +69,17 @@
                                 <?php echo $row['fechaAlta'];?>
                             </td>
                             <td>
-                                <a href="usuario_mod.php?id=<?php echo $row['idUsuario'];?>">Modificar</a>
+                                <a href="inc/usuario_mod.php?id=<?php echo $row['idUsuario'];?>">Modificar</a>
                             </td>
                             <td>
-                                <a href="usuario_eliminar.php?id=<?php echo $row['idUsuario'];?>">Eliminar</a>
+                                <a href="inc/usuario_eliminar.php?id=<?php echo $row['idUsuario'];?>">Eliminar</a>
                             </td>
 
                         </tr>
                     <?php } ?>
 
-                        
-                        
+
+
                     </tbody>
                 </table>
             </div>
@@ -97,5 +97,3 @@
 </body>
 
 </html>
-
-

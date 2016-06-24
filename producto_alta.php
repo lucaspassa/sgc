@@ -39,7 +39,7 @@
         <!-- /.row -->
 
 
-    <form action="producto_guardar.php" method="POST">
+    <form action="inc/producto_guardar.php" method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">Codigo</label>
             <input type="text" class="form-control" id="exampleInputEmail1" name="codigo">
@@ -60,7 +60,7 @@
             <label for="exampleInputPassword1">Precio Venta</label>
             <input type="text" class="form-control" id="exampleInputPassword1" name="precio_venta">
         </div>
-        
+
         <button type="submit" class="btn btn-primary">Cargar Producto</button>
   </form>
 

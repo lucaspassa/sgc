@@ -39,7 +39,7 @@
         <!-- /.row -->
 
 
-    <form action="proveedor_guardar.php" method="POST">
+    <form action="inc/proveedor_guardar.php" method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">Razon Social</label>
             <input type="text" class="form-control" id="exampleInputEmail1" name="razon_social">

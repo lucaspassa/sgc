@@ -39,7 +39,7 @@
         <!-- /.row -->
 
 
-    <form action="cliente_guardar.php" method="POST">
+    <form action="inc/cliente_guardar.php" method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">Nombre</label>
             <input type="text" class="form-control" id="exampleInputEmail1" name="nombre">
@@ -77,7 +77,7 @@
             <input type="email" class="form-control" id="exampleInputPassword1" name="correo">
         </div>
         <button type="submit" class="btn btn-primary">Registrar</button>
-        
+
   </form>
 
 

@@ -52,7 +52,7 @@ $permisos = mysqli_query($conexion,"SELECT * FROM permisos");
         <!-- /.row -->
 
 
-    <form method="post" action="insert_rol.php">
+    <form method="post" action="inc/insert_rol.php">
         <div class="form-group">
             <label >Tipo de rol</label>
             <input name="rol" type="text" class="form-control" id="rol" placeholder="Ej: Administrador">
