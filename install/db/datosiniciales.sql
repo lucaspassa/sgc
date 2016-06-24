@@ -1,4 +1,4 @@
---
+-- Prueba Git Otra prueba
 -- Volcado de datos para la tabla `permisos`
 --
 INSERT INTO `permisos` (`codigoPermiso`, `descripcion`) VALUES
