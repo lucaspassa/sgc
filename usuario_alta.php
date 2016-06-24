@@ -1,4 +1,11 @@
-<?php include "inc/menu.php" ?>
+<?php include "inc/menu.php";
+include "inc/conexiondb.php";
+
+$roles = mysqli_query($conexion,"SELECT * FROM roles");
+
+
+
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +22,8 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
@@ -50,22 +59,25 @@
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Fecha Alta</label>
-            <input type="date" class="form-control" id="exampleInputPassword1" name="fecha_alta">
+            <div class='input-group date' id='divMiCalendario'>
+              <input name="txtFecha" type='text' id="txtFecha" class="form-control"  readonly/>
+              <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
         </div>
-        
+
         <fieldset class="form-group">
             <label for="exampleSelect1">Seleccionar Rol</label>
             <select class="form-control" name="tipo_rol">
-            <option value="1">Administrador</option>
-            <option value="2">Supervisor</option>
-            <option value="3">Ventas</option>
-            <option value="4">Deposito</option>
+              <?php while($rolesArr = mysqli_fetch_array($roles)){ ?>
+            <option value="<?php echo $rolesArr['idRol']; ?>"><?php echo $rolesArr['nombreRol']; ?> </option>
+            <?php } ?>
             </select>
         </fieldset>
 
         <button type="submit" class="btn btn-primary">Registrar</button>
 
-       
+
   </form>
 
 
@@ -76,10 +88,20 @@
 
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <script src="js/moment.min.js"></script>
+   <script src="js/bootstrap-datetimepicker.min.js"></script>
+   <script src="js/bootstrap-datetimepicker.es.js"></script>
+   <script type="text/javascript">
+	 $('#divMiCalendario').datetimepicker({
+		  format: 'YYYY-MM-DD'
+	  });
+	  $('#divMiCalendario').data("DateTimePicker").show();
+   </script>
 </body>
 
 </html>
