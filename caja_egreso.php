@@ -39,26 +39,35 @@
         <!-- /.row -->
 
 
-    <form action="cliente_guardar.php" method="POST">
+    <form action="inc/caja_egresoguardar.php" method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">Proveedor</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="nombre">
+            <input type="text" class="form-control" id="exampleInputEmail1" name="">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Descripcion</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="apellido">
+            <input type="text" class="form-control" id="exampleInputPassword1" name="">
         </div>
         <div class="form-group">
+            <label for="exampleInputPassword1">Fecha Orden</label>
+            <div class='input-group date' id='divMiCalendario'>
+              <input name="txtFecha" type='text' id="txtFecha" class="form-control"  readonly/>
+              <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+        </div>
+
+        <div class="form-group">
             <label for="exampleInputPassword1">Cantidad</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="razon_social" >
+            <input type="text" class="form-control" id="exampleInputPassword1" name="cantidad" >
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Tipo de comprobante</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="categoria">
+            <input type="text" class="form-control" id="exampleInputPassword1" name="">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Importe</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="dni">
+            <input type="text" class="form-control" id="exampleInputPassword1" name="importe">
         </div>
         <button type="submit" class="btn btn-primary">Registrar</button>
         
@@ -72,9 +81,20 @@
 
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <script src="js/moment.min.js"></script>
+   <script src="js/bootstrap-datetimepicker.min.js"></script>
+   <script src="js/bootstrap-datetimepicker.es.js"></script>
+   <script type="text/javascript">
+	 $('#divMiCalendario').datetimepicker({
+		  format: 'YYYY-MM-DD'
+	  });
+	  $('#divMiCalendario').data("DateTimePicker").show();
+   </script>
 
 </body>
 
