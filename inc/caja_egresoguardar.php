@@ -1,13 +1,13 @@
 <?php 
 	
-	require('inc/conexiondb.php');
+	require('conexiondb.php');
 
 	$cantidad=$_POST['cantidad'];
 	$importe=$_POST['importe'];
-	$fecha_orden=$_POST['fecha_orden'];
+	
 	
 
-	$query="INSERT INTO egreso (cantidad, fecha_orden, importe) VALUES ('$cantidad','$fechaOrden','$importe')";
+	$query="INSERT INTO egreso (cantidad,importe) VALUES ('$cantidad','$importe')";
 	
 	$resultado = mysqli_query($conexion,$query);
 	
