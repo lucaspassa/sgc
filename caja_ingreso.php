@@ -1,4 +1,10 @@
-<?php include "inc/menu.php" ?>
+
+
+<?php 
+include "inc/menu.php" 
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,14 +45,56 @@
         <!-- /.row -->
 
 
-    <form action="inc/caja_egresoguardar.php" method="POST">
-        <div class="form-group">
-            <label for="exampleInputEmail1">Cliente</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="">
+    <form action="inc/caja_ingresoguardar.php" method="POST">
+       
+    <div class="form-group">
+            <label for="sel1">Cliente</label>
+            <select class="form-control" id="sel1">
+            
+                <option>Seleccione Cliente</option>
+<?php 
+$conexion=mysql_connect("localhost","root","root") or
+die("Problemas en la conexion");
+mysql_select_db("sgc",$conexion) or
+die("Problemas en la selección de la base de datos");  
+mysql_query ("SET NAMES 'utf8'");
+$clavebuscadah=mysql_query("select idCliente,nombre,apellido from clientes",$conexion) or
+die("Problemas en el select:".mysql_error());
+while($row = mysql_fetch_array($clavebuscadah))
+{
+echo'<OPTION VALUE="'.$row['idCliente'].'">'.$row['nombre'].' '.$row['apellido'].'</OPTION>';
+}
+ 
+?>
+
+
+
+            </select>
         </div>
+
         <div class="form-group">
-            <label for="exampleInputPassword1">Producto</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="">
+            <label for="sel1">Producto</label>
+            <select class="form-control" id="sel1">
+            
+                <option>Seleccione una Producto</option>
+<?php 
+$conexion=mysql_connect("localhost","root","root") or
+die("Problemas en la conexion");
+mysql_select_db("sgc",$conexion) or
+die("Problemas en la selección de la base de datos");  
+mysql_query ("SET NAMES 'utf8'");
+$clavebuscadah=mysql_query("select idProducto,descripcion from productos",$conexion) or
+die("Problemas en el select:".mysql_error());
+while($row = mysql_fetch_array($clavebuscadah))
+{
+echo'<OPTION VALUE="'.$row['idProducto'].'">'.$row['descripcion'].'</OPTION>';
+}
+ 
+?>
+
+
+
+            </select>
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Cantidad</label>
@@ -57,18 +105,35 @@
             <label for="exampleInputPassword1">Importe</label>
             <input type="text" class="form-control" id="exampleInputPassword1" name="cantidad" >
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Fecha Venta</label>
-            <div class='input-group date' id='divMiCalendario'>
-              <input name="txtFecha" type='text' id="txtFecha" class="form-control"  readonly/>
-              <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-              </span>
-            </div>
+
+
+<div class="form-group">
+            <label for="sel1">Comprobante</label>
+            <select class="form-control" id="sel1">
+            
+                <option>Seleccione una tipo</option>
+<?php 
+$conexion=mysql_connect("localhost","root","root") or
+die("Problemas en la conexion");
+mysql_select_db("sgc",$conexion) or
+die("Problemas en la selección de la base de datos");  
+mysql_query ("SET NAMES 'utf8'");
+$clavebuscadah=mysql_query("select idTipoComprobante,descripcion from tipocomprobante",$conexion) or
+die("Problemas en el select:".mysql_error());
+while($row = mysql_fetch_array($clavebuscadah))
+{
+echo'<OPTION VALUE="'.$row['idTipoComprobante'].'">'.$row['descripcion'].'</OPTION>';
+}
+ 
+?>
+
+
+
+            </select>
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Tipo de comprobante</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="">
-        </div>
+
+        
+       
         <button type="submit" class="btn btn-primary">Registrar</button>
         
     </form>
