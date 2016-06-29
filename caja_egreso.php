@@ -14,13 +14,17 @@
     <title>Egresos de Caja</title>
 
     <!-- Bootstrap Core CSS -->
+    <link href="css/select2.css" rel="stylesheet">
+    <link href="css/select2-bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+     
 
     <!-- Custom CSS -->
     <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        .select2-container{
+            width: 300px;
     }
     </style>
 
@@ -28,6 +32,7 @@
 
 <body>
 
+	<p><br/><br/></p>
     <!-- Page Content -->
     <div class="container">
 
@@ -35,15 +40,24 @@
             <div class="col-lg-12 text-center">
                 <h1>Egresos de Caja</h1>
             </div>
-        </div>
-        <!-- /.row -->
 
+            <div>
+            	<select class="js-example-basic-single">
+			  	<option value="AL">Alabama</option>
+			  	<option value="AL"> Alabama</option>
+		        <option value="CL"> Clinton</option>
+		        <option value="AL"> Alabama</option>
+		        <option value="AL"> Alabama</option>
+		        <option value="AL"> Alabama</option>
+		        <option value="AL"> Alabama</option>
+				<option value="WY">Wyoming</option>
+				</select>
+            </div>
+        </div>
+        <!-- /.row --> 
+      
 
     <form action="inc/caja_egresoguardar.php" method="POST">
-        <div class="form-group">
-            <label for="exampleInputEmail1">Proveedor</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="">
-        </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Descripcion</label>
             <input type="text" class="form-control" id="exampleInputPassword1" name="">
@@ -81,11 +95,11 @@
 
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+     Include all compiled plugins (below), or include individual files as needed 
     <script src="js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
    <script src="js/moment.min.js"></script>
    <script src="js/bootstrap-datetimepicker.min.js"></script>
    <script src="js/bootstrap-datetimepicker.es.js"></script>
@@ -95,6 +109,22 @@
 	  });
 	  $('#divMiCalendario').data("DateTimePicker").show();
    </script>
+   <!-- <script>
+
+        $(document).ready(funtion(){
+        	placeholder: 'Select an option'
+            $('#states').select2({});
+        });
+     </script> -->
+
+    <script src="js/select2.min.js"></script> 
+	<script type="text/javascript">
+		$(document).ready(function() {
+		  $(".js-example-basic-single").select2();
+		});
+		</script>
+
+		
 
 </body>
 
