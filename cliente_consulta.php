@@ -1,9 +1,6 @@
 <?php 
     include "inc/menu.php" ;
-    require('inc/conexiondb.php');
-
-    $query="SELECT idCliente,nombre,apellido,razonSocial,categoria,dni,cuit,direccion,telefono,correo from clientes ";
-    $resultado = mysqli_query($conexion,$query);
+    
 
 ?>
 

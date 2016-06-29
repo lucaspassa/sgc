@@ -15,6 +15,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/select2.css" rel="stylesheet">
+    <link href="css/select2.min.css" rel="stylesheet">
     <link href="css/select2-bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 

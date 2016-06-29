@@ -7,9 +7,6 @@
 
 ?>
 
-
-<?php include "inc/menu.php" ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,23 +44,7 @@
                 <h1>Lista de Proveedores</h1>
             </div>
         </div>
-        <!-- <a data-toggle="modal" href="#example" class="btn btn-danger btn-primary">Eliminar</a>
-         <a role="button" href="proveedor_modificar.php" class="btn btn-warning btn-primary">Modificar</a>
-         
-        <div class="modal fade" id="example" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-header">  
-                <a class="close" data-dismiss="modal">x</a>
-                <h3> &#191;Realmente desea eliminar los proveedores seleccionados? </h3>
-            </div>
-            <div class="modal-body">
-                <h4>Atencion!</h4>
-                <p>alerta!!!</p>
-            </div>               
-            <div class="modal-footer">
-                <a href="#" class="btn btn-success">Eliminar</a>
-                <a href="#" class="btn" data-dismiss="modal">Cancelar</a>
-            </div>
-        </div>-->
+        
         <div class="col-lg-6">
             
         </div>
