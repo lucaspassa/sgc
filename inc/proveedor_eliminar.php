@@ -1,6 +1,6 @@
 <?php 
-	include "inc/menu.php";
-	require('inc/conexiondb.php');
+	include "menu.php";
+	require('conexiondb.php');
 	
 	$id=$_GET['id'];
 	
@@ -23,7 +23,7 @@
 	    <title>Eliminar Proveedores</title>
 
 	    <!-- Bootstrap Core CSS -->
-	    <link href="css/bootstrap.min.css" rel="stylesheet">
+	    <link href="/sgc/css/bootstrap.min.css" rel="stylesheet">
 
 	    <!-- Custom CSS -->
 	    <style>
@@ -41,7 +41,7 @@
 				<?php if($resultado>0){ ?>
 					<h1>Cliente eliminado</h1>
 					<?php
-					header ("Location: proveedor_consulta.php");
+					header ("Location: /sgc/proveedor_consulta.php");
 
 					 }else{ ?>
 					<h1>Error al eliminar el proveedor/h1>		

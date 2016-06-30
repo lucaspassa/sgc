@@ -29,7 +29,7 @@
 	    <title>Modificar Proveedor</title>
 
 	    <!-- Bootstrap Core CSS -->
-	    <link href="css/bootstrap.min.css" rel="stylesheet">
+	    <link href="/sgc/css/bootstrap.min.css" rel="stylesheet">
 
 	    <!-- Custom CSS -->
 	    <style>
@@ -52,10 +52,10 @@
 			
 			</center>
 	</body>
-	<script src="js/jquery.js"></script>
+	<script src="/sgc/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"><
+    <script src="/sgc/js/bootstrap.min.js"><
 
 </script>
 

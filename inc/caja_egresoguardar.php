@@ -33,7 +33,7 @@ include ('inc/menu.php');
 	    <title>Guardar egreso</title>
 
 	    <!-- Bootstrap Core CSS -->
-	    <link href="css/bootstrap.min.css" rel="stylesheet">
+	    <link href="/sgc/css/bootstrap.min.css" rel="stylesheet">
 
 	    <!-- Custom CSS -->
 	    <style>

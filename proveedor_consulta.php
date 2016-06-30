@@ -105,10 +105,10 @@
                                 <?php echo $row['correo'];?>
                             </td>
                             <td>
-                                <a href="proveedor_mod.php?id=<?php echo $row['idProveedor'];?>">Modificar</a>
+                                <a href="inc/proveedor_mod.php?id=<?php echo $row['idProveedor'];?>">Modificar</a>
                             </td>
                             <td>
-                                <a href="proveedor_eliminar.php?id=<?php echo $row['idProveedor'];?>">Eliminar</a>
+                                <a href="inc/proveedor_eliminar.php?id=<?php echo $row['idProveedor'];?>">Eliminar</a>
                             </td>
 
                         </tr>

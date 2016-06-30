@@ -1,6 +1,6 @@
 <?php
-	include "inc/menu.php";
-	require('inc/conexiondb.php');
+	include "menu.php";
+	require('conexiondb.php');
 	
 	$id=$_GET['id'];
 	
@@ -26,7 +26,7 @@
     <title>Modificacion de Productos</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/sgc/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
@@ -90,9 +90,9 @@
 
 
     <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
+    <script src="/sgc/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/sgc/js/bootstrap.min.js"></script>
 
 </body>

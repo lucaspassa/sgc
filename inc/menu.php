@@ -21,7 +21,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clientes<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="cliente_alta.php">Alta Cliente</a></li>
-                <li><a href="cliente_consulta.php">Consultar Cliente</a></li>
+                <li><a href="/sgc/cliente_consulta.php">Consultar Cliente</a></li>
               </ul>
             </li>
 
