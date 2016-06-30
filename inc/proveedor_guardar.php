@@ -1,6 +1,6 @@
 <?php 
 	
-	require('inc/conexiondb.php');
+	require('conexiondb.php');
 	
 	$razon_social=$_POST['razon_social'];
 	$nombre_contacto=$_POST['nombre_contacto'];
@@ -13,13 +13,6 @@
 	
 	$resultado = mysqli_query($conexion,$query);
 	
-?>
-
-<?php
-
-
-include ('inc/menu.php');
-
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +43,12 @@ include ('inc/menu.php');
 	<body>
 			<center>	
 				
-				<?php if($resultado>0){ ?>
+				<?php if($resultado>0){ 
+					header('Location: /sgc/proveedor_consulta.php');
+					echo"<script>alert('Usted esta siendo redireccionado a la pagina principal')</script>";
+					exit();
+					?>
+
 					<h1>Proveedor Guardado</h1>
 					<?php }else{ ?>
 					<h1>Error al Guardar Proveedor</h1>		

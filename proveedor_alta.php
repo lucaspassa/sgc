@@ -39,7 +39,7 @@
         <!-- /.row -->
 
 
-    <form action="inc/proveedor_guardar.php" method="POST">
+    <form name= "formu"action="inc/proveedor_guardar.php" method="POST"  >
         <div class="form-group">
             <label for="exampleInputEmail1">Razon Social</label>
             <input type="text" class="form-control" id="exampleInputEmail1" name="razon_social">
@@ -64,11 +64,11 @@
             <label for="exampleInputPassword1">Correo</label>
             <input type="text" class="form-control" id="exampleInputPassword1" name="correo">
         </div>
-
-        <button type="submit" class="btn btn-primary">Registrar</button>
+        
+        <input type=button value="Registrar" class="btn btn-primary" onclick="this.form.submit(); this.disabled=true; this.value='enviando'">
+        
+        
   </form>
-
-
 
     </div>
     <!-- /.container -->
@@ -76,10 +76,9 @@
 
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
-
+</script>
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
+   
 </body>
 
 </html>

@@ -67,8 +67,7 @@ $permisos = mysqli_query($conexion,"SELECT * FROM permisos");
                         <input type="checkbox" name="permisos" value="<?php echo $permisosArr['codigoPermiso'];?>"/> <?php echo $permisosArr['descripcion']; ?><br />
                   <?php } ?>
         </fieldset>
-
-        <button type="submit" class="btn btn-primary">Agregar rol</button>
+        <input type=button value="Agregar rol" class="btn btn-primary" onclick="this.form.submit(); this.disabled=true; this.value='enviando'">
   </form>
 
  </div>

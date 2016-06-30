@@ -61,7 +61,7 @@
             <input type="text" class="form-control" id="exampleInputPassword1" name="precio_venta">
         </div>
 
-        <button type="submit" class="btn btn-primary">Cargar Producto</button>
+        <input type=button value="Cargar Producto" class="btn btn-primary" onclick="this.form.submit(); this.disabled=true; this.value='enviando'">
   </form>
 
 

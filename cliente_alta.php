@@ -76,7 +76,7 @@
             <label for="exampleInputPassword1">Correo Electronico</label>
             <input type="email" class="form-control" id="exampleInputPassword1" name="correo">
         </div>
-        <button type="submit" class="btn btn-primary">Registrar</button>
+        <input type=button value="Registrar" class="btn btn-primary" onclick="this.form.submit(); this.disabled=true; this.value='enviando'">
 
   </form>
 

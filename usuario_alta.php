@@ -75,7 +75,7 @@ $roles = mysqli_query($conexion,"SELECT * FROM roles");
             </select>
         </fieldset>
 
-        <button type="submit" class="btn btn-primary">Registrar</button>
+        <input type=button value="Registrar" class="btn btn-primary" onclick="this.form.submit(); this.disabled=true; this.value='enviando'">
 
 
   </form>

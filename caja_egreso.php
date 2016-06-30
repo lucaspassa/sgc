@@ -1,4 +1,8 @@
-<?php include "inc/menu.php" ?>
+
+<?php 
+    include "inc/menu.php" 
+    //require('inc/conexiondb.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,18 +18,13 @@
     <title>Egresos de Caja</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/select2.css" rel="stylesheet">
-    <link href="css/select2.min.css" rel="stylesheet">
-    <link href="css/select2-bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-     
 
     <!-- Custom CSS -->
     <style>
-        .select2-container{
-            width: 300px;
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
     </style>
 
@@ -33,7 +32,6 @@
 
 <body>
 
-	<p><br/><br/></p>
     <!-- Page Content -->
     <div class="container">
 
@@ -41,52 +39,102 @@
             <div class="col-lg-12 text-center">
                 <h1>Egresos de Caja</h1>
             </div>
-
-            <div>
-            	<select class="js-example-basic-single">
-			  	<option value="AL">Alabama</option>
-			  	<option value="AL"> Alabama</option>
-		        <option value="CL"> Clinton</option>
-		        <option value="AL"> Alabama</option>
-		        <option value="AL"> Alabama</option>
-		        <option value="AL"> Alabama</option>
-		        <option value="AL"> Alabama</option>
-				<option value="WY">Wyoming</option>
-				</select>
-            </div>
         </div>
-        <!-- /.row --> 
-      
+        <!-- /.row -->
 
-    <form action="inc/caja_egresoguardar.php" method="POST">
+
+    <form action="" method="POST">
+       
+    <div class="form-group">
+            <label for="sel1">Cliente</label>
+            <select class="form-control" id="sel1">
+            
+                <option>Seleccione Cliente</option>
+<?php 
+$conexion=mysql_connect("localhost","root","root") or
+die("Problemas en la conexion");
+mysql_select_db("sgc",$conexion) or
+die("Problemas en la selección de la base de datos");  
+mysql_query ("SET NAMES 'utf8'");
+$clavebuscadah=mysql_query("select * from proveedores",$conexion) or
+die("Problemas en el select:".mysql_error());
+while($row = mysql_fetch_array($clavebuscadah))
+{
+echo'<OPTION VALUE="'.$row['idCliente'].'">'.$row['razonSocial'].'</OPTION>';
+}
+ 
+?>
+
+
+
+            </select>
+        </div>
+
         <div class="form-group">
-            <label for="exampleInputPassword1">Descripcion</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Fecha Orden</label>
-            <div class='input-group date' id='divMiCalendario'>
-              <input name="txtFecha" type='text' id="txtFecha" class="form-control"  readonly/>
-              <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-              </span>
-            </div>
-        </div>
+            <label for="sel1">Producto</label>
+            <select class="form-control" id="sel1">
+            
+                <option>Seleccione una Producto</option>
+<?php 
+$conexion=mysql_connect("localhost","root","root") or
+die("Problemas en la conexion");
+mysql_select_db("sgc",$conexion) or
+die("Problemas en la selección de la base de datos");  
+mysql_query ("SET NAMES 'utf8'");
+$clavebuscadah=mysql_query("select idProducto,descripcion from productos",$conexion) or
+die("Problemas en el select:".mysql_error());
+while($row = mysql_fetch_array($clavebuscadah))
+{
+echo'<OPTION VALUE="'.$row['idProducto'].'">'.$row['descripcion'].'</OPTION>';
+}
+ 
+?>
 
+
+
+            </select>
+        </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Cantidad</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="cantidad" >
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Tipo de comprobante</label>
             <input type="text" class="form-control" id="exampleInputPassword1" name="">
         </div>
+
         <div class="form-group">
             <label for="exampleInputPassword1">Importe</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="importe">
+            <input type="text" class="form-control" id="exampleInputPassword1" name="cantidad" >
         </div>
+
+
+<div class="form-group">
+            <label for="sel1">Comprobante</label>
+            <select class="form-control" id="sel1">
+            
+                <option>Seleccione una tipo</option>
+<?php 
+$conexion=mysql_connect("localhost","root","root") or
+die("Problemas en la conexion");
+mysql_select_db("sgc",$conexion) or
+die("Problemas en la selección de la base de datos");  
+mysql_query ("SET NAMES 'utf8'");
+$clavebuscadah=mysql_query("select idTipoComprobante,descripcion from tipocomprobante",$conexion) or
+die("Problemas en el select:".mysql_error());
+while($row = mysql_fetch_array($clavebuscadah))
+{
+echo'<OPTION VALUE="'.$row['idTipoComprobante'].'">'.$row['descripcion'].'</OPTION>';
+}
+ 
+?>
+
+
+
+            </select>
+        </div>
+
+        
+       
         <button type="submit" class="btn btn-primary">Registrar</button>
         
-  </form>
+    </form>
 
 
 
@@ -96,36 +144,20 @@
 
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-     Include all compiled plugins (below), or include individual files as needed 
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
-   <script src="js/moment.min.js"></script>
-   <script src="js/bootstrap-datetimepicker.min.js"></script>
-   <script src="js/bootstrap-datetimepicker.es.js"></script>
-   <script type="text/javascript">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.es.js"></script>
+    <script type="text/javascript">
 	 $('#divMiCalendario').datetimepicker({
 		  format: 'YYYY-MM-DD'
 	  });
 	  $('#divMiCalendario').data("DateTimePicker").show();
-   </script>
-   <!-- <script>
-
-        $(document).ready(funtion(){
-        	placeholder: 'Select an option'
-            $('#states').select2({});
-        });
-     </script> -->
-
-    <script src="js/select2.min.js"></script> 
-	<script type="text/javascript">
-		$(document).ready(function() {
-		  $(".js-example-basic-single").select2();
-		});
-		</script>
-
-		
+    </script>
 
 </body>
 
