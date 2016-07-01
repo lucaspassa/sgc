@@ -99,7 +99,7 @@
         return 0;
         }
 
-        alert("Muchas gracias por enviar el formulario");
+        
         document.frm.submit(); 
         return true;
         }
