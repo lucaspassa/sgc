@@ -39,7 +39,7 @@
         <!-- /.row -->
 
 
-    <form action="inc/producto_guardar.php" method="POST">
+    <form name=frm action="inc/producto_guardar.php" method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">Codigo</label>
             <input type="text" class="form-control" id="exampleInputEmail1" name="codigo">
@@ -61,9 +61,46 @@
             <input type="text" class="form-control" id="exampleInputPassword1" name="precio_venta">
         </div>
 
-        <input type=button value="Cargar Producto" class="btn btn-primary" onclick="this.form.submit(); this.disabled=true; this.value='enviando'">
+        <input type=button value="Registrar" class="btn btn-primary" onclick="valida();">
   </form>
+    <script language="JavaScript" type="text/JavaScript">
 
+        function valida(){
+        if(document.frm.codigo.value == "") {
+        alert("Por favor indique Nombre");
+        document.frm.codigo.focus();
+        return 0;
+        }
+
+        if(document.frm.descripcion.value == "") {
+        alert("Por favor indique el Apellido");
+        document.frm.descripcion.focus();
+        return 0;
+        }
+
+
+        if(document.frm.stock.value == "") {
+        alert("Por favor indique Razon Social");
+        document.frm.stock.focus();
+        return 0;
+        }
+
+        if(document.frm.precio_costo.value == "") {
+        alert("Por favor indica una direccion");
+        document.frm.precio_costo.focus();
+        return 0;
+        }
+
+        if(document.frm.precio_venta.value == "") {
+        alert("Por favor indica un E-Mail valido");
+        document.frm.precio_venta.focus();
+        return 0;
+        }
+
+        document.frm.submit(); 
+        return true;
+        }
+</script>
 
 
     </div>
