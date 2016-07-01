@@ -71,6 +71,7 @@
         alert("Por favor indique la Razon Social");
         document.frm.codigo.focus();
         return 0;
+        
         }
 
         if(document.frm.descripcion.value == "") {
@@ -86,7 +87,7 @@
         return 0;
         }
 
-        if(document.frm.stock.value == "") {
+        if(document.frm.precio_costo.value == "") {
         alert("Por favor indica una direccion");
         document.frm.direccion.focus();
         return 0;
