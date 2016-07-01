@@ -1,9 +1,5 @@
-
-
 <?php 
 include "inc/menu.php" 
-
-
 ?>
 
 <!DOCTYPE html>
