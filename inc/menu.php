@@ -36,24 +36,24 @@
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Proveedores<span class="caret"></span></a>
       <ul class="dropdown-menu">
-        <li><a href="proveedor_alta.php">Alta Proveedor</a></li>
-        <li><a href="proveedor_consulta.php">Consultar Proveedor</a></li>
+        <li><a href="/sgc/proveedor_alta.php">Alta Proveedor</a></li>
+        <li><a href="/sgc/proveedor_consulta.php">Consultar Proveedor</a></li>
         </ul>
     </li>
 
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Productos<span class="caret"></span></a>
       <ul class="dropdown-menu">
-        <li><a href="producto_alta.php">Alta</a></li>
-        <li><a href="producto_consulta.php">Consultar</a></li>
+        <li><a href="/sgc/producto_alta.php">Alta</a></li>
+        <li><a href="/sgc/producto_consulta.php">Consultar</a></li>
         </ul>
     </li>
 
 	  <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Caja<span class="caret"></span></a>
       <ul class="dropdown-menu">
-            <li><a href="caja_ingreso.php">Ingreso</a></li>
-            <li><a href="caja_egreso.php">Egreso</a></li>
+            <li><a href="/sgc/caja_ingreso.php">Ingreso</a></li>
+            <li><a href="/sgc/caja_egreso.php">Egreso</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="caja_consulta.php">Consultar Movimientos</a></li>
       </ul>
@@ -63,16 +63,16 @@
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuarios<span class="caret"></span></a>
       <ul class="dropdown-menu">
-            <li><a href="usuario_alta.php">Alta usuario</a></li>
-            <li><a href="usuario_consulta.php">Consultar usuario</a></li>
+            <li><a href="/sgc/usuario_alta.php">Alta usuario</a></li>
+            <li><a href="/sgc/usuario_consulta.php">Consultar usuario</a></li>
       </ul>
     </li>
 
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Roles<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="roles_alta.php">Alta</a></li>
-          <li><a href="roles_consulta.php">Consultar</a></li>
+          <li><a href="/sgc/roles_alta.php">Alta</a></li>
+          <li><a href="/sgc/roles_consulta.php">Consultar</a></li>
         </ul>
     </li>
 
