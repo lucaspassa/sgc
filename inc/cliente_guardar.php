@@ -1,6 +1,6 @@
 <?php 
 	
-	require('inc/conexiondb.php');
+	require('conexiondb.php');
 
 	$nombre=$_POST['nombre'];
 	$apellido=$_POST['apellido'];
@@ -21,7 +21,7 @@
 <?php
 
 
-include ('inc/menu.php');
+include ('menu.php');
 
 ?>
 
@@ -62,7 +62,7 @@ include ('inc/menu.php');
 			
 			</center>
 	</body>
-	<script src="js/jquery.js"></script>
+	<script src="/sgc/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/sgc/js/bootstrap.min.js"></script>

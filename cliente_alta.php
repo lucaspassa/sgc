@@ -42,7 +42,7 @@
     <form action="inc/cliente_guardar.php" method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">Nombre</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="nombre">
+            <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" required="" >
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Apellido</label>
@@ -76,15 +76,52 @@
             <label for="exampleInputPassword1">Correo Electronico</label>
             <input type="email" class="form-control" id="exampleInputPassword1" name="correo">
         </div>
-        <input type=button value="Registrar" class="btn btn-primary" onclick="this.form.submit(); this.disabled=true; this.value='enviando'">
-
+        <input type=button value="Registrar" class="btn btn-primary" onclick="valida();">
   </form>
 
 
 
     </div>
     <!-- /.container -->
+    <script language="JavaScript" type="text/JavaScript">
 
+        function valida(){
+        if(document.frm.nombre.value == "") {
+        alert("Por favor indique Nombre");
+        document.frm.nombre.focus();
+        return 0;
+        }
+
+        if(document.frm.apellido.value == "") {
+        alert("Por favor indique el Apellido");
+        document.frm.apellido.focus();
+        return 0;
+        }
+
+
+        if(document.frm.razon_social.value == "") {
+        alert("Por favor indique Razon Social");
+        document.frm.razon_social.focus();
+        return 0;
+        }
+
+        if(document.frm.categoria.value == "") {
+        alert("Por favor indica una direccion");
+        document.frm.categoria.focus();
+        return 0;
+        }
+
+        if(document.frm.dni.value == "") {
+        alert("Por favor indica un E-Mail valido");
+        document.frm.dni.focus();
+        return 0;
+        }
+
+        alert("Cliente registrado correctamente");
+        document.frm.submit(); 
+        return true;
+        }
+</script>
 
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
