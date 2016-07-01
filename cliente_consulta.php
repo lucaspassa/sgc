@@ -91,10 +91,10 @@
                                 <?php echo $row['correo'];?>
                             </td>
                             <td>
-                                <a href="cliente_mod.php?id=<?php echo $row['idCliente'];?>">Modificar</a>
+                                <a href="inc/cliente_mod.php?id=<?php echo $row['idCliente'];?>">Modificar</a>
                             </td>
                             <td>
-                            <a  href="cliente_eliminar.php?id=<?php echo $row['idCliente'];?>">Eliminar</button></a>
+                            <a  href="inc/cliente_eliminar.php?id=<?php echo $row['idCliente'];?>">Eliminar</button></a>
                             </td>
                                 
 
@@ -109,10 +109,10 @@
 
 
         <!-- jQuery Version 1.11.1 -->
-        <script src="js/jquery.js"></script>
+        <script src="/sgc/js/jquery.js"></script>
 
         <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="/sgc/js/bootstrap.min.js"></script>
 
     </body>
 
