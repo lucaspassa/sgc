@@ -49,10 +49,12 @@
 			
 			</center>
 	</body>
-	<script src="js/jquery.js"></script>
+	
+	 <!-- jQuery Version 1.11.1 -->
+    <script src="/sgc/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"><
+    <script src="/sgc/js/bootstrap.min.js"></script>
 
 </script>
 

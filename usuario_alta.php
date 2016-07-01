@@ -60,7 +60,7 @@ $roles = mysqli_query($conexion,"SELECT * FROM roles");
         <div class="form-group">
             <label for="exampleInputPassword1">Fecha Alta</label>
             <div class='input-group date' id='divMiCalendario'>
-              <input name="txtFecha" type='text' id="txtFecha" class="form-control"  readonly/>
+              <input name="fecha_alta" type='text' id="txtFecha" class="form-control"  readonly/>
               <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
               </span>
             </div>

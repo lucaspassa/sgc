@@ -1,6 +1,6 @@
 <?php 
 	
-	require('inc/conexiondb.php');
+	require('conexiondb.php');
 
 	$codigo=$_POST['codigo'];
 	$descripcion=$_POST['descripcion'];
@@ -17,7 +17,7 @@
 <?php
 
 
-include ('inc/menu.php');
+include ('menu.php');
 
 ?>
 
@@ -34,7 +34,7 @@ include ('inc/menu.php');
 	    <title>Cargar Productos</title>
 
 	    <!-- Bootstrap Core CSS -->
-	    <link href="css/bootstrap.min.css" rel="stylesheet">
+	    <link href="/sgc/css/bootstrap.min.css" rel="stylesheet">
 
 	    <!-- Custom CSS -->
 	    <style>
@@ -57,9 +57,9 @@ include ('inc/menu.php');
 			
 			</center>
 	</body>
-	<script src="js/jquery.js"></script>
+	<script src="/sgc/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/sgc/js/bootstrap.min.js"></script>
 
 </html>

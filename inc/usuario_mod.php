@@ -1,6 +1,6 @@
 <?php
-	include "inc/menu.php";
-	require('inc/conexiondb.php');
+	include "menu.php";
+	require('conexiondb.php');
 	
 	$id=$_GET['id'];
 	

@@ -1,6 +1,6 @@
 <?php 
-	include "inc/menu.php";
-	require('inc/conexiondb.php');
+	include "menu.php";
+	require('conexiondb.php');
 	
 	$id=$_GET['id'];
 	
@@ -23,7 +23,7 @@
 	    <title>Guardar Usuarios</title>
 
 	    <!-- Bootstrap Core CSS -->
-	    <link href="css/bootstrap.min.css" rel="stylesheet">
+	    <link href="/sgc/css/bootstrap.min.css" rel="stylesheet">
 
 	    <!-- Custom CSS -->
 	    <style>
@@ -49,7 +49,9 @@
 			
 			</center>
 	</body>
-	<script src="js/jquery.js"></script>
+	
+	<!-- jQuery Version 1.11.1 -->
+    <script src="/sgc/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"><
