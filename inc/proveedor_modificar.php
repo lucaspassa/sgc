@@ -1,6 +1,6 @@
 <?php 
-	include "inc/menu.php";
-	require('inc/conexiondb.php');
+	include "menu.php";
+	require('conexiondb.php');
 	
 	$id=$_POST['idProveedor'];
 	$razon_social=$_POST['razon_social'];
