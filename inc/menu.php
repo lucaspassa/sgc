@@ -28,8 +28,8 @@
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ventas<span class="caret"></span></a>
         <ul class="dropdown-menu">
-        <li><a href="ventas.php">Ventas realizadas</a></li>
-        <li><a href="reporte_venta.php">Generar Reporte</a></li>
+        <li><a href="/sgc/ventas.php">Ventas realizadas</a></li>
+        <li><a href="/sgc/reporte_venta.php">Generar Reporte</a></li>
         </ul>
       </li>
 
@@ -55,7 +55,7 @@
             <li><a href="/sgc/caja_ingreso.php">Ingreso</a></li>
             <li><a href="/sgc/caja_egreso.php">Egreso</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="caja_consulta.php">Consultar Movimientos</a></li>
+            <li><a href="/sgc/caja_consulta.php">Consultar Movimientos</a></li>
       </ul>
     </li>
 
