@@ -42,7 +42,7 @@
     <form name=frm action="inc/proveedor_guardar.php" method="POST"  >
         <div class="form-group">
             <label for="exampleInputEmail1">Razon Social</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="razon_social" required=" " >
+            <input type="text" class="form-control" id="exampleInputEmail1" name="razon_social" required="" >
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Nombre Contacto</label>
@@ -65,7 +65,7 @@
             <input type="text" class="form-control" id="exampleInputPassword1" name="correo" required=" ">
         </div>
         
-        <input type=button value="Registrar" class="btn btn-primary" onclick="valida_envia();">
+        <input type=button value="Registrar" class="btn btn-primary" onclick="valida_envia(); this.disabled=true; this.value='enviando'">
         
         
   </form>
@@ -107,7 +107,7 @@
         return 0;
         }
 
-        alert("Muchas gracias por enviar el formulario");
+        
         document.frm.submit(); 
         return true;
         }
