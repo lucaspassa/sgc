@@ -41,7 +41,7 @@
 				<?php if($resultado>0){ ?>
 					<h1>Usuario eliminado</h1>
 					<?php
-					header ("Location: usuario_consulta.php");
+					header ("Location: /sgc/usuario_consulta.php");
 
 					 }else{ ?>
 					<h1>Error al eliminar Usuario</h1>		
@@ -51,7 +51,7 @@
 	</body>
 	
 	<!-- jQuery Version 1.11.1 -->
-    <script src="/sgc/js/jquery.js"></script>
+    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/sgc/js/bootstrap.min.js"></script>

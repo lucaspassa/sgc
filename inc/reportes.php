@@ -24,19 +24,24 @@ $pdf->ezSetCmMargins(1,1,1.5,1.5);
 //------------------------------ Reporte de usuarios
 if($_GET['id'] == "usuarios"){
 
-	$usuarios = mysql_query("SELECT idUsuario,nombreUsuario FROM usuarios",$conexion);
+	//$usuarios = mysql_query("SELECT idUsuario,nombreUsuario FROM usuarios",$conexion);
+	$data = array(
+		array ('num'=>1,'nombre'=>'bruno')
+		);
 
+   	
+            
 	
 	//Armado de las matrices-------------------------------------
 $ixx = 0;
-while($usuariosArray = mysql_fetch_assoc($usuarios)) {
+/*while($usuariosArray = mysql_fetch_assoc($usuarios)) {
 	$ixx = $ixx+1;
     $data[] = array_merge($usuariosArray, array('num'=>$ixx));
 
 }
+*/
 
-
-$titles = array(
+/*$titles = array(
 
                 //'num'=>'<b>Num</b>',
 
@@ -59,7 +64,7 @@ $options = array(
 'idUsuario' => array('justification'=>'left', 'width' => '300'), 
 'nombreUsuario' => array('justification'=>'left', 'width' => '300')));
 
-
+*/
 // Fin armado de matrices-----------------------------------
 
 $txttit= "Reportes de Usuarios";
@@ -72,7 +77,7 @@ $txttit= "Reportes de Usuarios";
 $pdf->ezText($txttit, 12);
 
 
-$pdf->ezTable($data,$titles ,'' , $options);
+$pdf->ezTable($data);
 
 $pdf->ezText("\n\n\n", 10);
 

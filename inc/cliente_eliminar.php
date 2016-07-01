@@ -1,6 +1,6 @@
 <?php 
-	include "inc/menu.php";
-	require('inc/conexiondb.php');
+	include "menu.php";
+	require('conexiondb.php');
 	
 	$id=$_GET['id'];
 	
@@ -41,7 +41,7 @@
 				<?php if($resultado>0){ ?>
 					<h1>Cliente eliminado</h1>
 					<?php
-					header ("Location: cliente_consulta.php");
+					header ("Location: /sgc/cliente_consulta.php");
 
 					 }else{ ?>
 					<h1>Error al eliminar Cliente</h1>		
