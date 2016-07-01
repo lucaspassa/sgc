@@ -18,7 +18,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Consulta de clientes</title>
+    <title>Consulta de Usuarios</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -40,6 +40,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h1>Lista de Usuarios</h1>
+                    <a href="inc/reportes.php?id=usuarios"><input type=button value="usuarios" class="btn btn-primary"></a>
                 </div>
             </div>
         <div class="jumbotron">
