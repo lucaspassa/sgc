@@ -54,7 +54,7 @@
     <script src="/sgc/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"><
+    <script src="/sgc/js/bootstrap.min.js"></script>
 
 </script>
 

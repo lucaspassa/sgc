@@ -21,10 +21,7 @@
 			require_once('PHP_Excel_1.8.0/classes/PHPExcel/IOFactory.php');
 			if(isset($_SESSION['user'])){
 		?>
-                <div class="barra">
-                    <?php		
-                        require_once("menu/menu.php");	
-                    ?>
+                    
                 </div><!--barra-->
                 <div class="titulo centrar-div centrar-texto borde-10 border-box">	
                 	<h1>Reportes de Ventas por Producto</h1>
