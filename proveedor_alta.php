@@ -65,7 +65,7 @@
             <input type="text" class="form-control" id="exampleInputPassword1" name="correo" required=" ">
         </div>
         
-        <input type=button value="Registrar" class="btn btn-primary" onclick="valida_envia(); this.disabled=true; this.value='enviando'">
+        <input type=button value="Registrar" class="btn btn-primary" onclick="valida_envia();">
         
         
   </form>
@@ -107,7 +107,7 @@
         return 0;
         }
 
-        
+        alert("Muchas gracias por enviar el formulario");
         document.frm.submit(); 
         return true;
         }
