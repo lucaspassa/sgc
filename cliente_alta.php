@@ -39,7 +39,7 @@
         <!-- /.row -->
 
 
-    <form action="inc/cliente_guardar.php" method="POST">
+    <form name=frm action="inc/cliente_guardar.php" method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">Nombre</label>
             <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" required="" >
@@ -117,7 +117,6 @@
         return 0;
         }
 
-        alert("Cliente registrado correctamente");
         document.frm.submit(); 
         return true;
         }
