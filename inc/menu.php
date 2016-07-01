@@ -28,8 +28,8 @@
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ventas<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="producto_venta.php">Vender Producto</a></li>
-          <li><a href="reporte_venta.php">Generar Reporte</a></li>
+        <li><a href="ventas.php">Ventas realizadas</a></li>
+        <li><a href="reporte_venta.php">Generar Reporte</a></li>
         </ul>
       </li>
 

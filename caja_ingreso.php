@@ -103,7 +103,7 @@ include "inc/menu.php"
 
         <div class="form-group">
             <label for="exampleInputPassword1">Importe</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="importe" >
+            <input type="number" class="form-control" id="exampleInputPassword1" name="importe" >
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Fecha Alta</label>
