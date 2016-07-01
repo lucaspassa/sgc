@@ -44,37 +44,12 @@
 
 
     <form action="" method="POST">
-       
-    <div class="form-group">
-            <label for="sel1">Cliente</label>
-            <select class="form-control" id="sel1">
-            
-                <option>Seleccione Cliente</option>
-<?php 
-$conexion=mysql_connect("localhost","root","root") or
-die("Problemas en la conexion");
-mysql_select_db("sgc",$conexion) or
-die("Problemas en la selección de la base de datos");  
-mysql_query ("SET NAMES 'utf8'");
-$clavebuscadah=mysql_query("select * from proveedores",$conexion) or
-die("Problemas en el select:".mysql_error());
-while($row = mysql_fetch_array($clavebuscadah))
-{
-echo'<OPTION VALUE="'.$row['idCliente'].'">'.$row['razonSocial'].'</OPTION>';
-}
- 
-?>
-
-
-
-            </select>
-        </div>
-
-        <div class="form-group">
+    
+            <div class="form-group">
             <label for="sel1">Producto</label>
             <select class="form-control" id="sel1">
             
-                <option>Seleccione una Producto</option>
+                <option>Seleccione un Producto</option>
 <?php 
 $conexion=mysql_connect("localhost","root","root") or
 die("Problemas en la conexion");
