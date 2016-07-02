@@ -61,7 +61,7 @@
             <input type="text" class="form-control" id="exampleInputPassword1" name="precio_venta">
         </div>
 
-        <input type=button value="Registrar" class="btn btn-primary" onclick="valida_envia(); this.disabled=true; this.value='enviando'">
+        <input type=button value="Registrar" class="btn btn-primary" onclick="valida_envia()">
   </form>
 
 <script language="JavaScript" type="text/JavaScript">

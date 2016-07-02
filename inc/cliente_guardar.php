@@ -55,7 +55,7 @@ include ('menu.php');
 				
 				<?php if($resultado>0){ ?>
 					<h1>Cliente Guardado</h1>
-					<h3><a button type="button" class="btn btn-primary" href="cliente_consulta.php">Consulta de clientes</a> 
+					<h3><a button type="button" class="btn btn-primary" href="/sgc/cliente_consulta.php">Consulta de clientes</a> 
 					<?php }else{ ?>
 					<h1>Error al Guardar Cliente</h1>		
 				<?php	} ?>		
