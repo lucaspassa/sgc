@@ -1,5 +1,6 @@
 <?php include "inc/menu.php" ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +15,7 @@
     <title>Alta de clientes</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css\bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
@@ -34,118 +35,82 @@
 
     <!-- Page Content -->
     <div class="container">
+        
+        <div class="col-lg-12 text-center">
+                <h1>Registro de Clientes <span class="glyphicon glyphicon-user" aria-hidden="true"></span></h1>
+        </div><br/>
 
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1>Cargar Cliente</h1>
-            </div>
-        </div>
-        <!-- /.row -->
-
-
-    <form action="inc/cliente_guardar.php" method="POST" class="form-horizontal ws-validate" name="forms">
+      <form action="inc/cliente_guardar.php" class="form-horizontal ws-validate" method="POST">
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+            <input type="text" class="form-control" placeholder="Nombre" aria-describedby="sizing-addon1" name="nombre" required="" maxlength="20">
+        </div><br/>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+            <input type="text" class="form-control" placeholder="Apellido" aria-describedby="sizing-addon1" name="apellido" required="" maxlength="30">
+        </div><br/>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+            <input type="text" class="form-control" placeholder="Razon Social" aria-describedby="sizing-addon1" name="razon_social" required="" maxlength="20">
+        </div><br/>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
+            <input type="text" class="form-control" placeholder="Categoria" aria-describedby="sizing-addon1" name="categoria" required="" maxlength="20">
+        </div><br/>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
+            <input type="number" class="form-control" placeholder="DNI" aria-describedby="sizing-addon1" name="dni" required="" oninput="maxDni(this)" maxlength="10">
+        </div><br/>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
+            <input type="number" class="form-control" placeholder="CUIT" aria-describedby="sizing-addon1" required="" oninput="maxCuit(this)" maxlength="11">
+        </div><br/>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></span>
+            <input type="text" class="form-control" placeholder="Dirección" aria-describedby="sizing-addon1" required="" maxlength="40">
+        </div><br/>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span></span>
+            <input type="tel" class="form-control" placeholder="Telefono" aria-describedby="sizing-addon1" required="" oninput="maxTel(this)" maxlength="15">
+        </div><br/>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
+            <input type="email" class="form-control" placeholder="Correo" aria-describedby="sizing-addon1" required="" maxlength="40">
+        </div><br/>
         <div class="form-group">
-            <label for="exampleInputEmail1">Nombre</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="nombre">
-        </div>
+    </div>  
         <div class="form-group">
-            <label for="exampleInputPassword1">Apellido</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="apellido">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Razon Social</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="razon_social" >
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Categoria</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="categoria">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Dni</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="dni">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Cuit</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="cuit" size="11" maxlength="15">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Dirección</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="direccion" >
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Telefono</label>
-            <input type="tel" class="form-control" id="exampleInputPassword1" name="telefono" >
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Correo Electronico</label>
-            <input type="email" class="form-control" id="exampleInputPassword1" name="correo">
-        </div>
-        <input type=button value="Registrar" class="btn btn-primary" onclick="valida();">
-  </form>
-
-
-
-    </div>
+            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Registrar</button>
+        </div> 
+    
     <!-- /.container -->
-    <script language="JavaScript" type="text/JavaScript">
-        (function () {
-    webshim.setOptions('forms', {
-        lazyCustomMessages: true,
-        iVal: {
-            sel: '.ws-validate',
-            handleBubble: 'hide', // hide error bubble
+    
+    <!-- Funcion para validar la longitud de caracteres del input DNI-->
+    <script>
+    function maxDni(dni)
+    {
+    if (dni.value.length > dni.maxLength)
+      dni.value = dni.value.slice(0, dni.maxLength)
+    }
+    </script>
+    <!-- Funcion para validar la longitud de caracteres del input CUIT-->
+    <script>
+    function maxCuit(cuit)
+    {
+    if (cuit.value.length > cuit.maxLength)
+      cuit.value = cuit.value.slice(0, cuit.maxLength)
+    }
+    </script>
+    <!-- Funcion para validar la longitud de caracteres del input telefono-->
+    <script>
+    function maxTel(telefono)
+    {
+    if (telefono.value.length > telefono.maxLength)
+      telefono.value = telefono.value.slice(0, telefono.maxLength)
+    }
+    </script>
 
-            //add bootstrap specific classes
-            errorMessageClass: 'help-block',
-            successWrapperClass: 'has-success',
-            errorWrapperClass: 'has-error',
-
-            //add config to find right wrapper
-            fieldWrapper: '.form-group'
-        }
-    });
-
-    //load forms polyfill + iVal feature
-    webshim.polyfill('forms');
-})();
-
-      /*  function valida(){
-        if(document.frm.nombre.value == "") {
-        alert("Por favor indique Nombre");
-        document.frm.nombre.focus();
-        return 0;
-        }
-
-        if(document.frm.apellido.value == "") {
-        alert("Por favor indique el Apellido");
-        document.frm.apellido.focus();
-        return 0;
-        }
-
-
-        if(document.frm.razon_social.value == "") {
-        alert("Por favor indique Razon Social");
-        document.frm.razon_social.focus();
-        return 0;
-        }
-
-        if(document.frm.categoria.value == "") {
-        alert("Por favor indica una direccion");
-        document.frm.categoria.focus();
-        return 0;
-        }
-
-        if(document.frm.dni.value == "") {
-        alert("Por favor indica un E-Mail valido");
-        document.frm.dni.focus();
-        return 0;
-        }
-
-        document.frm.submit(); 
-        return true;
-        }*/
-</script>
-
+    
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
 
