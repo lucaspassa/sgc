@@ -6,14 +6,11 @@
 	
 	$query="SELECT nombre, apellido, razonSocial, categoria, dni, cuit, direccion, telefono, correo FROM clientes WHERE idCliente='$id'";
 	
-	
-	
 	$resultado = mysqli_query($conexion,$query);
 	
 	$row=$resultado->fetch_assoc();
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -106,7 +103,7 @@
 
 
     <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
+    <script src="sgc/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/sgc/js/bootstrap.min.js"></script>

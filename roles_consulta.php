@@ -36,9 +36,9 @@ $roles = mysqli_query($conexion,"SELECT * FROM roles");
 <body>
 
     <!-- Page Content -->
-     <div class="container">
+     <div class="container-fluid">
         <div class="jumbotron">
-            <div class="row">
+            <div class="table-responsive">
                 <table class="table table-hover">
                     <thead>
                         <th> Rol </th>

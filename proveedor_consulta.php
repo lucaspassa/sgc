@@ -38,7 +38,7 @@
 
     <!-- Page Content -->
 
-    <div class="container">
+    <div class="container-fluid">
     <div class="row">
             <div class="col-lg-12 text-center">
                 <h1>Lista de Proveedores</h1>
@@ -69,7 +69,7 @@
         <div class="jumbotron">
 
 
-            <div class="row">
+            <div class="table-responsive">
               <table class="table table-hover">
                   <thead>
                        
@@ -105,10 +105,10 @@
                                 <?php echo $row['correo'];?>
                             </td>
                             <td>
-                                <a href="inc/proveedor_mod.php?id=<?php echo $row['idProveedor'];?>">Modificar</a>
+                                <a href="inc/proveedor_mod.php?id=<?php echo $row['idProveedor'];?>"><span class="glyphicon glyphicon-pencil" id="colorGlypiconEdit" aria-hidden="true"></span></a>
                             </td>
                             <td>
-                                <a href="inc/proveedor_eliminar.php?id=<?php echo $row['idProveedor'];?>">Eliminar</a>
+                                <a href="inc/proveedor_eliminar.php?id=<?php echo $row['idProveedor'];?>"><span class="glyphicon glyphicon-trash" id="colorGlypiconDelete" aria-hidden="true"></span></a>
                             </td>
 
                         </tr>
