@@ -51,10 +51,13 @@ include ('menu.php');
 			<center>	
 				
 				<?php if($resultado>0){ ?>
-					<h1>Venta realizada</h1>
-					<?php }else{ ?>
-					<h1>Error al registrar venta.</h1>		
-				<?php	} ?>		
+					<h1>Cliente eliminado</h1>
+					<?php
+					header ("Location: /sgc/ventas.php");
+
+					 }else{ ?>
+					<h1>Error al eliminar el proveedor/h1>		
+				<?php	} ?>			
 			
 			</center>
 	</body>

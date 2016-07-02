@@ -12,7 +12,7 @@ if((!empty($_POST['rol'])) && (!empty($_POST['descripcion']))&& (!empty($_POST['
   $idRol = $idRol['idRol'];
 
   mysqli_query($conexion,"INSERT INTO rol_permiso (codigoPermiso,idRol) VALUES ('$permisos','$idRol')");
-  header("Location: roles_consulta.php");
+  header("Location: /sgc/roles_consulta.php");
 
 }else{
   echo "Error en el ingreso de datos";

@@ -62,7 +62,7 @@
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Correo</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="correo" required=" ">
+            <input type="email" class="form-control" id="exampleInputPassword1" name="correo" required=" ">
         </div>
         
         <input type=button value="Registrar" class="btn btn-primary" onclick="valida_envia();">

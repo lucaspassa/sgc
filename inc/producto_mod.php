@@ -6,7 +6,6 @@
 	
 	$query="SELECT codigo, descripcion, stockDisponible, precioCosto, precioVenta FROM productos WHERE idProducto='$id'";
 	
-	
 	$resultado = mysqli_query($conexion,$query);
 	
 	$row=$resultado->fetch_assoc();

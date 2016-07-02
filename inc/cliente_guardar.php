@@ -53,12 +53,16 @@ include ('menu.php');
 	<body>
 			<center>	
 				
-				<?php if($resultado>0){ ?>
-					<h1>Cliente Guardado</h1>
-					<h3><a button type="button" class="btn btn-primary" href="/sgc/cliente_consulta.php">Consulta de clientes</a> 
+				<?php if($resultado>0){ 
+					header('Location: /sgc/cliente_consulta.php');
+					echo"<script>alert('Usted esta siendo redireccionado a la pagina principal')</script>";
+					exit();
+					?>
+
+					<h1>Proveedor Guardado</h1>
 					<?php }else{ ?>
-					<h1>Error al Guardar Cliente</h1>		
-				<?php	} ?>		
+					<h1>Error al Guardar Proveedor</h1>		
+				<?php	} ?>			
 			
 			</center>
 	</body>

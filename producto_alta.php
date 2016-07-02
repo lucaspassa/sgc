@@ -89,13 +89,13 @@
 
         if(document.frm.precio_costo.value == "") {
         alert("Por favor indica una direccion");
-        document.frm.direccion.focus();
+        document.frm.precio_costo.focus();
         return 0;
         }
 
-        if(document.frm.correo.value == "") {
+        if(document.frm.precio_venta.value == "") {
         alert("Por favor indica un E-Mail valido");
-        document.frm.correo.focus();
+        document.frm.precio_venta.focus();
         return 0;
         }
 

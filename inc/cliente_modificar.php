@@ -47,11 +47,17 @@
 	<body>
 			<center>	
 				
-				<?php if($resultado>0){ ?>
-					<h1>Cliente Modificado</h1>
+				<?php if($resultado>0){ 
+					header('Location: /sgc/cliente_consulta.php');
+					echo"<script>alert('Usted esta siendo redireccionado a la pagina principal')</script>";
+					exit();
+					?>
+
+					<h1>Proveedor Guardado</h1>
 					<?php }else{ ?>
-					<h1>Error al modificar Cliente</h1>		
-				<?php	} ?>		
+					<h1>Error al Guardar Proveedor</h1>		
+				<?php	} ?>			
+					
 			
 			</center>
 	</body>
