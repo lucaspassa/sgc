@@ -24,24 +24,29 @@ $pdf->ezSetCmMargins(1,1,1.5,1.5);
 //------------------------------ Reporte de usuarios
 if($_GET['id'] == "usuarios"){
 
-	//$usuarios = mysql_query("SELECT idUsuario,nombreUsuario FROM usuarios",$conexion);
-	$data = array(
-		array ('num'=>1,'nombre'=>'bruno')
-		);
+	$usuarios = mysql_query("SELECT idUsuario,nombreUsuario FROM usuarios",$conexion);
+	/*$data = array(
+		while($usuariosArray = mysql_fetch_assoc($usuarios)){
 
+			array ('id'=>$usuariosArray['idUsuario'],'nombre'=>$usuariosArray['nombreUsuario'])
+
+		}
+		
+		);
+*/
    	
             
 	
 	//Armado de las matrices-------------------------------------
 $ixx = 0;
-/*while($usuariosArray = mysql_fetch_assoc($usuarios)) {
+while($usuariosArray = mysql_fetch_assoc($usuarios)) {
 	$ixx = $ixx+1;
     $data[] = array_merge($usuariosArray, array('num'=>$ixx));
 
 }
-*/
 
-/*$titles = array(
+
+$titles = array(
 
                 //'num'=>'<b>Num</b>',
 
@@ -51,7 +56,7 @@ $ixx = 0;
             );
 
 
-$options = array(
+/*$options = array(
 
               	
 'fontSize' => 7,

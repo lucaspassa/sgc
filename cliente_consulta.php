@@ -54,7 +54,6 @@
                             <th> Apellido </th>
                             <th> Razon Social </th>
                             <th>Categoria</th>
-                            <th> Dni </th>
                             <th> Cuit </th>
                             <th> Dirección </th>
                             <th> Telefono </th>
@@ -74,9 +73,6 @@
                             </td>
                             <td>
                                 <?php echo $row['categoria'];?>
-                            </td>
-                            <td>
-                                <?php echo $row['dni'];?>
                             </td>
                             <td>
                                 <?php echo $row['cuit'];?>

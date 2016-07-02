@@ -22,6 +22,10 @@
         padding-top: 70px;
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
+
+    .form-group >[class*="col-"] + .ws-errorbox {
+    padding: 0 15px;
+}
     </style>
 
 </head>
@@ -39,10 +43,10 @@
         <!-- /.row -->
 
 
-    <form name=frm action="inc/cliente_guardar.php" method="POST">
+    <form action="inc/cliente_guardar.php" method="POST" class="form-horizontal ws-validate" name="forms">
         <div class="form-group">
             <label for="exampleInputEmail1">Nombre</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" required="" >
+            <input type="text" class="form-control" id="exampleInputEmail1" name="nombre">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Apellido</label>
@@ -62,7 +66,7 @@
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Cuit</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="cuit">
+            <input type="text" class="form-control" id="exampleInputPassword1" name="cuit" size="11" maxlength="15">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Dirección</label>
@@ -84,8 +88,28 @@
     </div>
     <!-- /.container -->
     <script language="JavaScript" type="text/JavaScript">
+        (function () {
+    webshim.setOptions('forms', {
+        lazyCustomMessages: true,
+        iVal: {
+            sel: '.ws-validate',
+            handleBubble: 'hide', // hide error bubble
 
-        function valida(){
+            //add bootstrap specific classes
+            errorMessageClass: 'help-block',
+            successWrapperClass: 'has-success',
+            errorWrapperClass: 'has-error',
+
+            //add config to find right wrapper
+            fieldWrapper: '.form-group'
+        }
+    });
+
+    //load forms polyfill + iVal feature
+    webshim.polyfill('forms');
+})();
+
+      /*  function valida(){
         if(document.frm.nombre.value == "") {
         alert("Por favor indique Nombre");
         document.frm.nombre.focus();
@@ -119,7 +143,7 @@
 
         document.frm.submit(); 
         return true;
-        }
+        }*/
 </script>
 
     <!-- jQuery Version 1.11.1 -->
