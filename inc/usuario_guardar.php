@@ -52,12 +52,16 @@ include ('menu.php');
 	<body>
 			<center>
 
-				<?php if($resultado>0){ ?>
+				<?php if($resultado>0){ 
+					header('Location: /sgc/usuario_consulta.php');
+					echo"<script>alert('Usted esta siendo redireccionado a la pagina principal')</script>";
+					exit();
+					?>
+
 					<h1>Usuario Guardado</h1>
 					<?php }else{ ?>
-					<h1>Error al Guardar Usuario</h1>
+					<h1>Error al Guardar Usuario</h1>		
 				<?php	} ?>
-
 			</center>
 	</body>
 	
