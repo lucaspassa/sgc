@@ -82,15 +82,8 @@
     
     <!-- /.container -->
     
-    <!-- Funcion para validar la longitud de caracteres del input DNI>
-    <script>
-    function maxDni(dni)
-    {
-    if (dni.value.length > dni.maxLength)
-      dni.value = dni.value.slice(0, dni.maxLength)
-    }
-    </script>
-    Funcion para validar la longitud de caracteres del input CUIT
+    
+    <!--Funcion para validar la longitud de caracteres del input CUIT -->
     <script>
     function maxCuit(cuit)
     {
@@ -98,14 +91,14 @@
       cuit.value = cuit.value.slice(0, cuit.maxLength)
     }
     </script>
-    <!-- Funcion para validar la longitud de caracteres del input telefono
+    <!-- Funcion para validar la longitud de caracteres del input telefono -->
     <script>
     function maxTel(telefono)
     {
     if (telefono.value.length > telefono.maxLength)
       telefono.value = telefono.value.slice(0, telefono.maxLength)
     }
-    </script>-->
+    </script>
 
     
     <!-- jQuery Version 1.11.1 -->
