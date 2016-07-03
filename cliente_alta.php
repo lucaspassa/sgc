@@ -57,25 +57,22 @@
             <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
             <input type="text" class="form-control" placeholder="Categoria" aria-describedby="sizing-addon1" name="categoria" required="" maxlength="20">
         </div><br/>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
-            <input type="number" class="form-control" placeholder="DNI" aria-describedby="sizing-addon1" name="dni" required="" oninput="maxDni(this)" maxlength="10">
-        </div><br/>
+        
         <div class="input-group input-group-lg">
             <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
             <input type="number" class="form-control" placeholder="CUIT" aria-describedby="sizing-addon1" required="" oninput="maxCuit(this)" maxlength="11">
         </div><br/>
         <div class="input-group input-group-lg">
             <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></span>
-            <input type="text" class="form-control" placeholder="Dirección" aria-describedby="sizing-addon1" required="" maxlength="40">
+            <input type="text" class="form-control" placeholder="Dirección" aria-describedby="sizing-addon1" required="" maxlength="50">
         </div><br/>
         <div class="input-group input-group-lg">
             <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span></span>
-            <input type="tel" class="form-control" placeholder="Telefono" aria-describedby="sizing-addon1" required="" oninput="maxTel(this)" maxlength="15">
+            <input type="text" class="form-control" placeholder="Telefono" aria-describedby="sizing-addon1" required="" oninput="maxTel(this)" maxlength="20">
         </div><br/>
         <div class="input-group input-group-lg">
             <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
-            <input type="email" class="form-control" placeholder="Correo" aria-describedby="sizing-addon1" required="" maxlength="40">
+            <input type="email" class="form-control" placeholder="Correo" aria-describedby="sizing-addon1" required="" maxlength="50">
         </div><br/>
         <div class="form-group">
     </div>  
@@ -85,7 +82,7 @@
     
     <!-- /.container -->
     
-    <!-- Funcion para validar la longitud de caracteres del input DNI-->
+    <!-- Funcion para validar la longitud de caracteres del input DNI>
     <script>
     function maxDni(dni)
     {
@@ -93,7 +90,7 @@
       dni.value = dni.value.slice(0, dni.maxLength)
     }
     </script>
-    <!-- Funcion para validar la longitud de caracteres del input CUIT-->
+    Funcion para validar la longitud de caracteres del input CUIT
     <script>
     function maxCuit(cuit)
     {
@@ -101,14 +98,14 @@
       cuit.value = cuit.value.slice(0, cuit.maxLength)
     }
     </script>
-    <!-- Funcion para validar la longitud de caracteres del input telefono-->
+    <!-- Funcion para validar la longitud de caracteres del input telefono
     <script>
     function maxTel(telefono)
     {
     if (telefono.value.length > telefono.maxLength)
       telefono.value = telefono.value.slice(0, telefono.maxLength)
     }
-    </script>
+    </script>-->
 
     
     <!-- jQuery Version 1.11.1 -->

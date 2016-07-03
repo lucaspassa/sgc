@@ -6,13 +6,12 @@
 	$apellido=$_POST['apellido'];
 	$razon_social=$_POST['razon_social'];
 	$categoria=$_POST['categoria'];
-	$dni=$_POST['dni'];
 	$cuit=$_POST['cuit'];
 	$direccion=$_POST['direccion'];
 	$telefono=$_POST['telefono'];
 	$correo=$_POST['correo'];
 
-	$query="INSERT INTO clientes (nombre, apellido, razonSocial, categoria, dni, cuit, direccion, telefono, correo) VALUES ('$nombre','$apellido','$razon_social','$categoria','$dni','$cuit','$direccion','$telefono','$correo')";
+	$query="INSERT INTO clientes (nombre, apellido, razonSocial, categoria,cuit, direccion, telefono, correo) VALUES ('$nombre','$apellido','$razon_social','$categoria','$cuit','$direccion','$telefono','$correo')";
 	
 	$resultado = mysqli_query($conexion,$query);
 	
