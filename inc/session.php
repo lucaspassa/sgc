@@ -17,7 +17,7 @@ if(($nombreU == $usuario['nombreUsuario'])&&($clave == $usuario['clave'])){
     $_SESSION['nombre'] = $nombreU;
     $_SESSION['permiso'] = $usuario['idRol'];//Aca deberia tomar los permisos de la base de datos
     $_SESSION['entrar'] = true;
-    echo 'Bievenido';
+    echo 'Bievenido'.$_SESSION['nombre'] ;
   	header('Location: ../principal.php');
 }else{
   $_SESSION['entrar'] = false;
