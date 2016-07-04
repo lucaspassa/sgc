@@ -51,11 +51,11 @@
             </div><br/>
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-                <input type="text" class="form-control" placeholder="Razon Social" aria-describedby="sizing-addon1" name="razon_social" required="" maxlength="20">
+                <input type="text" class="form-control" placeholder="Razón Social" aria-describedby="sizing-addon1" name="razon_social" required="" maxlength="20">
             </div><br/>
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
-                <input type="text" class="form-control" placeholder="Categoria" aria-describedby="sizing-addon1" name="categoria" required="" maxlength="20">
+                <input type="text" class="form-control" placeholder="Categoría" aria-describedby="sizing-addon1" name="categoria" required="" maxlength="20">
             </div><br/>
             
             <div class="input-group input-group-lg">
@@ -68,7 +68,7 @@
             </div><br/>
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span></span>
-                <input type="text" class="form-control" placeholder="Telefono" aria-describedby="sizing-addon1" name="telefono" required="" oninput="maxTel(this)" maxlength="20">
+                <input type="text" class="form-control" placeholder="Teléfono" aria-describedby="sizing-addon1" name="telefono" required="" oninput="maxTel(this)" maxlength="20">
             </div><br/>
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>

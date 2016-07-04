@@ -47,8 +47,8 @@
                 <div class="table-responsive">
                     <table class="table table-hover">
                         <thead>
-                            <th> Codigo </th>
-                            <th> Descripcion </th>
+                            <th> Código </th>
+                            <th> Descripción </th>
                             <th> Stock </th>
                             <th> Precio Costo</th>
                             <th> Precio Venta </th>

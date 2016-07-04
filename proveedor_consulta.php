@@ -74,11 +74,11 @@
                   <thead>
                        
                         <tr>
-                            <td><b>Razon social</b></td>
+                            <td><b>Razón social</b></td>
                             <td><b>Contacto</b></td>
                             <td><b>Cuit</b></td>
-                            <td><b>Direccion</b></td>
-                            <td><b>Telefono</b></td>
+                            <td><b>Dirección</b></td>
+                            <td><b>Teléfono</b></td>
                             <td><b>Email</b></td>    
                             <td><a href="\sgc\proveedor_alta.php"><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nuevo</button></a></td>
                         </tr>

@@ -1,4 +1,5 @@
 <!-- Navigation -->
+<meta charset="utf-8">
 <nav class="navbar navbar-inverse navbar-fixed-top" id="menu" role="navigation">
     <div class="container">
       
