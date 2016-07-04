@@ -43,7 +43,7 @@
           <form action="inc/cliente_guardar.php" class="form-horizontal ws-validate" method="POST" onsubmit="registrar.disabled = true; return true;">
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-                <input type="text" class="form-control" placeholder="Nombre" aria-describedby="sizing-addon1" name="nombre" required="" maxlength="20">
+                <input type="text" class="form-control" pattern="|^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]*$|" placeholder="Nombre" aria-describedby="sizing-addon1" name="nombre" required="" maxlength="20">
             </div><br/>
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
