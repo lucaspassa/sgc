@@ -52,11 +52,11 @@
                         <thead>
                             <th> Nombre </th>
                             <th> Apellido </th>
-                            <th> Razon Social </th>
-                            <th>Categoria</th>
+                            <th> Razón Social </th>
+                            <th>Categoría</th>
                             <th> Cuit </th>
                             <th> Dirección </th>
-                            <th> Telefono </th>
+                            <th> Teléfono </th>
                             <th> Email </th>
                             <td><a href="\sgc\cliente_alta.php"><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nuevo</button></a></td>
                         </thead>

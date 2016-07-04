@@ -40,11 +40,11 @@
         <form action="inc/producto_guardar.php" method="POST" onsubmit="registrar.disabled = true; return true;">
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span></span>
-                <input type="text" class="form-control" placeholder="Codigo" aria-describedby="sizing-addon1" name="codigo" required="" maxlength="20">
+                <input type="text" class="form-control" placeholder="Código" aria-describedby="sizing-addon1" name="codigo" required="" maxlength="20">
             </div><br/>
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-apple" aria-hidden="true"></span></span>
-                <input type="text" class="form-control" placeholder="Descripcion" aria-describedby="sizing-addon1" name="descripcion" required="" maxlength="30">
+                <input type="text" class="form-control" placeholder="Descripción" aria-describedby="sizing-addon1" name="descripcion" required="" maxlength="30">
             </div><br/>
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-sort" aria-hidden="true"></span></span>
