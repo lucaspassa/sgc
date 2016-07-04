@@ -51,7 +51,8 @@
 
 					<h1>Proveedor Guardado</h1>
 					<?php }else{ ?>
-					<h1>Error al Guardar Proveedor</h1>		
+					<h1>Error al Guardar Proveedor!</h1>
+					<a href="\sgc\proveedor_alta.php"><button type="button" class="btn btn-warning">Volver a Intentar</button></a>	
 				<?php	} ?>		
 			
 			</center>

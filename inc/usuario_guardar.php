@@ -60,8 +60,10 @@ include ('menu.php');
 
 					<h1>Usuario Guardado</h1>
 					<?php }else{ ?>
-					<h1>Error al Guardar Usuario</h1>		
-				<?php	} ?>
+					<h1>Error al Guardar Usuario!</h1>
+					<a href="\sgc\usuario_alta.php"><button type="button" class="btn btn-warning">Volver a Intentar</button></a>		
+				<?php	} 
+				?>
 			</center>
 	</body>
 	

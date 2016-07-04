@@ -66,7 +66,7 @@
             </div><br/>
 
             <input type="submit" value="Registrar" name="registrar" class="btn btn-primary">
-            <a href="\sgc\proveedor_consulta.php">Cancelar</a>
+            <a href="\sgc\proveedor_consulta.php"><button type="button" class="btn btn-default"> Cancelar</button></a>
         </form>
     </div>
     <!-- /.container -->

@@ -58,9 +58,10 @@ include ('menu.php');
 					exit();
 					?>
 
-					<h1>Proveedor Guardado</h1>
+					<h1>Cliente Guardado</h1>
 					<?php }else{ ?>
-					<h1>Error al Guardar Proveedor</h1>		
+					<h1>Error al Guardar Cliente!</h1>
+					<a href="\sgc\cliente_alta.php"><button type="button" class="btn btn-warning">Volver a Intentar</button></a>		
 				<?php	} ?>			
 			
 			</center>

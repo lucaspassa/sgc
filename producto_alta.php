@@ -33,81 +33,52 @@
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>Cargar Productos</h1>
+                <h1>Registro de Productos</h1>
             </div>
         </div>
         <!-- /.row -->
+        <form action="inc/producto_guardar.php" method="POST" onsubmit="registrar.disabled = true; return true;">
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span></span>
+                <input type="text" class="form-control" placeholder="Codigo" aria-describedby="sizing-addon1" name="codigo" required="" maxlength="20">
+            </div><br/>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-apple" aria-hidden="true"></span></span>
+                <input type="text" class="form-control" placeholder="Descripcion" aria-describedby="sizing-addon1" name="descripcion" required="" maxlength="30">
+            </div><br/>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-sort" aria-hidden="true"></span></span>
+                <input type="text" class="form-control" placeholder="Stock" aria-describedby="sizing-addon1" name="stock" required="" maxlength="20">
+            </div><br/>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span></span>
+                <input type="number" class="form-control" placeholder="Precio Costo" aria-describedby="sizing-addon1" name="precio_costo" oninput="maxPrecioCosto(this)" required="" maxlength="10">
+            </div><br/>
+              <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span></span>
+                <input type="number" class="form-control" placeholder="Precio Venta" aria-describedby="sizing-addon1" name="precio_venta" required="" oninput="maxPrecioVenta(this)" maxlength="10">
+            </div><br/>
 
-
-    <form name=frm action="inc/producto_guardar.php" method="POST">
-        <div class="form-group">
-            <label for="exampleInputEmail1">Codigo</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="codigo">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Descripcion</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="descripcion">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Stock</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="stock" >
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Precio Costo</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="precio_costo">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Precio Venta</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="precio_venta">
-        </div>
-
-        <input type=button value="Registrar" class="btn btn-primary" onclick="valida_envia()">
-        <a href="\sgc\producto_consulta.php">Cancelar</a>
-  </form>
-
-<script language="JavaScript" type="text/JavaScript">
-
-        function valida_envia(){
-        if(document.frm.codigo.value == "") {
-        alert("Por favor indique la Razon Social");
-        document.frm.codigo.focus();
-        return 0;
-        
-        }
-
-        if(document.frm.descripcion.value == "") {
-        alert("Por favor indique el nombre de contacto");
-        document.frm.descripcion.focus();
-        return 0;
-        }
-
-
-        if(document.frm.stock.value == "") {
-        alert("Por favor indica un cuit");
-        document.frm.stock.focus();
-        return 0;
-        }
-
-        if(document.frm.precio_costo.value == "") {
-        alert("Por favor indica una direccion");
-        document.frm.precio_costo.focus();
-        return 0;
-        }
-
-        if(document.frm.precio_venta.value == "") {
-        alert("Por favor indica un E-Mail valido");
-        document.frm.precio_venta.focus();
-        return 0;
-        }
-
-        
-        document.frm.submit(); 
-        return true;
-        }
-</script>
-
+            <input type="submit" class="btn btn-primary" value="Registrar" name="registrar">
+            <a href="\sgc\producto_consulta.php"><button type="button" class="btn btn-default"> Cancelar</button></a>
+        </form>
     </div>
     <!-- /.container -->
+    <script>
+    function maxPrecioCosto(precio_costo)
+    {
+    if (precio_costo.value.length > precio_costo.maxLength)
+      precio_costo.value = precio_costo.value.slice(0, precio_costo.maxLength)
+    }
+    </script>
+    <!-- Funcion para validar la longitud de caracteres del input telefono-->
+    <script>
+    function maxPrecioVenta(precio_venta)
+    {
+    if (precio_venta.value.length > precio_venta.maxLength)
+      precio_venta.value = precio_venta.value.slice(0, precio_venta.maxLength)
+    }
+    </script>
 
 
     <!-- jQuery Version 1.11.1 -->

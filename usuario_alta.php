@@ -71,7 +71,7 @@ $roles = mysqli_query($conexion,"SELECT * FROM roles");
         </fieldset>
 
         <input type="submit" class="btn btn-primary" value="Registrar" name="registrar">
-        <a href="\sgc\usuario_consulta.php">Cancelar</a>
+        <a href="\sgc\usuario_consulta.php"><button type="button" class="btn btn-default"> Cancelar</button></a>
 
 
   </form>
