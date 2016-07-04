@@ -1,3 +1,9 @@
+
+<?php
+require_once("inc/validar.php");
+ ?>
+
+
 <!-- Navigation -->
 <meta charset="utf-8">
 <nav class="navbar navbar-inverse navbar-fixed-top" id="menu" role="navigation">

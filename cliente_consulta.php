@@ -1,7 +1,7 @@
 <?php 
     include "inc/menu.php" ;
     require('inc/conexiondb.php');
-
+    
     $query="SELECT * from clientes ";
     $resultado = mysqli_query($conexion,$query);
 
