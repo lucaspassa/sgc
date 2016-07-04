@@ -50,7 +50,7 @@
             </div><br/>
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
-                <input type="number" class="form-control" placeholder="Cuit" aria-describedby="sizing-addon1" name="cuit" required="" oninput="maxCuit(this)" maxlength="11">
+                <input type="text" class="form-control" pattern="|^[0123546789]*$|"  placeholder="Cuit" aria-describedby="sizing-addon1" name="cuit" required="" oninput="maxCuit(this)" maxlength="11">
             </div><br/>
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></span>
@@ -58,7 +58,7 @@
             </div><br/>
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span></span>
-                <input type="text" class="form-control" placeholder="Teléfono" aria-describedby="sizing-addon1" name="telefono" required="" oninput="maxTel(this)" maxlength="20">
+                <input type="text" pattern="|^[0123546789]*$|" class="form-control" placeholder="Teléfono" aria-describedby="sizing-addon1" name="telefono" required="" oninput="maxTel(this)" maxlength="20">
             </div><br/>
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
