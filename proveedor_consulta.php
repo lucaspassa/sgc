@@ -47,30 +47,19 @@
         
         <div class="col-lg-6">
             
-        </div>
-            
-        
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                    
-                    <h3>&#191;Realmente desea eliminar los proveedores seleccionados?</h3>
-                </div>
-        
-                <div class="modal-footer">
-                    <button id="edit-form"  data-id-mutual="" class="btn btn-primary">Eliminar</button>
-                    <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Cancelar</button>
-                </div>
-                </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->                
+        </div>             
                         
         <div class="jumbotron">
+        
 
+        <div class="input-group">
+        <span class="input-group-addon">Buscar</span>
+        <input id="filtrar" type="text" class="form-control" placeholder="Ingresa lo que deseas Buscar...">
+        </div>
 
             <div class="table-responsive">
               <table class="table table-hover">
+
                   <thead>
                        
                         <tr>
@@ -83,7 +72,7 @@
                             <td><a href="\sgc\proveedor_alta.php"><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nuevo</button></a></td>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="buscar">
                         <?php while($row=$resultado->fetch_assoc()){ ?>
                         <tr>
                             <td>
@@ -126,6 +115,8 @@
 
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
+
+    <script src="js/buscador.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
