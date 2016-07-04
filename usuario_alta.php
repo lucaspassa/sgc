@@ -51,26 +51,26 @@ $roles = mysqli_query($conexion,"SELECT * FROM roles");
     <form action="inc/usuario_guardar.php" class="form-horizontal ws-validate" method="POST" onsubmit="registrar.disabled = true; return true;" >
         <div class="input-group input-group-sm">
             <span class="input-group-addon" id="sizing-addon3"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-            <input type="text" class="form-control" placeholder="Nombre de Usuario" aria-describedby="sizing-addon3" name="nombre_usuario">
+            <input type="text" class="form-control" placeholder="Nombre de Usuario" aria-describedby="sizing-addon3" name="nombre_usuario" required="">
         </div><br/>
         <div class="input-group input-group-sm">
             <span class="input-group-addon" id="sizing-addon3"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span></span>
-            <input type="text" class="form-control" placeholder="Clave" aria-describedby="sizing-addon3" name="clave">
+            <input type="text" class="form-control" placeholder="Clave" aria-describedby="sizing-addon3" name="clave" required="">
         </div><br/>
         <div class="input-group input-group-sm">
             <span class="input-group-addon" id="sizing-addon3"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></span>
-            <input type="date" class="form-control" placeholder="Fecha de alta" aria-describedby="sizing-addon3" name="fecha_alta">
+            <input type="date" class="form-control" placeholder="Fecha de alta" aria-describedby="sizing-addon3" name="fecha_alta" required="">
         </div><br/>
         <fieldset class="form-group">
             <label for="exampleSelect1">Seleccionar Rol</label>
-            <select class="form-control" name="tipo_rol" name="tipo_rol">
+            <select class="form-control" name="tipo_rol" name="tipo_rol" required="">
               <?php while($rolesArr = mysqli_fetch_array($roles)){ ?>
             <option value="<?php echo $rolesArr['idRol']; ?>"><?php echo $rolesArr['nombreRol']; ?> </option>
             <?php } ?>
             </select>
         </fieldset>
 
-        <input type=button value="Registrar" name="registrar" class="btn btn-primary" onclick="this.form.submit(); this.disabled=true; this.value='enviando'">
+        <input type="submit" class="btn btn-primary" value="Registrar" name="registrar" >
 
 
   </form>

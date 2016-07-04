@@ -13,7 +13,7 @@
     <meta name="author" content="">
 
     <title>Alta de clientes</title>
-
+    
     <!-- Bootstrap Core CSS -->
     <link href="css\bootstrap.min.css" rel="stylesheet">
 
@@ -75,7 +75,7 @@
                 <input type="email" class="form-control" placeholder="Correo" aria-describedby="sizing-addon1" name="correo" required="" maxlength="50">
             </div><br/>
        
-                <input type="submit" class="btn btn-primary" value="registrar" name="registrar" >
+                <input type="submit" class="btn btn-primary" value="Registrar" name="registrar" >
         </form>
     </div>  
     <!-- /.container -->
