@@ -10,6 +10,7 @@
 	$resultado = mysqli_query($conexion,$query);
 	
 	$row=$resultado->fetch_assoc();
+    $roles = mysqli_query($conexion,"SELECT * FROM roles");
 
 ?>
 <!DOCTYPE html>
@@ -72,11 +73,10 @@
         
         <fieldset class="form-group">
             <label for="exampleSelect1">Seleccionar Rol</label>
-            <select class="form-control" name="tipo_rol">
-            <option value="1">Administrador</option>
-            <option value="2">Supervisor</option>
-            <option value="3">Ventas</option>
-            <option value="4">Deposito</option>
+            <select class="form-control" name="tipo_rol" name="tipo_rol" required="">
+              <?php while($rolesArr = mysqli_fetch_array($roles)){ ?>
+            <option value="<?php echo $rolesArr['idRol']; ?>"><?php echo $rolesArr['nombreRol']; ?> </option>
+            <?php } ?>
             </select>
         </fieldset>
 

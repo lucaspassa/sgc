@@ -51,7 +51,9 @@
                         <tr>
                             <td><b>Nombre de Usuario</b></td>
                             <td><b>Clave</b></td>
-                            <td><b>Fecha de Alta</b></td>
+                            <td><b>Fecha de Alta</b></td><br/>
+                            <td><a href="\sgc\usuario_alta.php"><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nuevo</button></a></td>
+                                                                       
                             
                         </tr>
 

@@ -80,7 +80,7 @@
                             <td><b>Direccion</b></td>
                             <td><b>Telefono</b></td>
                             <td><b>Email</b></td>    
-                            <td></td>
+                            <td><a href="\sgc\proveedor_alta.php"><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nuevo</button></a></td>
                         </tr>
                     </thead>
                     <tbody>

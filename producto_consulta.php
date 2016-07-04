@@ -52,6 +52,7 @@
                             <th> Stock </th>
                             <th> Precio Costo</th>
                             <th> Precio Venta </th>
+                            <td><a href="\sgc\producto_alta.php"><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nuevo</button></a></td>
                        </thead>
                         <tbody>
                             <?php while($row=$resultado->fetch_assoc()){ ?>

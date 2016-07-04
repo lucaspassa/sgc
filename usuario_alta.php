@@ -55,7 +55,7 @@ $roles = mysqli_query($conexion,"SELECT * FROM roles");
         </div><br/>
         <div class="input-group input-group-sm">
             <span class="input-group-addon" id="sizing-addon3"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span></span>
-            <input type="text" class="form-control" placeholder="Clave" aria-describedby="sizing-addon3" name="clave" required="">
+            <input type="password" class="form-control" placeholder="Clave" aria-describedby="sizing-addon3" name="clave" required="">
         </div><br/>
         <div class="input-group input-group-sm">
             <span class="input-group-addon" id="sizing-addon3"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></span>
@@ -70,7 +70,8 @@ $roles = mysqli_query($conexion,"SELECT * FROM roles");
             </select>
         </fieldset>
 
-        <input type="submit" class="btn btn-primary" value="Registrar" name="registrar" >
+        <input type="submit" class="btn btn-primary" value="Registrar" name="registrar">
+        <a href="\sgc\usuario_consulta.php">Cancelar</a>
 
 
   </form>

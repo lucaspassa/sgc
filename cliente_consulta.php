@@ -58,6 +58,7 @@
                             <th> Dirección </th>
                             <th> Telefono </th>
                             <th> Email </th>
+                            <td><a href="\sgc\cliente_alta.php"><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nuevo</button></a></td>
                         </thead>
                         <tbody>
                             <?php while($row=$resultado->fetch_assoc()){ ?>

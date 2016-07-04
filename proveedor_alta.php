@@ -65,7 +65,8 @@
                 <input type="email" class="form-control" placeholder="Correo" aria-describedby="sizing-addon1" name="correo" required="" maxlength="50">
             </div><br/>
 
-            <input type="submit" value="registrar" name="registrar" class="btn btn-primary">
+            <input type="submit" value="Registrar" name="registrar" class="btn btn-primary">
+            <a href="\sgc\proveedor_consulta.php">Cancelar</a>
         </form>
     </div>
     <!-- /.container -->

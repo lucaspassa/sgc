@@ -83,7 +83,8 @@
             <label for="exampleInputPassword1">Correo Electronico</label>
             <input type="email" class="form-control" id="exampleInputPassword1" value="<?php echo $row['correo']; ?>" name="correo">
         </div>
-        <button type="submit" class="btn btn-primary">Modificar</button>
+        <button type="submit" class="btn btn-danger">Modificar</button>
+        <a href="\sgc\proveedor_consulta.php"></a> <button type="submit" class="btn btn-primary">Cancelar</button>
   </form>
 
 

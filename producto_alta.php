@@ -62,6 +62,7 @@
         </div>
 
         <input type=button value="Registrar" class="btn btn-primary" onclick="valida_envia()">
+        <a href="\sgc\producto_consulta.php">Cancelar</a>
   </form>
 
 <script language="JavaScript" type="text/JavaScript">

@@ -1,6 +1,6 @@
 <?php 
 	include "menu.php";
-	require('conexiondb.php');
+	include('conexiondb.php');
 	
 	$id=$_POST['idUsuario'];
 	$usuario=$_POST['nombre_usuario'];
@@ -10,6 +10,7 @@
 
 	$query="UPDATE usuarios SET nombreUsuario='$usuario', clave='$clave', fechaAlta='$fecha',idRol='$tipo_rol' WHERE idUsuario='$id'";
 	$resultado = mysqli_query($conexion,$query);
+
 	
 ?>
 
@@ -41,7 +42,10 @@
 	<body>
 			<center>	
 				
-				<?php if($resultado>0){ ?>
+				<?php if($resultado>0){
+					header('Location: /sgc/usuario_consulta.php');
+					echo"<script>alert('Usted esta siendo redireccionado a la pagina principal')</script>";
+					exit(); ?>
 					<h1>Usuario Modificado</h1>
 					<?php }else{ ?>
 					<h1>Error al modificar Usuario</h1>		
