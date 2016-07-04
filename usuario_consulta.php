@@ -39,7 +39,7 @@
      <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h1>Lista de Usuarios</h1>
+                    <h1>Lista de Usuarios <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></h1>
                     <a href="inc/reportes.php?id=usuarios"><input type=button value="usuarios" class="btn btn-primary"></a>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                             <td><b>Nombre de Usuario</b></td>
                             <td><b>Clave</b></td>
                             <td><b>Fecha de Alta</b></td>
-                            <td></td>
+                            
                         </tr>
 
 
@@ -70,10 +70,10 @@
                                 <?php echo $row['fechaAlta'];?>
                             </td>
                             <td>
-                                <a href="inc/usuario_mod.php?id=<?php echo $row['idUsuario'];?>">Modificar</a>
+                                <a href="inc/usuario_mod.php?id=<?php echo $row['idUsuario'];?>"> <button type="button" class="btn btn-success"> Modificar </button></a>
                             </td>
                             <td>
-                                <a href="inc/usuario_eliminar.php?id=<?php echo $row['idUsuario'];?>">Eliminar</a>
+                                <a href="inc/usuario_eliminar.php?id=<?php echo $row['idUsuario'];?>"> <button type="button" class="btn btn-danger"> Eliminar</button></a>
                             </td>
 
                         </tr>

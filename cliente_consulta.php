@@ -87,10 +87,10 @@
                                 <?php echo $row['correo'];?>
                             </td>
                             <td>
-                                <a href="inc/cliente_mod.php?id=<?php echo $row['idCliente'];?>">Modificar</a>
+                                <a href="inc/cliente_mod.php?id=<?php echo $row['idCliente'];?>"> <button type="button" class="btn btn-success"> Modificar </button></a>
                             </td>
                             <td>
-                            <a  href="inc/cliente_eliminar.php?id=<?php echo $row['idCliente'];?>">Eliminar</button></a>
+                                <a href="inc/cliente_eliminar.php?id=<?php echo $row['idCliente'];?>"> <button type="button" class="btn btn-danger"> Eliminar</button></a>
                             </td>
                                 
 

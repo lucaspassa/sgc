@@ -72,10 +72,10 @@
                                 <?php echo $row['precioVenta'];?>
                             </td>
                             <td>
-                                <a href="inc/producto_mod.php?id=<?php echo $row['idProducto'];?>">Modificar</a>
+                                <a href="inc/producto_mod.php?id=<?php echo $row['idProducto'];?>"> <button type="button" class="btn btn-success"> Modificar </button></a>
                             </td>
                             <td>
-                                <a href="inc/producto_eliminar.php?id=<?php echo $row['idProducto'];?>">Eliminar</a>
+                                <a href="inc/producto_eliminar.php?id=<?php echo $row['idProducto'];?>"> <button type="button" class="btn btn-danger"> Eliminar</button></a>
                             </td>
 
                         </tr>

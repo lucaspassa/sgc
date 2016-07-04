@@ -77,7 +77,8 @@
             <input type="text" class="form-control" id="exampleInputPassword1" value="<?php echo $row['precioVenta']; ?>" name="precio_venta">
         </div>
         
-    	<button type="submit" class="btn btn-primary">Modificar Producto</button>
+    	<button type="submit" class="btn btn-danger">Modificar</button>
+        <a href="\sgc\producto_consulta.php"></a> <button type="submit" class="btn btn-primary">Cancelar</button>
 
        
   </form>
