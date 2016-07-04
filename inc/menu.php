@@ -1,6 +1,6 @@
 
 <?php
-require_once("inc/validar.php");
+require_once("validar.php");
  ?>
 
 
@@ -17,7 +17,7 @@ require_once("inc/validar.php");
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Bienvenido:  <?php echo $_SESSION['nombre']?>  </a><span></span>
+            <a class="navbar-brand">Bienvenido:  <?php echo $_SESSION['nombre']?>  </a><span></span>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
