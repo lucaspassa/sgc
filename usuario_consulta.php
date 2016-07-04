@@ -44,6 +44,11 @@
                 </div>
             </div>
         <div class="jumbotron">
+        <div class="input-group">
+            <span class="input-group-addon">Buscar</span>
+            <input id="filtrar" type="text" class="form-control" placeholder="Ingresa lo que deseas Buscar...">
+            </div>
+
             <div class="table-responsive">
                 <table class="table table-hover">
                     <thead>
@@ -59,7 +64,7 @@
 
 
                     </thead>
-                    <tbody>
+                     <tbody class="buscar">
                         <?php while($row=$resultado->fetch_assoc()){ ?>
                         <tr>
                             <td>
@@ -93,7 +98,7 @@
 
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
-
+    <script src="js/buscador.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 

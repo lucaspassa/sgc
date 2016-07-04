@@ -43,8 +43,11 @@
             </div>
         </div>
            <div class="jumbotron">
-                
-            
+           <div class="input-group">
+            <span class="input-group-addon">Buscar</span>
+            <input id="filtrar" type="text" class="form-control" placeholder="Ingresa lo que deseas Buscar...">
+            </div>
+
                 <div class="table-responsive">
                     <table class="table table-hover">
                         <thead>
@@ -55,7 +58,7 @@
                             <th> Precio Venta </th>
                             <td><a href="\sgc\producto_alta.php"><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nuevo</button></a></td>
                        </thead>
-                        <tbody>
+                        <tbody class="buscar">
                             <?php while($row=$resultado->fetch_assoc()){ ?>
                             <tr>
                             <td>
@@ -94,6 +97,7 @@
         <!-- jQuery Version 1.11.1 -->
         <script src="js/jquery.js"></script>
 
+        <script src="js/buscador.js"></script>
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js"></script>
 
