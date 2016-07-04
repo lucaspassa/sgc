@@ -25,7 +25,7 @@
           <ul class="nav navbar-nav">
             
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"><span class="caret"></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Clientes <span class="glyphicon glyphicon-user" aria-hidden="true"></span><span class="caret"></a>
               <ul class="dropdown-menu">
               
                 <li><a href="/sgc/cliente_alta.php">Alta Cliente</a></li>
@@ -34,7 +34,7 @@
             </li>
 
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-signal" aria-hidden="true"><span class="caret"></span></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Ventas <span class="glyphicon glyphicon-signal" aria-hidden="true"></span><span class="caret"></span></a>
         <ul class="dropdown-menu">
         <li><a href="/sgc/ventas.php">Ventas realizadas</a></li>
         <li><a href="/sgc/reporte_venta.php">Generar Reporte</a></li>
@@ -42,7 +42,7 @@
       </li>
 
     <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"><span class="caret"></span></a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Proveedores <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span class="caret"></span></a>
       <ul class="dropdown-menu">
         <li><a href="/sgc/proveedor_alta.php">Alta Proveedor</a></li>
         <li><a href="/sgc/proveedor_consulta.php">Consultar Proveedor</a></li>
@@ -50,7 +50,7 @@
     </li>
 
     <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-glass" aria-hidden="true"><span class="caret"></span></a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Productos <span class="glyphicon glyphicon-glass" aria-hidden="true"><span class="caret"></span></span></a>
       <ul class="dropdown-menu">
         <li><a href="/sgc/producto_alta.php">Alta</a></li>
         <li><a href="/sgc/producto_consulta.php">Consultar</a></li>
@@ -58,7 +58,7 @@
     </li>
 
 	  <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-usd" aria-hidden="true"><span class="caret"></span></a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Caja <span class="glyphicon glyphicon-usd" aria-hidden="true"><span class="caret"></span></span></a>
       <ul class="dropdown-menu">
             <li><a href="/sgc/caja_ingreso.php">Ingreso</a></li>
             <li><a href="/sgc/caja_egreso.php">Egreso</a></li>
@@ -69,7 +69,7 @@
 
 
     <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span><span class="caret"></span></a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Sistema <span class="glyphicon glyphicon-cog" aria-hidden="true"></span><span class="caret"></span></a>
       <ul class="dropdown-menu">
             <li><a href="/sgc/usuario_alta.php">Nuevo usuario</a></li>
             <li><a href="/sgc/usuario_consulta.php">Consultar usuario</a></li>

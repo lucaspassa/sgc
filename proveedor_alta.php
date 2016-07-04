@@ -39,79 +39,54 @@
         <!-- /.row -->
 
 
-    <form name=frm action="inc/proveedor_guardar.php" method="POST"  >
-        <div class="form-group">
-            <label for="exampleInputEmail1">Razon Social</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="razon_social" required="" >
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Nombre Contacto</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="nombre_contacto" required=" ">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Cuit</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="cuit" required=" ">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Direccion</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="direccion" required=" ">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Telefono</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="telefono" required=" ">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Correo</label>
-            <input type="email" class="form-control" id="exampleInputPassword1" name="correo" required=" ">
-        </div>
-        
-        <input type=button value="Registrar" class="btn btn-primary" onclick="valida_envia();">
-        
-        
-  </form>
+        <form action="inc/proveedor_guardar.php" method="POST" onsubmit="registrar.disabled = true; return true;">
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                <input type="text" class="form-control" placeholder="Razon Social" aria-describedby="sizing-addon1" name="razon_social" required="" maxlength="20">
+            </div><br/>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                <input type="text" class="form-control" placeholder="Nombre Contacto" aria-describedby="sizing-addon1" name="nombre_contacto" required="" maxlength="40">
+            </div><br/>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
+                <input type="number" class="form-control" placeholder="Cuit" aria-describedby="sizing-addon1" name="cuit" required="" oninput="maxCuit(this)" maxlength="11">
+            </div><br/>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></span>
+                <input type="text" class="form-control" placeholder="Direccion" aria-describedby="sizing-addon1" name="direccion" required="" maxlength="50">
+            </div><br/>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span></span>
+                <input type="text" class="form-control" placeholder="Telefono" aria-describedby="sizing-addon1" name="telefono" required="" oninput="maxTel(this)" maxlength="20">
+            </div><br/>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
+                <input type="email" class="form-control" placeholder="Correo" aria-describedby="sizing-addon1" name="correo" required="" maxlength="50">
+            </div><br/>
 
+            <input type="submit" value="registrar" name="registrar" class="btn btn-primary">
+        </form>
     </div>
     <!-- /.container -->
 
-    <script language="JavaScript" type="text/JavaScript">
+    <script>
+    function maxCuit(cuit)
+    {
+    if (cuit.value.length > cuit.maxLength)
+      cuit.value = cuit.value.slice(0, cuit.maxLength)
+    }
+    </script>
+    <!-- Funcion para validar la longitud de caracteres del input telefono-->
+    <script>
+    function maxTel(telefono)
+    {
+    if (telefono.value.length > telefono.maxLength)
+      telefono.value = telefono.value.slice(0, telefono.maxLength)
+    }
+    </script>
 
-        function valida_envia(){
-        if(document.frm.razon_social.value == "") {
-        alert("Por favor indique la Razon Social");
-        document.frm.razon_social.focus();
-        return 0;
-        }
-
-        if(document.frm.nombre_contacto.value == "") {
-        alert("Por favor indique el nombre de contacto");
-        document.frm.nombre_contacto.focus();
-        return 0;
-        }
-
-
-        if(document.frm.cuit.value == "") {
-        alert("Por favor indica un cuit");
-        document.frm.cuit.focus();
-        return 0;
-        }
-
-        if(document.frm.direccion.value == "") {
-        alert("Por favor indica una direccion");
-        document.frm.direccion.focus();
-        return 0;
-        }
-
-        if(document.frm.correo.value == "") {
-        alert("Por favor indica un E-Mail valido");
-        document.frm.correo.focus();
-        return 0;
-        }
-
-        
-        document.frm.submit(); 
-        return true;
-        }
-</script>
+    
 
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>

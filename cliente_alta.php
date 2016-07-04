@@ -40,59 +40,46 @@
                 <h1>Registro de Clientes <span class="glyphicon glyphicon-user" aria-hidden="true"></span></h1>
         </div><br/>
 
-      <form action="inc/cliente_guardar.php" class="form-horizontal ws-validate" method="POST" onsubmit="registrar.disabled = true; return true;">
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-            <input type="text" class="form-control" placeholder="Nombre" aria-describedby="sizing-addon1" name="nombre" required="" maxlength="20">
-        </div><br/>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-            <input type="text" class="form-control" placeholder="Apellido" aria-describedby="sizing-addon1" name="apellido" required="" maxlength="30">
-        </div><br/>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-            <input type="text" class="form-control" placeholder="Razon Social" aria-describedby="sizing-addon1" name="razon_social" required="" maxlength="20">
-        </div><br/>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
-            <input type="text" class="form-control" placeholder="Categoria" aria-describedby="sizing-addon1" name="categoria" required="" maxlength="20">
-        </div><br/>
-        
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
-            <input type="number" class="form-control" placeholder="CUIT" aria-describedby="sizing-addon1" name="cuit" required="" oninput="maxCuit(this)" maxlength="11">
-        </div><br/>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></span>
-            <input type="text" class="form-control" placeholder="Dirección" aria-describedby="sizing-addon1" name="direccion" required="" maxlength="50">
-        </div><br/>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span></span>
-            <input type="text" class="form-control" placeholder="Telefono" aria-describedby="sizing-addon1" name="telefono" required="" oninput="maxTel(this)" maxlength="20">
-        </div><br/>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
-            <input type="email" class="form-control" placeholder="Correo" aria-describedby="sizing-addon1" name="correo" required="" maxlength="50">
-        </div><br/>
-        <div class="form-group">
+          <form action="inc/cliente_guardar.php" class="form-horizontal ws-validate" method="POST" onsubmit="registrar.disabled = true; return true;">
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                <input type="text" class="form-control" placeholder="Nombre" aria-describedby="sizing-addon1" name="nombre" required="" maxlength="20">
+            </div><br/>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                <input type="text" class="form-control" placeholder="Apellido" aria-describedby="sizing-addon1" name="apellido" required="" maxlength="30">
+            </div><br/>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                <input type="text" class="form-control" placeholder="Razon Social" aria-describedby="sizing-addon1" name="razon_social" required="" maxlength="20">
+            </div><br/>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
+                <input type="text" class="form-control" placeholder="Categoria" aria-describedby="sizing-addon1" name="categoria" required="" maxlength="20">
+            </div><br/>
+            
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
+                <input type="number" class="form-control" placeholder="CUIT" aria-describedby="sizing-addon1" name="cuit" required="" oninput="maxCuit(this)" maxlength="11">
+            </div><br/>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></span>
+                <input type="text" class="form-control" placeholder="Dirección" aria-describedby="sizing-addon1" name="direccion" required="" maxlength="50">
+            </div><br/>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span></span>
+                <input type="text" class="form-control" placeholder="Telefono" aria-describedby="sizing-addon1" name="telefono" required="" oninput="maxTel(this)" maxlength="20">
+            </div><br/>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
+                <input type="email" class="form-control" placeholder="Correo" aria-describedby="sizing-addon1" name="correo" required="" maxlength="50">
+            </div><br/>
+       
+                <input type="submit" class="btn btn-primary" value="registrar" name="registrar" >
+        </form>
     </div>  
-        <div class="form-group">
-            <input type="submit" class="btn btn-primary" value="registrar" name="registrar" >
-        </div> 
-    
     <!-- /.container -->
   
-
-
-    <!-- Funcion para validar la longitud de caracteres del input DNI>
-    <script>
-    function maxDni(dni)
-    {
-    if (dni.value.length > dni.maxLength)
-      dni.value = dni.value.slice(0, dni.maxLength)
-    }
-    </script>
-    Funcion para validar la longitud de caracteres del input CUIT
     <script>
     function maxCuit(cuit)
     {
@@ -100,14 +87,14 @@
       cuit.value = cuit.value.slice(0, cuit.maxLength)
     }
     </script>
-    <!-- Funcion para validar la longitud de caracteres del input telefono
+    <!-- Funcion para validar la longitud de caracteres del input telefono-->
     <script>
     function maxTel(telefono)
     {
     if (telefono.value.length > telefono.maxLength)
       telefono.value = telefono.value.slice(0, telefono.maxLength)
     }
-    </script>-->
+    </script>
 
     
     <!-- jQuery Version 1.11.1 -->
