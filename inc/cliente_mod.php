@@ -1,13 +1,13 @@
 <?php
 	include "menu.php";
 	require('conexiondb.php');
-	
+
 	$id=$_GET['id'];
-	
+
 	$query="SELECT nombre, apellido, razonSocial, categoria, dni, cuit, direccion, telefono, correo FROM clientes WHERE idCliente='$id'";
-	
+
 	$resultado = mysqli_query($conexion,$query);
-	
+
 	$row=$resultado->fetch_assoc();
 
 ?>
@@ -55,45 +55,40 @@
     	<tr>
 			<input type="hidden" name="idCliente" value="<?php echo $id; ?>">
 		</tr>
-
-        <div class="form-group">
-            <label for="exampleInputEmail1">Nombre</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $row['nombre']; ?>" name="nombre">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Apellido</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" value="<?php echo $row['apellido']; ?>" name="apellido">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Razon Social</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" value="<?php echo $row['razonSocial']; ?>" name="razon_social" >
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Categoria</label>
-            <input type="text" class="form-control" id="exampleInputPassword1"  value="<?php echo $row['categoria']; ?>" name="categoria">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Dni</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" value="<?php echo $row['dni']; ?>" name="dni">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Cuit</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" value="<?php echo $row['cuit']; ?>" name="cuit">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Dirección</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" value="<?php echo $row['direccion']; ?>" name="direccion" >
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Telefono</label>
-            <input type="tel" class="form-control" id="exampleInputPassword1" value="<?php echo $row['telefono']; ?>" name="telefono" >
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Correo Electronico</label>
-            <input type="email" class="form-control" id="exampleInputPassword1" value="<?php echo $row['correo']; ?>" name="correo">
-        </div>
+				<div class="input-group input-group-lg">
+						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+						<input type="text" class="form-control" pattern="|^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]*$|" value="<?php echo $row['nombre']; ?>" placeholder="Nombre" aria-describedby="sizing-addon1" name="nombre" required="" maxlength="20">
+				</div><br/>
+				<div class="input-group input-group-lg">
+						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+						<input type="text" class="form-control" pattern="|^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]*$|" value="<?php echo $row['apellido']; ?>" placeholder="Apellido" aria-describedby="sizing-addon1" name="apellido" required="" maxlength="20">
+				</div><br/>
+				<div class="input-group input-group-lg">
+						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+						<input type="text" class="form-control" value="<?php echo $row['razonSocial']; ?>" placeholder="Razón Social" aria-describedby="sizing-addon1" name="razon_social" required="" maxlength="20">
+				</div><br/>
+				<div class="input-group input-group-lg">
+						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+						<input type="text" class="form-control" pattern="|^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]*$|" value="<?php echo $row['categoria']; ?>" placeholder="Categoría" aria-describedby="sizing-addon1" name="categoria" required="" maxlength="20">
+				</div><br/>
+				<div class="input-group input-group-lg">
+						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+						<input type="text" class="form-control" value="<?php echo $row['cuit']; ?>" placeholder="Cuit" aria-describedby="sizing-addon1" name="cuit" required="" maxlength="20">
+				</div><br/>
+				<div class="input-group input-group-lg">
+						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+						<input type="text" class="form-control" value="<?php echo $row['direccion']; ?>" placeholder="Dirección" aria-describedby="sizing-addon1" name="cuit" required="" maxlength="20">
+				</div><br/>
+				<div class="input-group input-group-lg">
+						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+						<input type="text" class="form-control" value="<?php echo $row['telefono']; ?>" placeholder="Teléfono" aria-describedby="sizing-addon1" name="telefono" required="" maxlength="20">
+				</div><br/>
+				<div class="input-group input-group-lg">
+						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+						<input type="text" class="form-control" value="<?php echo $row['correo']; ?>" placeholder="Correo" aria-describedby="sizing-addon1" name="correo" required="" maxlength="20">
+				</div><br/>
         <button type="submit" class="btn btn-danger">Modificar</button>
-        <a href="\sgc\cliente_consulta.php"></a> <button type="submit" class="btn btn-primary">Cancelar</button>
+        <a href="\sgc\cliente_consulta.php"></a> <button type="button" class="btn btn-primary">Cancelar</button>
   </form>
 
 
@@ -104,7 +99,7 @@
 
 
     <!-- jQuery Version 1.11.1 -->
-    <script src="sgc/js/jquery.js"></script>
+    <script src="/sgc/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/sgc/js/bootstrap.min.js"></script>
