@@ -42,7 +42,7 @@ require_once("validar.php");
       </li>
 
     <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>Proveedores</span><span class="caret"></span></a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Proveedores</span><span class="caret"></span></a>
       <ul class="dropdown-menu">
         <li><a href="/sgc/proveedor_alta.php">Nuevo Proveedor</a></li>
         <li><a href="/sgc/proveedor_consulta.php">Lista de proveedores</a></li>
