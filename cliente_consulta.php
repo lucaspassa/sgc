@@ -46,13 +46,17 @@
                 <h1>Lista de Clientes</h1>
             </div>
         </div>
+
+        <div class="col-lg-6">
+        </div>
+        
         <div class="jumbotron">
             <div class="input-group">
-            <span class="input-group-addon">Buscar</span>
-            <input id="filtrar" type="text" class="form-control" placeholder="Ingresa lo que deseas Buscar...">
+                <span class="input-group-addon">Buscar</span>
+                <input id="filtrar" type="text" class="form-control" placeholder="Ingresa lo que deseas Buscar...">
             </div>
 
-            <div class="table-responsive">
+                <div class="table-responsive">
                     <table class="table table-hover">
                         <thead>
                             <th> Nombre </th>
@@ -65,48 +69,49 @@
                             <th> Email </th>
                             <td><a href="\sgc\cliente_alta.php"><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nuevo</button></a></td>
                         </thead>
-                         <tbody class="buscar">
+                        <tbody class="buscar">
                             <?php while($row=$resultado->fetch_assoc()){ ?>
                             <tr>
-                            <td>
-                                <?php echo $row['nombre'];?>
-                            </td>
-                            <td>
-                                <?php echo $row['apellido'];?>
-                            </td>
-                            <td>
-                                <?php echo $row['razonSocial'];?>
-                            </td>
-                            <td>
-                                <?php echo $row['categoria'];?>
-                            </td>
-                            <td>
-                                <?php echo $row['cuit'];?>
-                            </td>
-                            <td>
-                                <?php echo $row['direccion'];?>
-                            </td>
-                            <td>
-                                <?php echo $row['telefono'];?>
-                            </td>
-                            <td>
-                                <?php echo $row['correo'];?>
-                            </td>
-                            <td>
-                                <a href="inc/cliente_mod.php?id=<?php echo $row['idCliente'];?>"> <button type="button" class="btn btn-success"> Modificar </button></a>
-                            </td>
-                            <td>
-                                <a href="inc/cliente_eliminar.php?id=<?php echo $row['idCliente'];?>"> <button type="button" class="btn btn-danger"> Eliminar</button></a>
-                            </td>
-                                
+                                <td>
+                                    <?php echo $row['nombre'];?>
+                                </td>
+                                <td>
+                                    <?php echo $row['apellido'];?>
+                                </td>
+                                <td>
+                                    <?php echo $row['razonSocial'];?>
+                                </td>
+                                <td>
+                                    <?php echo $row['categoria'];?>
+                                </td>
+                                <td>
+                                    <?php echo $row['cuit'];?>
+                                </td>
+                                <td>
+                                    <?php echo $row['direccion'];?>
+                                </td>
+                                <td>
+                                    <?php echo $row['telefono'];?>
+                                </td>
+                                <td>
+                                    <?php echo $row['correo'];?>
+                                </td>
+                                <td>
+                                    <a href="inc/cliente_mod.php?id=<?php echo $row['idCliente'];?>"> <button type="button" class="btn btn-success"> Modificar </button></a>
+                                </td>
+                                <td>
+                                    <a href="inc/cliente_eliminar.php?id=<?php echo $row['idCliente'];?>"> <button type="button" class="btn btn-danger"> Eliminar</button></a>
+                                </td>
+                                    
 
                             </tr>
                                  <?php } ?>
                         </tbody>
                     </table>
                 </div>
-            </div>
+              
         </div>
+    </div>
         <!-- /.container -->
 
 

@@ -7,13 +7,12 @@
 	$apellido=$_POST['apellido'];
 	$razon_social=$_POST['razon_social'];
 	$categoria=$_POST['categoria'];
-	$dni=$_POST['dni'];
 	$cuit=$_POST['cuit'];
 	$direccion=$_POST['direccion'];
 	$telefono=$_POST['telefono'];
 	$correo=$_POST['correo'];
 	
-	$query="UPDATE clientes SET nombre='$nombre', apellido='$apellido', razonSocial='$razon_social',categoria='$categoria',dni= '$dni', cuit='$cuit', direccion='$direccion', telefono='$telefono', correo='$correo' WHERE idCliente='$id'";
+	$query="UPDATE clientes SET nombre='$nombre', apellido='$apellido', razonSocial='$razon_social',categoria='$categoria', cuit='$cuit', direccion='$direccion', telefono='$telefono', correo='$correo' WHERE idCliente='$id'";
 	
 	$resultado = mysqli_query($conexion,$query);
 	

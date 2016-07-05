@@ -57,11 +57,11 @@
 		</tr>
 				<div class="input-group input-group-lg">
 						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-						<input type="text" class="form-control" pattern="|^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]*$|" value="<?php echo $row['nombre']; ?>" placeholder="Nombre" aria-describedby="sizing-addon1" name="nombre" required="" maxlength="20">
+						<input type="text" class="form-control" value="<?php echo $row['nombre']; ?>" placeholder="Nombre" aria-describedby="sizing-addon1" name="nombre" required="" maxlength="20">
 				</div><br/>
 				<div class="input-group input-group-lg">
 						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-						<input type="text" class="form-control" pattern="|^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]*$|" value="<?php echo $row['apellido']; ?>" placeholder="Apellido" aria-describedby="sizing-addon1" name="apellido" required="" maxlength="20">
+						<input type="text" class="form-control" pattern="|^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]*$|" value="<?php echo $row['apellido']; ?>" placeholder="Apellido" aria-describedby="sizing-addon1" name="apellido" required="" maxlength="30">
 				</div><br/>
 				<div class="input-group input-group-lg">
 						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
@@ -69,15 +69,15 @@
 				</div><br/>
 				<div class="input-group input-group-lg">
 						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-						<input type="text" class="form-control" pattern="|^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]*$|" value="<?php echo $row['categoria']; ?>" placeholder="Categoría" aria-describedby="sizing-addon1" name="categoria" required="" maxlength="20">
+						<input type="text" class="form-control" value="<?php echo $row['categoria']; ?>" placeholder="Categoría" aria-describedby="sizing-addon1" name="categoria" required="" maxlength="20">
 				</div><br/>
 				<div class="input-group input-group-lg">
 						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-						<input type="text" class="form-control" value="<?php echo $row['cuit']; ?>" placeholder="Cuit" aria-describedby="sizing-addon1" name="cuit" required="" maxlength="20">
+						<input type="number" class="form-control" value="<?php echo $row['cuit']; ?>" placeholder="Cuit" aria-describedby="sizing-addon1" name="cuit" required="" oninput="maxCuit(this)" maxlength="15" >
 				</div><br/>
 				<div class="input-group input-group-lg">
 						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-						<input type="text" class="form-control" value="<?php echo $row['direccion']; ?>" placeholder="Dirección" aria-describedby="sizing-addon1" name="cuit" required="" maxlength="20">
+						<input type="text" class="form-control" value="<?php echo $row['direccion']; ?>" placeholder="Dirección" aria-describedby="sizing-addon1" name="direccion" required="" maxlength="20">
 				</div><br/>
 				<div class="input-group input-group-lg">
 						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
@@ -88,10 +88,16 @@
 						<input type="text" class="form-control" value="<?php echo $row['correo']; ?>" placeholder="Correo" aria-describedby="sizing-addon1" name="correo" required="" maxlength="20">
 				</div><br/>
         <button type="submit" class="btn btn-danger">Modificar</button>
-        <a href="\sgc\cliente_consulta.php"></a> <button type="button" class="btn btn-primary">Cancelar</button>
+        <a href="\sgc\cliente_consulta.php"></a> <button type="" class="btn btn-primary">Cancelar</button>
   </form>
 
-
+	<script>
+    function maxCuit(cuit)
+    {
+    if (cuit.value.length > cuit.maxLength)
+      cuit.value = cuit.value.slice(0, cuit.maxLength)
+    }
+    </script>
 
 
     </div>

@@ -39,7 +39,7 @@
     <!-- Page Content -->
 
     <div class="container-fluid">
-    <div class="row">
+        <div class="row">
             <div class="col-lg-12 text-center">
                 <h1>Lista de Proveedores</h1>
             </div>
@@ -53,8 +53,8 @@
         
 
         <div class="input-group">
-        <span class="input-group-addon">Buscar</span>
-        <input id="filtrar" type="text" class="form-control" placeholder="Ingresa lo que deseas Buscar...">
+            <span class="input-group-addon">Buscar</span>
+            <input id="filtrar" type="text" class="form-control" placeholder="Ingresa lo que deseas Buscar...">
         </div>
 
             <div class="table-responsive">
