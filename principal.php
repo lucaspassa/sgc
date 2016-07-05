@@ -25,6 +25,7 @@ include ('inc/menu.php');
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
@@ -70,7 +71,7 @@ include ('inc/menu.php');
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-green">
+                        <div class="panel panel-success">
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
