@@ -40,7 +40,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h1>Lista de Usuarios <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></h1>
-                    <a href="inc/reportes.php?id=usuarios"><input type=button value="usuarios" class="btn btn-primary"></a>
+                    <a href="inc/reportes/generarReporte.php"><input type=button value="usuarios" class="btn btn-primary"></a>
                 </div>
             </div>
         <div class="jumbotron">
@@ -58,8 +58,8 @@
                             <td><b>Clave</b></td>
                             <td><b>Fecha de Alta</b></td><br/>
                             <td><a href="\sgc\usuario_alta.php"><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nuevo</button></a></td>
-                                                                       
-                            
+
+
                         </tr>
 
 
