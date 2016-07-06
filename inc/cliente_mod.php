@@ -68,27 +68,27 @@
 						<input type="text" class="form-control" value="<?php echo $row['razonSocial']; ?>" placeholder="Razón Social" aria-describedby="sizing-addon1" name="razon_social" required="" maxlength="20">
 				</div><br/>
 				<div class="input-group input-group-lg">
-						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
 						<input type="text" class="form-control" value="<?php echo $row['categoria']; ?>" placeholder="Categoría" aria-describedby="sizing-addon1" name="categoria" required="" maxlength="20">
 				</div><br/>
 				<div class="input-group input-group-lg">
-						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
 						<input type="number" class="form-control" value="<?php echo $row['cuit']; ?>" placeholder="Cuit" aria-describedby="sizing-addon1" name="cuit" required="" oninput="maxCuit(this)" maxlength="15" >
 				</div><br/>
 				<div class="input-group input-group-lg">
-						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-						<input type="text" class="form-control" value="<?php echo $row['direccion']; ?>" placeholder="Dirección" aria-describedby="sizing-addon1" name="direccion" required="" maxlength="20">
+						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></span>
+						<input type="text" class="form-control" value="<?php echo $row['direccion']; ?>" placeholder="Dirección" aria-describedby="sizing-addon1" name="direccion" required="" maxlength="50">
 				</div><br/>
 				<div class="input-group input-group-lg">
-						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span></span>
 						<input type="text" class="form-control" value="<?php echo $row['telefono']; ?>" placeholder="Teléfono" aria-describedby="sizing-addon1" name="telefono" required="" maxlength="20">
 				</div><br/>
 				<div class="input-group input-group-lg">
-						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-						<input type="text" class="form-control" value="<?php echo $row['correo']; ?>" placeholder="Correo" aria-describedby="sizing-addon1" name="correo" required="" maxlength="20">
+						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
+						<input type="email" class="form-control" value="<?php echo $row['correo']; ?>" placeholder="Correo" aria-describedby="sizing-addon1" name="correo" required="" maxlength="50">
 				</div><br/>
         <button type="submit" class="btn btn-danger">Modificar</button>
-        <a href="\sgc\cliente_consulta.php"></a> <button type="" class="btn btn-primary">Cancelar</button>
+        <a href="\sgc\cliente_consulta.php"><button type="button" class="btn btn-default"> Cancelar</button></a>
   </form>
 
 	<script>

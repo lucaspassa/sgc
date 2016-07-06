@@ -6,8 +6,16 @@ include "inc/menu.php"; ?>
 
 <?php
 
+include("inc/conexiondb.php");
 
-include ('inc/menu.php');
+$query="select * from clientes";
+    
+$resultado = mysqli_query($conexion,$query);
+$numero = mysqli_num_rows($resultado); 
+
+$productos = "select * from productos";
+$resultado = mysqli_query($conexion,$productos);
+$productos = mysqli_num_rows($resultado); 
 
 ?>
 <!DOCTYPE html>
@@ -25,7 +33,7 @@ include ('inc/menu.php');
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
@@ -43,7 +51,7 @@ include ('inc/menu.php');
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>Panel Central</h1>
+                 <h1 class="display-1">Bienvenido a SGC</h1>
 
             </div>
 
@@ -56,45 +64,46 @@ include ('inc/menu.php');
                                         <i class="fa fa-comments fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">26</div>
-                                        <div>New Comments!</div>
+                                        <div class="huge"><?php echo $numero;  ?></div>
+                                        <div>Clientes</div>
                                     </div>
                                 </div>
                             </div>
                             <a href="#">
                                 <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
+                                    <a href="/sgc/cliente_consulta.php"><span class="pull-left">Ver</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
+                                    <div class="clearfix"></div></a>
                                 </div>
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-success">
+                        <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
                                         <i class="fa fa-tasks fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">12</div>
-                                        <div>New Tasks!</div>
+                                        <div class="huge"><?php echo $productos;  ?></div>
+                                        <div>Productos</div>
                                     </div>
                                 </div>
                             </div>
                             <a href="#">
                                 <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
+                                    <a href="/sgc/producto_consulta.php"><span class="pull-left">Ver</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
+                                    <div class="clearfix"></div></a>
                                 </div>
                             </a>
                         </div>
                     </div>
-
-
-
+                    <a href="cliente_alta.php"><div class=""></data><img src="img/usuario.png"></div></a>
+                   
+            
+            
 
 
 

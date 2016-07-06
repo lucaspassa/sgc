@@ -2,7 +2,7 @@
     include "inc/menu.php" ;
     require('inc/conexiondb.php');
 
-    $query="SELECT idProducto,codigo,descripcion,stockDisponible,precioCosto,precioVenta from productos ";
+    $query="SELECT idProducto,codigo,descripcion,stockDisponible,precioCosto,precioVenta from productos order by descripcion";
     $resultado = mysqli_query($conexion,$query);
 
 ?>

@@ -2,7 +2,7 @@
     include "inc/menu.php" ;
     require('inc/conexiondb.php');
     
-    $query="SELECT * from clientes ";
+    $query="SELECT * from clientes order by nombre";
     $resultado = mysqli_query($conexion,$query);
 
 
