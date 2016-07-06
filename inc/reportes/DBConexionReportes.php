@@ -1,5 +1,5 @@
 <?php
-include ("../../config.php");
+include ("../config.php");
 $conexion = mysql_connect($servername, $username,$password);
 mysql_select_db("sgc", $conexion);
 
