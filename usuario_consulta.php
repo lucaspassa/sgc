@@ -40,7 +40,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h1>Lista de Usuarios <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></h1>
-                    <a href="inc/reportes/generarReporte.php"><input type=button value="usuarios" class="btn btn-primary"></a>
+                    <a href="inc/reportes/generarReporte.php?tipo=usuarios"><input type=button value="usuarios" class="btn btn-primary"></a>
                 </div>
             </div>
         <div class="jumbotron">
