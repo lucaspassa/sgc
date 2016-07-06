@@ -97,7 +97,7 @@ if($tipo == 'ventas'){
   $pdf=new PDF();
   $pdf->AddPage();
   //Primera tabla.
-  $pdf->Table('SELECT * FROM ingreso');
+  $pdf->Table('SELECT * FROM ingreso WHERE');
   ob_start();
   $pdf->Output();
 }
