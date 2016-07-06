@@ -78,7 +78,7 @@
         </div>
         
     	<button type="submit" class="btn btn-danger">Modificar</button>
-        <a href="\sgc\producto_consulta.php"></a> <button type="submit" class="btn btn-primary">Cancelar</button>
+        <a href="\sgc\producto_consulta.php"><button type="submit" class="btn btn-primary">Cancelar</button></a> 
 
        
   </form>

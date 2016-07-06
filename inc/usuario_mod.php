@@ -81,7 +81,7 @@
         </fieldset>
 
         <button type="submit" class="btn btn-danger">Modificar</button>
-        <a href="\sgc\usuario_consulta.php"></a> <button type="" class="btn btn-primary">Cancelar</button>
+        <a href="\sgc\usuario_consulta.php"><button type="" class="btn btn-primary">Cancelar</button></a> 
        
   </form>
 
