@@ -76,6 +76,7 @@ require_once("validar.php");
             <li role="separator" class="divider"></li>
             <li><a href="/sgc/inc/reportes/generarReporte.php?tipo=clientes">Clientes</a></li>
             <li><a href="/sgc/inc/reportes/generarReporte.php?tipo=proveedores">Proveedores</a></li>
+            <li><a href="/sgc/inc/reportes/generarReporte.php?tipo=productos">Stock</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="/sgc/inc/reportes/generarReporte.php?tipo=usuarios">Usuarios</a></li>
       </ul>

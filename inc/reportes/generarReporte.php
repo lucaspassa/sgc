@@ -97,7 +97,7 @@ if($tipo == 'ventas'){
   $pdf=new PDF();
   $pdf->AddPage();
   //Primera tabla.
-  $pdf->Table('SELECT * FROM ingreso WHERE');
+  $pdf->Table('SELECT * FROM ingreso WHERE idTipoComprobante = 1');
   ob_start();
   $pdf->Output();
 }
@@ -142,6 +142,28 @@ if($tipo == 'clientes'){
   $pdf->AddPage();
   //Primera tabla.
   $pdf->Table('SELECT * FROM clientes');
+  ob_start();
+  $pdf->Output();
+}
+
+//--------- Reportes de stock ---------------------
+if($tipo == 'productos'){
+  class PDF extends PDF_MySQL_Table{
+      function Header()
+      {
+          // Titulo
+          $this->SetFont('Arial', '', 18);
+          $this->Cell(0, 6, 'Reporte de Stock', 0, 1, 'C');
+          $this->Ln(10);
+          // Asegurar la header de la tabla en el outpu
+          parent::Header();
+      }
+  }
+
+  $pdf=new PDF();
+  $pdf->AddPage();
+  //Primera tabla.
+  $pdf->Table('SELECT * FROM productos');
   ob_start();
   $pdf->Output();
 }
