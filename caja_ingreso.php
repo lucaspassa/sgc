@@ -1,5 +1,5 @@
-<?php 
-include "inc/menu.php" 
+<?php
+include "inc/menu.php"
 ?>
 
 <!DOCTYPE html>
@@ -42,17 +42,17 @@ include "inc/menu.php"
 
 
     <form action="inc/caja_ingresoguardar.php" method="POST">
-       
+
     <div class="form-group">
             <label for="sel1">Cliente</label>
             <select class="form-control" id="sel1" name="cliente">
-            
+
                 <option>Seleccione Cliente</option>
-        <?php 
+        <?php
         $conexion=mysql_connect("localhost","root","root") or
         die("Problemas en la conexion");
         mysql_select_db("sgc",$conexion) or
-        die("Problemas en la selección de la base de datos");  
+        die("Problemas en la selección de la base de datos");
         mysql_query ("SET NAMES 'utf8'");
         $clavebuscadah=mysql_query("select idCliente,nombre,apellido from clientes",$conexion) or
         die("Problemas en el select:".mysql_error());
@@ -60,7 +60,7 @@ include "inc/menu.php"
         {
         echo'<OPTION VALUE="'.$row['idCliente'].'">'.$row['nombre'].' '.$row['apellido'].'</OPTION>';
         }
-         
+
         ?>
 
 
@@ -71,13 +71,13 @@ include "inc/menu.php"
         <div class="form-group">
             <label for="sel1">Producto</label>
             <select class="form-control" id="sel1" name="producto">
-            
+
                 <option>Seleccione una Producto</option>
-        <?php 
+        <?php
         $conexion=mysql_connect("localhost","root","root") or
         die("Problemas en la conexion");
         mysql_select_db("sgc",$conexion) or
-        die("Problemas en la selección de la base de datos");  
+        die("Problemas en la selección de la base de datos");
         mysql_query ("SET NAMES 'utf8'");
         $clavebuscadah=mysql_query("select idProducto,descripcion from productos",$conexion) or
         die("Problemas en el select:".mysql_error());
@@ -85,7 +85,7 @@ include "inc/menu.php"
         {
         echo'<OPTION VALUE="'.$row['idProducto'].'">'.$row['descripcion'].'</OPTION>';
         }
-         
+
         ?>
 
 
@@ -108,13 +108,13 @@ include "inc/menu.php"
         <div class="form-group">
             <label for="sel1">Comprobante</label>
             <select class="form-control" id="sel1" name="comprobante">
-            
+
                 <option>Seleccione una tipo</option>
-        <?php 
+        <?php
         $conexion=mysql_connect("localhost","root","root") or
         die("Problemas en la conexion");
         mysql_select_db("sgc",$conexion) or
-        die("Problemas en la selección de la base de datos");  
+        die("Problemas en la selección de la base de datos");
         mysql_query ("SET NAMES 'utf8'");
         $clavebuscadah=mysql_query("select idTipoComprobante,descripcion from tipocomprobante",$conexion) or
         die("Problemas en el select:".mysql_error());
@@ -122,7 +122,7 @@ include "inc/menu.php"
         {
         echo'<OPTION VALUE="'.$row['idTipoComprobante'].'">'.$row['descripcion'].'</OPTION>';
         }
- 
+
         ?>
 
 
@@ -132,7 +132,7 @@ include "inc/menu.php"
 
         <button type="submit" class="btn btn-primary">Registrar</button>
         <a href="\sgc\principal.php"><button type="button" class="btn btn-default"> Cancelar</button></a>
-        
+
     </form>
 
 
@@ -142,7 +142,7 @@ include "inc/menu.php"
 
 
     <!-- jQuery Version 1.11.1 -->
-    <script src="/sgc/js/jquery.js"></script>
+    <script src="/js/jquery.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -151,7 +151,7 @@ include "inc/menu.php"
     <script src="js/moment.min.js"></script>
     <script src="js/bootstrap-datetimepicker.min.js"></script>
     <script src="js/bootstrap-datetimepicker.es.js"></script>
-  
+
 
 </body>
 

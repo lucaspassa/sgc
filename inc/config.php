@@ -5,7 +5,7 @@
  */
 
 // Se inician las variables con los datos para conexión con el motor de base de datos
-$servername = "localhost";
+$servername = "localhost:8889";
 $username = "root";
 $password = "root";
 $database = "sgc";
