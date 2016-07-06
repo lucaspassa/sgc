@@ -14,7 +14,7 @@ class PDF extends PDF_MySQL_Table{
         $this->SetFont('Arial', '', 18);
         $this->Cell(0, 6, 'Reporte de Usuarios', 0, 1, 'C');
         $this->Ln(10);
-        // Asegurar la header de la tabla en el outpu
+        // Asegurar la header de la tabla en el output
         parent::Header();
     }
 }

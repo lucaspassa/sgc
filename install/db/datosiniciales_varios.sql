@@ -237,7 +237,7 @@ VALUES
 		'Monotributo'
 	);
 
-INSERT INTO tipocomprobante(codigo , descripcion)
+INSERT INTO tipoComprobante(codigo , descripcion)
 VALUES
 	('A' , 'IVA') ,
 	('B' , 'Otro tipo de comprobante') ,

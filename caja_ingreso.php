@@ -1,6 +1,5 @@
 <?php
     include "inc/menu.php" ;
-    require('inc/conexiondb.php');
 ?>
 
 <!DOCTYPE html>
@@ -45,51 +44,41 @@
     <form action="inc/caja_ingresoguardar.php" method="POST">
 
     <div class="form-group">
-            <label for="sel1">Cliente</label>
-            <select class="form-control" id="sel1" name="cliente">
+        <label for="selClientes">Cliente</label>
+        <select class="form-control" id="selClientes" name="clientes">
+            <option>Seleccione Cliente</option>
+            <?php
+                require_once('inc/mysqlconexiondb.php');
 
-                <option>Seleccione Cliente</option>
-        <?php
-        $conexion=mysql_connect("localhost","root","root") or
-        die("Problemas en la conexion");
-        mysql_select_db("sgc",$conexion) or
-        die("Problemas en la selección de la base de datos");
-        mysql_query ("SET NAMES 'utf8'");
-        $clavebuscadah=mysql_query("select idCliente,nombre,apellido from clientes",$conexion) or
-        die("Problemas en el select:".mysql_error());
-        while($row = mysql_fetch_array($clavebuscadah))
-        {
-        echo'<OPTION VALUE="'.$row['idCliente'].'">'.$row['nombre'].' '.$row['apellido'].'</OPTION>';
-        }
+                $clavebuscadah=mysql_query("select idCliente, nombre, apellido from clientes",$conexion) or
+                die("Problemas en el select:".mysql_error());
 
-        ?>
+                while($row = mysql_fetch_array($clavebuscadah)){
+                    echo'<OPTION VALUE="'.$row['idCliente'].'">'.$row['nombre'].$row['apellido'].'</OPTION>';
+                }
 
-
-
-            </select>
-        </div>
+            ?>
+        </select>
+    </div>
 
         <div class="form-group">
             <label for="sel1">Producto</label>
             <select class="form-control" id="sel1" name="producto">
 
                 <option>Seleccione una Producto</option>
-        <?php
-        $conexion=mysql_connect("localhost","root","root") or
-        die("Problemas en la conexion");
-        mysql_select_db("sgc",$conexion) or
-        die("Problemas en la selección de la base de datos");
-        mysql_query ("SET NAMES 'utf8'");
-        $clavebuscadah=mysql_query("select idProducto,descripcion from productos",$conexion) or
-        die("Problemas en el select:".mysql_error());
-        while($row = mysql_fetch_array($clavebuscadah))
-        {
-        echo'<OPTION VALUE="'.$row['idProducto'].'">'.$row['descripcion'].'</OPTION>';
-        }
 
-        ?>
+            <?php
 
+                require_once('inc/mysqlconexiondb.php');
 
+                $clavebuscadah=mysql_query("select idProducto,descripcion from productos",$conexion) or
+                die("Problemas en el select:".mysql_error());
+
+                while($row = mysql_fetch_array($clavebuscadah)){
+                    echo'<OPTION VALUE="'.$row['idProducto'].'">'.$row['descripcion'].'</OPTION>';
+                }
+
+            ?>
 
             </select>
         </div>
@@ -112,22 +101,16 @@
 
                 <option>Seleccione una tipo</option>
         <?php
-        $conexion=mysql_connect("localhost","root","root") or
-        die("Problemas en la conexion");
-        mysql_select_db("sgc",$conexion) or
-        die("Problemas en la selección de la base de datos");
-        mysql_query ("SET NAMES 'utf8'");
-        $clavebuscadah=mysql_query("select idTipoComprobante,descripcion from tipocomprobante",$conexion) or
-        die("Problemas en el select:".mysql_error());
-        while($row = mysql_fetch_array($clavebuscadah))
-        {
-        echo'<OPTION VALUE="'.$row['idTipoComprobante'].'">'.$row['descripcion'].'</OPTION>';
-        }
 
+            require_once('inc/mysqlconexiondb.php');
+
+            $clavebuscadah=mysql_query("select idTipoComprobante,descripcion from tipocomprobante",$conexion) or
+            die("Problemas en el select:".mysql_error());
+
+            while($row = mysql_fetch_array($clavebuscadah)){
+                echo'<OPTION VALUE="'.$row['idTipoComprobante'].'">'.$row['descripcion'].'</OPTION>';
+            }
         ?>
-
-
-
             </select>
         </div>
 

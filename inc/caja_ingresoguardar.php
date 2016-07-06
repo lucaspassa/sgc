@@ -1,6 +1,6 @@
 
-<?php 
-	
+<?php
+
 	require('conexiondb.php');
 
 	$cliente=$_POST['cliente'];
@@ -11,9 +11,9 @@
 	$comprobante=$_POST['comprobante'];
 
 	$query="INSERT INTO ingreso (idProducto,idCliente,cantidad,importe,fechaVenta,idTipoComprobante) VALUES ('$producto','$cliente','$cantidad','$importe','$fecha','$comprobante')";
-	
+
 	$resultado = mysqli_query($conexion,$query);
-	
+
 ?>
 
 <?php
@@ -48,16 +48,16 @@ include ('menu.php');
 	</head>
 
 	<body>
-			<center>	
-				
+			<center>
+
 				<?php if($resultado>0){ ?>
 					<h1>Cliente eliminado</h1>
 					<?php
 					header ("Location: /sgc/ventas.php");
 
 					 }else{ ?>
-					<h1>Error al eliminar el proveedor/h1>		
-				<?php	} ?>			
+					<h1>Error al eliminar el proveedor/h1>
+				<?php	} ?>
 			
 			</center>
 	</body>
