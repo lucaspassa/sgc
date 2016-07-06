@@ -17,7 +17,7 @@ require_once("validar.php");
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="principal.php">Bienvenido:  <?php echo $_SESSION['nombre']?>  </a><span></span>
+            <a class="navbar-brand" href="principal.php">Usuario :  <?php echo $_SESSION['nombre']?>  </a><span></span>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
