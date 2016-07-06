@@ -101,14 +101,10 @@ include "inc/menu.php"
             <label for="exampleInputPassword1">Importe</label>
             <input type="number" class="form-control" id="exampleInputPassword1" name="importe" >
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Fecha Alta</label>
-            <div class='input-group date' id='divMiCalendario'>
-              <input name="fecha" type='text' id="txtFecha" class="form-control"  readonly/>
-              <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-              </span>
-            </div>
-        </div>
+        <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></span>
+                <input type="date" class="form-control" placeholder="Fecha" aria-describedby="sizing-addon1" name="fecha" required="" oninput="maxTel(this)" maxlength="20">
+            </div><br/>
         <div class="form-group">
             <label for="sel1">Comprobante</label>
             <select class="form-control" id="sel1" name="comprobante">
@@ -156,12 +152,7 @@ include "inc/menu.php"
     <script src="js/moment.min.js"></script>
     <script src="js/bootstrap-datetimepicker.min.js"></script>
     <script src="js/bootstrap-datetimepicker.es.js"></script>
-    <script type="text/javascript">
-	 $('#divMiCalendario').datetimepicker({
-		  format: 'YYYY-MM-DD'
-	  });
-	  $('#divMiCalendario').data("DateTimePicker").show();
-    </script>
+  
 
 </body>
 

@@ -58,19 +58,19 @@
 			<input type="hidden" name="idUsuario" value="<?php echo $id; ?>">
 		</tr>	
 
-        <div class="form-group">
-            <label for="exampleInputPassword1">Nombre de usuario</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" value="<?php echo $row['nombreUsuario']; ?>" name="nombre_usuario">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Clave</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" value="<?php echo $row['clave']; ?>" name="clave">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Fecha Alta</label>
-            <input type="date" class="form-control" id="exampleInputPassword1" value="<?php echo $row['fechaAlta']; ?>" name="fecha_alta">
-        </div>
-        
+
+        <div class="input-group input-group-sm">
+            <span class="input-group-addon" id="sizing-addon3"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+            <input type="text" class="form-control" value="<?php echo $row['nombreUsuario']; ?>" placeholder="Nombre de Usuario" aria-describedby="sizing-addon3" name="nombre_usuario" required="">
+        </div><br/>
+        <div class="input-group input-group-sm">
+            <span class="input-group-addon" id="sizing-addon3"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span></span>
+            <input type="text" class="form-control" value="<?php echo $row['clave']; ?>" placeholder="Clave" aria-describedby="sizing-addon3" name="clave" required="">
+        </div><br/>
+        <div class="input-group input-group-sm">
+            <span class="input-group-addon" id="sizing-addon3"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></span>
+            <input type="date" class="form-control" value=""  placeholder="Fecha de alta" aria-describedby="sizing-addon3" name="fecha_alta" required="">
+        </div><br/>
         <fieldset class="form-group">
             <label for="exampleSelect1">Seleccionar Rol</label>
             <select class="form-control" name="tipo_rol" name="tipo_rol" required="">
@@ -79,7 +79,6 @@
             <?php } ?>
             </select>
         </fieldset>
-
         <button type="submit" class="btn btn-danger">Modificar</button>
         <a href="\sgc\usuario_consulta.php"><button type="" class="btn btn-primary">Cancelar</button></a> 
        

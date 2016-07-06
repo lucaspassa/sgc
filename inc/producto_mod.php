@@ -58,23 +58,23 @@
 
         <div class="form-group">
             <label for="exampleInputPassword1">Codigo Producto</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" value="<?php echo $row['codigo']; ?>" name="codigo">
+            <input type="text" class="form-control" id="exampleInputPassword1" value="<?php echo $row['codigo']; ?>" name="codigo" maxlength="20">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Descripcion</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" value="<?php echo $row['descripcion']; ?>" name="descripcion">
+            <input type="text" class="form-control" id="exampleInputPassword1" value="<?php echo $row['descripcion']; ?>" name="descripcion" maxlength="30">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Stock Disponible</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" value="<?php echo $row['stockDisponible']; ?>" name="stock">
+            <input type="number" class="form-control" id="exampleInputPassword1" value="<?php echo $row['stockDisponible']; ?>" name="stock">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Precio Costo</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" value="<?php echo $row['precioCosto']; ?>" name="precio_costo">
+            <input type="number" class="form-control" id="exampleInputPassword1" value="<?php echo $row['precioCosto']; ?>" name="precio_costo">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Precio Venta</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" value="<?php echo $row['precioVenta']; ?>" name="precio_venta">
+            <input type="number" class="form-control" id="exampleInputPassword1" value="<?php echo $row['precioVenta']; ?>" name="precio_venta">
         </div>
         
     	<button type="submit" class="btn btn-danger">Modificar</button>

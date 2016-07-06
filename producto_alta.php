@@ -48,7 +48,7 @@
             </div><br/>
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-sort" aria-hidden="true"></span></span>
-                <input type="text" class="form-control" placeholder="Stock" aria-describedby="sizing-addon1" name="stock" required="" maxlength="20">
+                <input type="number" class="form-control" placeholder="Stock" aria-describedby="sizing-addon1" name="stock" required="" maxlength="20">
             </div><br/>
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span></span>

@@ -2,7 +2,7 @@
     include "inc/menu.php" ;
     require('inc/conexiondb.php');
 
-    $query="SELECT idUsuario,nombreUsuario,clave,fechaAlta from usuarios ";
+    $query="SELECT idUsuario,nombreUsuario,clave,fechaAlta from usuarios order by nombreUsuario ";
     $resultado = mysqli_query($conexion,$query);
 
 ?>
