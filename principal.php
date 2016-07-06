@@ -51,7 +51,7 @@ $productos = mysqli_num_rows($resultado);
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>Panel Central</h1>
+                 <h1 class="display-1">Bienvenido a SGC</h1>
 
             </div>
 
@@ -100,9 +100,9 @@ $productos = mysqli_num_rows($resultado);
                             </a>
                         </div>
                     </div>
-                    <a href="cliente_alta.php"><div align="right"></data><img src="img/usuario.png" class="img-rounded pull-xs-left img-fluid"></div></a>
-                    <a href="producto_consulta.php"><div align="left"></data><img src="img/stock.png" class="img-thumbnail img-fluid" width="200" height="200"></div></a>
-
+                    <a href="cliente_alta.php"><div class=""></data><img src="img/usuario.png"></div></a>
+                   
+            
             
 
 
