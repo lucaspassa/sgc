@@ -8,6 +8,7 @@ require('mysql_table.php');
 include('DBConexionReportes.php');
 $tipo = $_GET['tipo'];
 
+// --------- Reportes de usuarios --------------
 if($tipo == 'usuarios'){
   class PDF extends PDF_MySQL_Table{
       function Header()
@@ -35,8 +36,52 @@ if($tipo == 'usuarios'){
   ob_start();
   $pdf->Output();
 }
-
+//--------- Reportes de ingresos ---------------------
 if($tipo == 'ingresos'){
+  class PDF extends PDF_MySQL_Table{
+      function Header()
+      {
+          // Titulo
+          $this->SetFont('Arial', '', 18);
+          $this->Cell(0, 6, 'Reporte de Ingresos', 0, 1, 'C');
+          $this->Ln(10);
+          // Asegurar la header de la tabla en el outpu
+          parent::Header();
+      }
+  }
+
+  $pdf=new PDF();
+  $pdf->AddPage();
+  //Primera tabla.
+  $pdf->Table('SELECT * FROM ingreso');
+  ob_start();
+  $pdf->Output();
+}
+
+//--------- Reportes de egresos ---------------------
+if($tipo == 'egresos'){
+  class PDF extends PDF_MySQL_Table{
+      function Header()
+      {
+          // Titulo
+          $this->SetFont('Arial', '', 18);
+          $this->Cell(0, 6, 'Reporte de Egresos', 0, 1, 'C');
+          $this->Ln(10);
+          // Asegurar la header de la tabla en el outpu
+          parent::Header();
+      }
+  }
+
+  $pdf=new PDF();
+  $pdf->AddPage();
+  //Primera tabla.
+  $pdf->Table('SELECT * FROM egreso');
+  ob_start();
+  $pdf->Output();
+}
+
+//--------- Reportes de Ventas ---------------------
+if($tipo == 'ventas'){
   class PDF extends PDF_MySQL_Table{
       function Header()
       {
@@ -53,6 +98,50 @@ if($tipo == 'ingresos'){
   $pdf->AddPage();
   //Primera tabla.
   $pdf->Table('SELECT * FROM ingreso');
+  ob_start();
+  $pdf->Output();
+}
+
+//--------- Reportes de proveedores ---------------------
+if($tipo == 'proveedores'){
+  class PDF extends PDF_MySQL_Table{
+      function Header()
+      {
+          // Titulo
+          $this->SetFont('Arial', '', 18);
+          $this->Cell(0, 6, 'Reporte de Proveedores', 0, 1, 'C');
+          $this->Ln(10);
+          // Asegurar la header de la tabla en el outpu
+          parent::Header();
+      }
+  }
+
+  $pdf=new PDF();
+  $pdf->AddPage();
+  //Primera tabla.
+  $pdf->Table('SELECT * FROM proveedores');
+  ob_start();
+  $pdf->Output();
+}
+
+//--------- Reportes de clientes ---------------------
+if($tipo == 'clientes'){
+  class PDF extends PDF_MySQL_Table{
+      function Header()
+      {
+          // Titulo
+          $this->SetFont('Arial', '', 18);
+          $this->Cell(0, 6, 'Reporte de Clientes', 0, 1, 'C');
+          $this->Ln(10);
+          // Asegurar la header de la tabla en el outpu
+          parent::Header();
+      }
+  }
+
+  $pdf=new PDF();
+  $pdf->AddPage();
+  //Primera tabla.
+  $pdf->Table('SELECT * FROM clientes');
   ob_start();
   $pdf->Output();
 }
