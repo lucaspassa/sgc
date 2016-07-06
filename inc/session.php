@@ -2,7 +2,6 @@
 require_once("conexiondb.php");
 //Inicio de la sesion
 session_start();
-
 //Tomo los valores enviados desde el formulario de ingreso
 $nombreU = $_POST['user'];
 $clave = $_POST['password'];
