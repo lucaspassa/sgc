@@ -22,7 +22,14 @@ class PDF extends PDF_MySQL_Table{
 $pdf=new PDF();
 $pdf->AddPage();
 //Primera tabla.
-$pdf->Table('SELECT * FROM usuarios');
+$pdf->Table('SELECT
+    	nombreUsuario,
+    	clave,
+    	fechaAlta,
+	roles.nombreRol as rol
+    FROM
+	   usuarios
+       INNER JOIN roles ON usuarios.idRol = roles.idRol');
 ob_start();
 $pdf->Output();
 ?>

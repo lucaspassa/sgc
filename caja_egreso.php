@@ -1,5 +1,5 @@
-<?php 
-    include "inc/menu.php" 
+<?php
+    include "inc/menu.php"
 ?>
 
 <!DOCTYPE html>
@@ -42,26 +42,27 @@
 
 
     <form action="" method="POST">
-    
+
             <div class="form-group">
             <label for="sel1">Producto</label>
             <select class="form-control" id="sel1">
-            
+
                 <option>Seleccione un Producto</option>
-<?php 
-$conexion=mysql_connect("localhost","root","root") or
-die("Problemas en la conexion");
-mysql_select_db("sgc",$conexion) or
-die("Problemas en la selección de la base de datos");  
-mysql_query ("SET NAMES 'utf8'");
-$clavebuscadah=mysql_query("select idProducto,descripcion from productos",$conexion) or
-die("Problemas en el select:".mysql_error());
-while($row = mysql_fetch_array($clavebuscadah))
-{
-echo'<OPTION VALUE="'.$row['idProducto'].'">'.$row['descripcion'].'</OPTION>';
-}
- 
-?>
+
+            <?php
+            $conexion=mysql_connect("localhost","root","root") or
+            die("Problemas en la conexion");
+            mysql_select_db("sgc",$conexion) or
+            die("Problemas en la selección de la base de datos");
+            mysql_query ("SET NAMES 'utf8'");
+            $clavebuscadah=mysql_query("select idProducto,descripcion from productos",$conexion) or
+            die("Problemas en el select:".mysql_error());
+            while($row = mysql_fetch_array($clavebuscadah))
+            {
+            echo'<OPTION VALUE="'.$row['idProducto'].'">'.$row['descripcion'].'</OPTION>';
+            }
+
+            ?>
 
 
 
@@ -78,28 +79,25 @@ echo'<OPTION VALUE="'.$row['idProducto'].'">'.$row['descripcion'].'</OPTION>';
         </div>
 
 
-<div class="form-group">
+        <div class="form-group">
             <label for="sel1">Comprobante</label>
             <select class="form-control" id="sel1">
-            
+
                 <option>Seleccione una tipo</option>
-<?php 
-$conexion=mysql_connect("localhost","root","root") or
-die("Problemas en la conexion");
-mysql_select_db("sgc",$conexion) or
-die("Problemas en la selección de la base de datos");  
-mysql_query ("SET NAMES 'utf8'");
-$clavebuscadah=mysql_query("select idTipoComprobante,descripcion from tipocomprobante",$conexion) or
-die("Problemas en el select:".mysql_error());
-while($row = mysql_fetch_array($clavebuscadah))
-{
-echo'<OPTION VALUE="'.$row['idTipoComprobante'].'">'.$row['descripcion'].'</OPTION>';
-}
- 
-?>
+                <?php
+                $conexion=mysql_connect("localhost","root","root") or
+                die("Problemas en la conexion");
+                mysql_select_db("sgc",$conexion) or
+                die("Problemas en la selección de la base de datos");
+                mysql_query ("SET NAMES 'utf8'");
+                $clavebuscadah=mysql_query("select idTipoComprobante,descripcion from tipocomprobante",$conexion) or
+                die("Problemas en el select:".mysql_error());
+                while($row = mysql_fetch_array($clavebuscadah))
+                {
+                echo'<OPTION VALUE="'.$row['idTipoComprobante'].'">'.$row['descripcion'].'</OPTION>';
+                }
 
-
-
+                ?>
             </select>
         </div>
             <button type="submit" class="btn btn-primary">Registrar</button>
