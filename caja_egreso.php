@@ -102,11 +102,8 @@ echo'<OPTION VALUE="'.$row['idTipoComprobante'].'">'.$row['descripcion'].'</OPTI
 
             </select>
         </div>
-
-        
-       
-        <button type="submit" class="btn btn-primary">Registrar</button>
-        
+            <button type="submit" class="btn btn-primary">Registrar</button>
+            <a href="\sgc\principal.php"><button type="button" class="btn btn-default"> Cancelar</button></a>
     </form>
 
 

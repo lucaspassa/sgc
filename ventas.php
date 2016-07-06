@@ -1,10 +1,11 @@
 <?php 
     include "inc/menu.php" ;
     require('inc/conexiondb.php');
+   
 
     $query="select nombre,apellido,descripcion,cantidad,importe,fechaVenta from clientes,ingreso,productos
 where clientes.idCliente = ingreso.idCliente 
-and productos.idProducto = ingreso.idProducto ";
+and productos.idProducto = ingreso.idProducto order by fechaVenta";
     $resultado = mysqli_query($conexion,$query);
 
 
@@ -50,13 +51,15 @@ and productos.idProducto = ingreso.idProducto ";
         </div>
         <div class="jumbotron">
             <div class="row">
-                    <table class="table table-hover">
+                    <table class="table table-striped">
                         <thead>
                             <th> Cliente </th>
                             <th> Producto</th>
                             <th> Cantidad </th>
-                            <th>Importe</th>
+                            <th> Importe unitario</th>
+                            <th> Total</th>
                             <th> Fecha de venta</th>
+
                             
                         </thead>
                         <tbody>
@@ -72,23 +75,24 @@ and productos.idProducto = ingreso.idProducto ";
                                 <?php echo $row['cantidad'];?>
                             </td>
                             <td>
-                                <?php echo $row['importe'];?>
+                                <?php echo '$'.$row['importe'];?>
+                            </td>
+                            <td>
+                               <?php echo '$'. $row['cantidad']*$row['importe']; ?>
                             </td>
                             <td>
                                 <?php echo $row['fechaVenta'];?>
                             </td>
-                            
-                                
-
                             </tr>
                                  <?php } ?>
                         </tbody>
                     </table>
+
                 </div>
             </div>
         </div>
         <!-- /.container -->
-
+    
 
         <!-- jQuery Version 1.11.1 -->
         <script src="/sgc/js/jquery.js"></script>
