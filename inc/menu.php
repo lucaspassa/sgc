@@ -70,14 +70,14 @@ require_once("validar.php");
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Reportes <span class="caret"></span></a>
       <ul class="dropdown-menu">
-            <li><a href="/sgc/caja_ingreso.php">Ingresos</a></li>
-            <li><a href="/sgc/caja_egreso.php">Egresos</a></li>
-            <li><a href="/sgc/caja_egreso.php">Ventas</a></li>
+            <li><a href="/sgc/inc/reportes/generarReporte.php?tipo=ingresos">Ingresos</a></li>
+            <li><a href="/sgc/inc/reportes/generarReporte.php?tipo=egresos">Egresos</a></li>
+            <li><a href="/sgc/inc/reportes/generarReporte.php?tipo=ventas">Ventas</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="/sgc/caja_egreso.php">Clientes</a></li>
-            <li><a href="/sgc/caja_egreso.php">Proveedores</a></li>
+            <li><a href="/sgc/inc/reportes/generarReporte.php?tipo=clientes">Clientes</a></li>
+            <li><a href="/sgc/inc/reportes/generarReporte.php?tipo=proveedores">Proveedores</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="/sgc/caja_consulta.php">Usuarios</a></li>
+            <li><a href="/sgc/inc/reportes/generarReporte.php?tipo=usuarios">Usuarios</a></li>
       </ul>
     </li>
 
